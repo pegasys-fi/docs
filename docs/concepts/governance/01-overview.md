@@ -41,7 +41,7 @@ import Timelock from '@pegasys-fi/governance/build/Timelock.json'
 
 ### ABI
 
-The `GovernorAlpha` ABI is viewable on [Etherscan](https://etherscan.io/address/0x5e4be8Bc9637f0EAA1A755019e06A68ce081D58F), as well as via an [npm package](https://www.npmjs.com/package/@pegasys-fi/governance).
+The `GovernorAlpha` ABI is viewable on [Etherscan](https://etherscan.io/address/0x5e4be8Bc9637f0EAA1A755019e06A68ce081D58F), as well as via an [npm package](https://www.npmjs.com/package/@pollum-io/governance).
 
 [https://unpkg.com/@pegasys-fi/governance@1.0.2/build/GovernorAlpha.json](https://unpkg.com/@pegasys-fi/governance@1.0.2/build/GovernorAlpha.json)
 

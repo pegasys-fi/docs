@@ -65,7 +65,7 @@ export const developerLinks = [
   },
   {
     title: 'widgets',
-    href: 'https://www.npmjs.com/package/@pegasys-fi/widgets',
+    href: 'https://www.npmjs.com/package/@pollum-io/widgets',
     icon: Npm,
   },
 ]
