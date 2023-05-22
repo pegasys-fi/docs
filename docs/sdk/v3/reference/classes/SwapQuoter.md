@@ -14,7 +14,7 @@ calldata needed to call the quoter contract.
 ### Properties
 
 - [V1INTERFACE](SwapQuoter.md#v1interface)
-- [V2INTERFACE](SwapQuoter.md#v2interface)
+- [V1INTERFACE](SwapQuoter.md#v1interface)
 
 ### Methods
 
@@ -38,9 +38,9 @@ calldata needed to call the quoter contract.
 
 ___
 
-### V2INTERFACE
+### V1INTERFACE
 
-▪ `Static` **V2INTERFACE**: `Interface`
+▪ `Static` **V1INTERFACE**: `Interface`
 
 #### Defined in
 
@@ -52,7 +52,7 @@ ___
 
 ▸ `Static` **quoteCallParameters**<`TInput`, `TOutput`\>(`route`, `amount`, `tradeType`, `options?`): [`MethodParameters`](../interfaces/MethodParameters.md)
 
-Produces the on-chain method name of the appropriate function within QuoterV2,
+Produces the on-chain method name of the appropriate function within QuoterV1,
 and the relevant hex encoded parameters.
 
 #### Type parameters

@@ -48,8 +48,8 @@ A complete list of commands can be found in the table below:
 | `0x05`  | [`TRANSFER`](./02-technical-reference.md#transfer)                                       |
 | `0x06`  | [`PAY_PORTION`](./02-technical-reference.md#pay_portion)                                 |
 | `0x07`  |                                                                                          |
-| `0x08`  | [`V2_SWAP_EXACT_IN`](./02-technical-reference.md#v2_swap_exact_in)                       |
-| `0x09`  | [`V2_SWAP_EXACT_OUT`](./02-technical-reference.md#v2_swap_exact_out)                     |
+| `0x08`  | [`V1_SWAP_EXACT_IN`](./02-technical-reference.md#v1_swap_exact_in)                       |
+| `0x09`  | [`V1_SWAP_EXACT_OUT`](./02-technical-reference.md#v1_swap_exact_out)                     |
 | `0x0a`  | [`PERMIT2_PERMIT`](./02-technical-reference.md#permit2_permit)                           |
 | `0x0b`  | [`WRAP_ETH`](./02-technical-reference.md#wrap_eth)                                       |
 | `0x0c`  | [`UNWRAP_WETH`](./02-technical-reference.md#unwrap_eth)                                  |
@@ -132,20 +132,20 @@ The individual that signed the permits must be the `msg.sender` of the transacti
 - `address` The recipient of the transfer
 - `uint256` In basis points, the percentage of the contract’s balance to transfer
 
-### `V2_SWAP_EXACT_IN`
+### `V1_SWAP_EXACT_IN`
 
 - `address` The recipient of the output of the trade
 - `uint256` The amount of input tokens for the trade
 - `uint256` The minimum amount of output tokens the user wants
-- `address[]` The UniswapV2 token path to trade along
+- `address[]` The UniswapV1 token path to trade along
 - `bool` A flag for whether the input tokens should come from the `msg.sender` (through Permit2) or whether the funds are already in the `UniversalRouter`
 
-### `V2_SWAP_EXACT_OUT`
+### `V1_SWAP_EXACT_OUT`
 
 - `address` The recipient of the output of the trade
 - `uint256` The amount of output tokens to receive
 - `uint256` The maximum number of input tokens that should be spent
-- `address[]` The UniswapV2 token path to trade along
+- `address[]` The UniswapV1 token path to trade along
 - `bool` A flag for whether the input tokens should come from the `msg.sender` (through Permit2) or whether the funds are already in the `UniversalRouter`
 
 ### `PERMIT2_PERMIT`

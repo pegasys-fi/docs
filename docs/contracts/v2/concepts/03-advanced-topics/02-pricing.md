@@ -9,9 +9,9 @@ As we learned in [Protocol Overview](../protocol-overview/how-uniswap-works), ea
 
 # How Uniswap handles prices
 
-In Uniswap V2 pairs directly check whether the invariant was satisfied (accounting for fees) after every trade. This means that rather than relying on a pricing function to _also_ enforce the invariant, V2 pairs simply and transparently ensure their own safety, a nice separation of concerns. One downstream benefit is that V2 pairs will more naturally support other flavors of trades which may emerge, (e.g. trading to a specific price at execution time).
+In Uniswap V1 pairs directly check whether the invariant was satisfied (accounting for fees) after every trade. This means that rather than relying on a pricing function to _also_ enforce the invariant, V1 pairs simply and transparently ensure their own safety, a nice separation of concerns. One downstream benefit is that V1 pairs will more naturally support other flavors of trades which may emerge, (e.g. trading to a specific price at execution time).
 
-At a high level, in Uniswap V2, _trades must be priced in the periphery_. The good news is that the [library](../../reference/smart-contracts/library)
+At a high level, in Uniswap V1, _trades must be priced in the periphery_. The good news is that the [library](../../reference/smart-contracts/library)
 provides a variety of functions designed to make this quite simple, and all swapping functions in the [router](../../reference/smart-contracts/router-02) are designed with this in mind.
 
 # Pricing Trades
@@ -22,7 +22,7 @@ Say a smart contract naively wants to send 10 DAI to the DAI/WETH pair and recei
 
 To prevent these types of attacks, it's vital to submit swaps _that have access to knowledge about the "fair" price their swap should execute at_. In other words, swaps need access to an _oracle_, to be sure that the best execution they can get from Uniswap is close enough to what the oracle considers the "true" price. While this may sound complicated, the oracle can be as simple as an _off-chain observation of the current market price of a pair_. Because of arbitrage, it's typically the case that the ratio of the intra-block reserves of a pair is close to the "true" market price. So, if a user submits a trade with this knowledge in mind, they can ensure that the losses due to front-running are tightly bounded. This is how, for example, the Uniswap frontend ensure trade safety. It calculates the optimal input/output amounts given observed intra-block prices, and uses the router to perform the swap, which guarantees the swap will execute at a rate no less that `x`% worse than the observed intra-block rate, where `x` is a user-specified slippage tolerance (0.5% by default).
 
-There are, of course, other options for oracles, including [native V2 oracles](../core-concepts/oracles).
+There are, of course, other options for oracles, including [native V1 oracles](../core-concepts/oracles).
 
 ## Exact Input
 
@@ -34,4 +34,4 @@ If you'd like to receive an exact amount of output tokens for as few input token
 
 ## Swap to Price
 
-For this more advanced use case, see [ExampleSwapToPrice.sol](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleSwapToPrice.sol).
+For this more advanced use case, see [ExampleSwapToPrice.sol](https://github.com/Uniswap/uniswap-v1-periphery/blob/master/contracts/examples/ExampleSwapToPrice.sol).

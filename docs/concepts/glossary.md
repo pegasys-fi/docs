@@ -18,7 +18,7 @@ Liquidity that is allocated within a determined price range.
 
 ## Constant Product Formula
 
-The automated market making algorithm used by Uniswap. In v2, this was x\*y=k.
+The automated market making algorithm used by Uniswap. In v1, this was x\*y=k.
 
 ## Core
 
@@ -58,7 +58,7 @@ An instance of historical price and liquidity data of a given pair.
 
 ## Pair
 
-A smart contract deployed from a Uniswap V2 factory contract that enables trading between two ERC20 tokens. Pair contracts are now called Pools in V3.
+A smart contract deployed from a Uniswap V1 factory contract that enables trading between two ERC20 tokens. Pair contracts are now called Pools in V3.
 
 ## Periphery
 

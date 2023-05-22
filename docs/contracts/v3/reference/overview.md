@@ -18,7 +18,7 @@ External calls will primarily call the periphery interfaces. Externally availabl
 
 The core consists of a single factory, a pool deployer, and the many pools the factory will create.
 
-A significant amount of care and attention has been given to gas optimization in the core contracts. The result is a substantial reduction in gas costs for all protocol interactions compared to V2, at the cost of a reduction in code clarity.
+A significant amount of care and attention has been given to gas optimization in the core contracts. The result is a substantial reduction in gas costs for all protocol interactions compared to V1, at the cost of a reduction in code clarity.
 
 ### Factory
 

@@ -298,12 +298,12 @@ module.exports = {
           if (existingPath.includes('/contracts/v3/guides')) {
             return [existingPath.replace('/contracts/v3/guides', '/protocol/guides')]
           }
-          // V2 Redirects
-          if (existingPath.includes('/contracts/v2/reference')) {
-            return [existingPath.replace('/contracts/v2/reference', '/protocol/V2/reference')]
+          // V1 Redirects
+          if (existingPath.includes('/contracts/v1/reference')) {
+            return [existingPath.replace('/contracts/v1/reference', '/protocol/V1/reference')]
           }
-          if (existingPath.includes('/contracts/v2/guides')) {
-            return [existingPath.replace('/contracts/v2/guides', '/protocol/V2/guides')]
+          if (existingPath.includes('/contracts/v1/guides')) {
+            return [existingPath.replace('/contracts/v1/guides', '/protocol/V1/guides')]
           }
           // Permit2 Redirects
           if (existingPath.includes('/contracts/permit2')) {
@@ -320,8 +320,8 @@ module.exports = {
           if (existingPath.includes('/sdk/swap-widget/overview')) {
             return [existingPath.replace('/sdk/swap-widget/overview', '/sdk/widgets/swap-widget')]
           }
-          if (existingPath.includes('/sdk/swap-widget/reference/v2')) {
-            return [existingPath.replace('/sdk/swap-widget/reference/v2', '/sdk/widgets/swap-widget/api')]
+          if (existingPath.includes('/sdk/swap-widget/reference/v1')) {
+            return [existingPath.replace('/sdk/swap-widget/reference/v1', '/sdk/widgets/swap-widget/api')]
           }
           if (existingPath.includes('/concepts')) {
             return [existingPath.replace('/concepts', '/protocol/concepts')]
