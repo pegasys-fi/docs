@@ -95,7 +95,7 @@ const DAI = await Fetcher.fetchTokenData(
 
 # Case 2: Pairs
 
-Now that we've explored how to define a token, let's talk about pairs. To read more about what Uniswap pairs are, see [Pair](../../../contracts/v1/reference/smart-contracts/pair)
+Now that we've explored how to define a token, let's talk about pairs. To read more about what Pegasys pairs are, see [Pair](../../../contracts/v1/reference/smart-contracts/pair)
 
 As an example, let's try to represent the DAI-WETH pair.
 

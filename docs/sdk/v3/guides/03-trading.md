@@ -5,7 +5,7 @@ title: Executing a Trade
 
 ## Introduction
 
-This guide will build off our [quoting guide](./02-quoting.md) and show how to use a quote to construct and execute a trade on the Uniswap V2 protocol. It is based on the [Trading code example](https://github.com/Uniswap/examples/tree/main/v2-sdk/trading), found in the Uniswap code examples [repository](https://github.com/Uniswap/examples). To run this example, check out the guide's [README](https://github.com/Uniswap/examples/blob/main/v2-sdk/trading/README.md) and follow the setup instructions.
+This guide will build off our [quoting guide](./02-quoting.md) and show how to use a quote to construct and execute a trade on the Pegasys V2 protocol. It is based on the [Trading code example](https://github.com/Uniswap/examples/tree/main/v2-sdk/trading), found in the Uniswap code examples [repository](https://github.com/Uniswap/examples). To run this example, check out the guide's [README](https://github.com/Uniswap/examples/blob/main/v2-sdk/trading/README.md) and follow the setup instructions.
 
 :::info
 If you need a briefer on the SDK and to learn more about how these guides connect to the examples repository, please visit our [background](./01-background.md) page!
@@ -95,7 +95,7 @@ Then, we set our options that define how much time and slippage can occur in our
 https://github.com/Uniswap/examples/blob/c4667fadb13584268bbee2e0e0f556558a474751/v2-sdk/trading/src/libs/trading.ts#L97-L101
 ```
 
-Next, we use the Uniswap `SwapRouter` to get the associated call parameters for our trade and options:
+Next, we use the Pegasys `SwapRouter` to get the associated call parameters for our trade and options:
 
 ```typescript reference title="Getting call parameters" referenceLinkText="View on Github" customStyling
 https://github.com/Uniswap/examples/blob/bbee4b974768ff1668ac56e27d1fe840060bb61b/v2-sdk/trading/src/libs/trading.ts#L103
@@ -109,4 +109,4 @@ https://github.com/Uniswap/examples/blob/bbee4b974768ff1668ac56e27d1fe840060bb61
 
 ## Next Steps
 
-The resulting example allows for trading between any two ERC20 tokens, but this can be suboptimal for the best pricing and fees. To achieve the best possible price, we use the Uniswap auto router to route through pools to get an optimal cost. Our [routing](./04-routing.md) guide will show you how to use this router and execute optimal swaps.
+The resulting example allows for trading between any two ERC20 tokens, but this can be suboptimal for the best pricing and fees. To achieve the best possible price, we use the Pegasys auto router to route through pools to get an optimal cost. Our [routing](./04-routing.md) guide will show you how to use this router and execute optimal swaps.

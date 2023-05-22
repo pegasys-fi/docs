@@ -13,6 +13,6 @@ title: Glossary
 
 - **Voting:** Users can vote for or against single proposals once they have voting rights delegated to their address. Votes can be cast while a proposal is in the &quot;Active&quot; state. Votes can be submitted immediately using &quot;castVote&quot; or submitted later with &quot;castVoteBySig&quot; (For more info on castVoteBySig and offline signatures, see EIP-712). If the majority of votes (and a 4% quorum of UNI) vote for a proposal, the proposal may be queued in the Timelock.
 
-- **Voting Period:** Once a proposal has been put forward, Uniswap community members will have a seven day period (the Voting Period) to cast their votes.
+- **Voting Period:** Once a proposal has been put forward, Pegasys community members will have a seven day period (the Voting Period) to cast their votes.
 
 - **Timelock:** All governance and other administrative actions are required to sit in the Timelock for a minimum of 2 days, after which they can be implemented.

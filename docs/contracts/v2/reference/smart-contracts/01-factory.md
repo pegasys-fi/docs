@@ -7,11 +7,11 @@ title: Factory
 
 ## Code
 
-[`UniswapV1Factory.sol`](https://github.com/Pegasys-fi/v1-core/blob/master/contracts/UniswapV1Factory.sol)
+[`PegasysV1Factory.sol`](https://github.com/Pegasys-fi/v1-core/blob/master/contracts/PegasysV1Factory.sol)
 
 # Address
 
-`UniswapV1Factory` is deployed at `0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f` on the Ethereum [mainnet](https://etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), and the [Ropsten](https://ropsten.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), [Rinkeby](https://rinkeby.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), [Görli](https://goerli.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), and [Kovan](https://kovan.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f) testnets. It was built from commit [8160750](https://github.com/Pegasys-fi/v1-core/tree/816075049f811f1b061bca81d5d040b96f4c07eb).
+`PegasysV1Factory` is deployed at `0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f` on the Ethereum [mainnet](https://etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), and the [Ropsten](https://ropsten.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), [Rinkeby](https://rinkeby.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), [Görli](https://goerli.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), and [Kovan](https://kovan.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f) testnets. It was built from commit [8160750](https://github.com/Pegasys-fi/v1-core/tree/816075049f811f1b061bca81d5d040b96f4c07eb).
 
 # Events
 
@@ -89,13 +89,13 @@ Creates a pair for `tokenA` and `tokenB` if one doesn't exist already.
 # Interface
 
 ```solidity
-import '@pegasys-fi/v1-core/contracts/interfaces/IUniswapV1Factory.sol';
+import '@pegasys-fi/v1-core/contracts/interfaces/IPegasysV1Factory.sol';
 ```
 
 ```solidity
 pragma solidity >=0.5.0;
 
-interface IUniswapV1Factory {
+interface IPegasysV1Factory {
   event PairCreated(address indexed token0, address indexed token1, address pair, uint);
 
   function getPair(address tokenA, address tokenB) external view returns (address pair);
@@ -112,7 +112,7 @@ interface IUniswapV1Factory {
 # ABI
 
 ```typescript
-import IUniswapV1Factory from '@pegasys-fi/v1-core/build/IUniswapV1Factory.json'
+import IPegasysV1Factory from '@pegasys-fi/v1-core/build/IPegasysV1Factory.json'
 ```
 
-[https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IUniswapV1Factory.json](https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IUniswapV1Factory.json)
+[https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IPegasysV1Factory.json](https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IPegasysV1Factory.json)

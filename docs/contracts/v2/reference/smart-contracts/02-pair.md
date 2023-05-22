@@ -3,11 +3,11 @@ id: pair
 title: Pair
 ---
 
-This documentation covers Uniswap-specific functionality. For ERC-20 functionality, see [Pair (ERC-20)](../smart-contracts/pair-erc-20).
+This documentation covers Pegasys-specific functionality. For ERC-20 functionality, see [Pair (ERC-20)](../smart-contracts/pair-erc-20).
 
 # Code
 
-[`UniswapV1Pair.sol`](https://github.com/Pegasys-fi/v1-core/blob/master/contracts/UniswapV1Pair.sol)
+[`PegasysV1Pair.sol`](https://github.com/Pegasys-fi/v1-core/blob/master/contracts/PegasysV1Pair.sol)
 
 # Address
 
@@ -173,13 +173,13 @@ See the <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>whit
 # Interface
 
 ```solidity
-import '@pegasys-fi/v1-core/contracts/interfaces/IUniswapV1Pair.sol';
+import '@pegasys-fi/v1-core/contracts/interfaces/IPegasysV1Pair.sol';
 ```
 
 ```solidity
 pragma solidity >=0.5.0;
 
-interface IUniswapV1Pair {
+interface IPegasysV1Pair {
   event Approval(address indexed owner, address indexed spender, uint value);
   event Transfer(address indexed from, address indexed to, uint value);
 
@@ -232,7 +232,7 @@ interface IUniswapV1Pair {
 # ABI
 
 ```typescript
-import IUniswapV1Pair from '@pegasys-fi/v1-core/build/IUniswapV1Pair.json'
+import IPegasysV1Pair from '@pegasys-fi/v1-core/build/IPegasysV1Pair.json'
 ```
 
-[https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IUniswapV1Pair.json](https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IUniswapV1Pair.json)
+[https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IPegasysV1Pair.json](https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IPegasysV1Pair.json)

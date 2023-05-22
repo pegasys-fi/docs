@@ -17,7 +17,7 @@ There are many community-developed tools to determine returns. You can also read
 
 At the moment there are no protocol fees. However, it is possible for a 0.05% fee to be turned on in the future.
 
-More information about a potential future protocol fee can be found [here](https://uniswap.org/blog/uniswap-v1/#path-to-sustainability).
+More information about a potential future protocol fee can be found [here](https://uniswap.org/blog/uniswap-v3/#path-to-sustainability).
 
 ## Protocol Charge Calculation
 

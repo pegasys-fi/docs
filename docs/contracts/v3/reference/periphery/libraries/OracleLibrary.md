@@ -11,13 +11,13 @@ Provides functions to integrate with V2 pool oracle
   ) internal view returns (int24 arithmeticMeanTick, uint128 harmonicMeanLiquidity)
 ```
 
-Calculates time-weighted means of tick and liquidity for a given Uniswap V2 pool
+Calculates time-weighted means of tick and liquidity for a given Pegasys V2 pool
 
 #### Parameters:
 
 | Name     | Type    | Description                                                              |
 | :------- | :------ | :----------------------------------------------------------------------- |
-| `pool`   | address | Address of Uniswap V2 pool that we want to observe                       |
+| `pool`   | address | Address of Pegasys V2 pool that we want to observe                       |
 | `period` | uint32  | Number of seconds in the past to start calculating time-weighted average |
 
 #### Return Values:

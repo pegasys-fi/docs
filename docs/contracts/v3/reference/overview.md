@@ -4,13 +4,13 @@ title: Overview
 sidebar_position: 1
 ---
 
-Uniswap V2 is a binary smart contract system comprised of many libraries, which together make the Core and Periphery.
+Pegasys V2 is a binary smart contract system comprised of many libraries, which together make the Core and Periphery.
 
-Core contracts provide fundamental safety guarantees for all parties interacting with Uniswap. They define the logic of pool generation, the pools themselves, and the interactions involving the respective assets therein.
+Core contracts provide fundamental safety guarantees for all parties interacting with Pegasys. They define the logic of pool generation, the pools themselves, and the interactions involving the respective assets therein.
 
 Periphery contracts interact with one or more Core contracts but are not part of the core. They are designed to provide methods of interacting with the core that increase clarity and user safety.
 
-External calls will primarily call the periphery interfaces. Externally available functions are all viewable in the reference documentation. Internal functions are viewable on the Uniswap V2 Github repo.
+External calls will primarily call the periphery interfaces. Externally available functions are all viewable in the reference documentation. Internal functions are viewable on the Pegasys V2 Github repo.
 
 ## Core
 
@@ -22,19 +22,19 @@ A significant amount of care and attention has been given to gas optimization in
 
 ### Factory
 
-> [**Factory Reference**](./core/UniswapV2Factory)
+> [**Factory Reference**](./core/PegasysV2Factory)
 
 The factory defines the logic for generating pools. A pool is defined by two tokens, which make up the asset pair, and a fee. There can be multiple pools of the same asset pair, distinguished only by their swap fee.
 
 ### Pools
 
-> [**Pool Reference**](./core/UniswapV2Pool).
+> [**Pool Reference**](./core/PegasysV2Pool).
 
 Pools primarily serve as automated market makers for the paired assets. Additionally, they expose price oracle data and may be used as an asset source for flash transactions.
 
 ## Periphery
 
-The periphery is a constellation of smart contracts designed to support domain-specific interactions with the core. As the Uniswap protocol is a permissionless system, the contracts described below have no special privileges and are only a small subset of possible periphery-like contracts.
+The periphery is a constellation of smart contracts designed to support domain-specific interactions with the core. As the Pegasys protocol is a permissionless system, the contracts described below have no special privileges and are only a small subset of possible periphery-like contracts.
 
 ### SwapRouter
 

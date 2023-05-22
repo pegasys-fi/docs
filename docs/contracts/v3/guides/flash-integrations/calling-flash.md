@@ -46,10 +46,10 @@ Now we'll start our function by assigning the relevant parameters from the `Flas
     }
 ```
 
-Next we will declare `pool` as type [**IUniswapV2Pool**], which allows us to call `flash` on our desired pool contract.
+Next we will declare `pool` as type [**IPegasysV2Pool**], which allows us to call `flash` on our desired pool contract.
 
 ```solidity
-        IUniswapV2Pool pool = IUniswapV2Pool(PoolAddress.computeAddress(factory, poolKey));
+        IPegasysV2Pool pool = IPegasysV2Pool(PoolAddress.computeAddress(factory, poolKey));
 ```
 
 ## Calling Flash
@@ -103,7 +103,7 @@ The full function:
 function initFlash(FlashParams memory params) external {
         PoolAddress.PoolKey memory poolKey =
             PoolAddress.PoolKey({token0: params.token0, token1: params.token1, fee: params.fee1});
-        IUniswapV2Pool pool = IUniswapV2Pool(PoolAddress.computeAddress(factory, poolKey));
+        IPegasysV2Pool pool = IPegasysV2Pool(PoolAddress.computeAddress(factory, poolKey));
         pool.flash(
             address(this),
             params.amount0,

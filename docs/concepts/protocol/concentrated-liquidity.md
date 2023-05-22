@@ -15,7 +15,7 @@ sidebar_position: 1
 
 ## Introduction
 
-The defining idea of Uniswap v2 is concentrated liquidity: liquidity that is allocated within a custom price range.
+The defining idea of Pegasys v2 is concentrated liquidity: liquidity that is allocated within a custom price range.
 In earlier versions, liquidity was distributed uniformly along the price curve between 0 and infinity.
 
 The previously uniform distribution allowed trading across the entire price interval (0, ∞) without any loss of liquidity. However, in many pools, the majority of the liquidity was never used.

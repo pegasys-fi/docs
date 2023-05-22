@@ -10,7 +10,7 @@ An automated market maker is a smart contract on Ethereum that holds liquidity r
 
 ## Asset
 
-While a digital asset can take many forms, the Uniswap Protocol supports ERC-20 token pairs, and represents a position in the form of an NFT (ERC-721).
+While a digital asset can take many forms, the Pegasys Protocol supports ERC-20 token pairs, and represents a position in the form of an NFT (ERC-721).
 
 ## Concentrated Liquidity
 
@@ -18,15 +18,15 @@ Liquidity that is allocated within a determined price range.
 
 ## Constant Product Formula
 
-The automated market making algorithm used by Uniswap. In v1, this was x\*y=k.
+The automated market making algorithm used by Pegasys. In v1, this was x\*y=k.
 
 ## Core
 
-Smart contracts that are considered foundational, and are essential for Uniswap to exist. Upgrading to a new version of core would require deploying an entirely new set of smart contracts on Ethereum and would be considered a new version of the Uniswap Protocol.
+Smart contracts that are considered foundational, and are essential for Pegasys to exist. Upgrading to a new version of core would require deploying an entirely new set of smart contracts on Ethereum and would be considered a new version of the Pegasys Protocol.
 
 ## ERC20
 
-ERC20 tokens are fungible tokens on Ethereum. Uniswap supports all standard ERC20 implementations.
+ERC20 tokens are fungible tokens on Ethereum. Pegasys supports all standard ERC20 implementations.
 
 ## Factory
 
@@ -46,11 +46,11 @@ A liquidity provider is someone who deposits ERC20 tokens into a given liquidity
 
 ## Liquidity
 
-Digital assets that are stored in a Uniswap pool contract, and are able to be traded against by traders.
+Digital assets that are stored in a Pegasys pool contract, and are able to be traded against by traders.
 
 ## Mid Price
 
-The price between the available buy and sell prices. In Uniswap V2, this is the ratio of the two ERC20 token reserves available within the current active tick.
+The price between the available buy and sell prices. In Pegasys V2, this is the ratio of the two ERC20 token reserves available within the current active tick.
 
 ## Observation
 
@@ -58,11 +58,11 @@ An instance of historical price and liquidity data of a given pair.
 
 ## Pair
 
-A smart contract deployed from a Uniswap V1 factory contract that enables trading between two ERC20 tokens. Pair contracts are now called Pools in V2.
+A smart contract deployed from a Pegasys V1 factory contract that enables trading between two ERC20 tokens. Pair contracts are now called Pools in V2.
 
 ## Periphery
 
-External smart contracts that are useful, but not required for Uniswap to exist. New periphery contracts can always be deployed without migrating liquidity.
+External smart contracts that are useful, but not required for Pegasys to exist. New periphery contracts can always be deployed without migrating liquidity.
 
 ## Pool
 

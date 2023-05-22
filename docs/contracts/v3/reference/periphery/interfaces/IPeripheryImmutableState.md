@@ -13,7 +13,7 @@ Functions that return immutable state of the router
 
 | Type    | Description                           |
 | :------ | :------------------------------------ |
-| address | the address of the Uniswap V2 factory |
+| address | the address of the Pegasys V2 factory |
 
 ### WETH9
 

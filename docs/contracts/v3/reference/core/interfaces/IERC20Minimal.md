@@ -1,4 +1,4 @@
-Contains a subset of the full ERC20 interface that is used in Uniswap V2
+Contains a subset of the full ERC20 interface that is used in Pegasys V2
 
 ## Functions
 

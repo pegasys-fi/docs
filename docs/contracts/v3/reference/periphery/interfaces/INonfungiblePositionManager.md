@@ -1,4 +1,4 @@
-Wraps Uniswap V2 positions in a non-fungible token interface which allows for them to be transferred
+Wraps Pegasys V2 positions in a non-fungible token interface which allows for them to be transferred
 and authorized.
 
 ## Parameter Structs

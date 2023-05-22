@@ -8,10 +8,10 @@ sidebar_position: 3
 
 Here we will override the flash callback with our custom logic to execute the desired swaps and pay the profits to the original `msg.sender`.
 
-Declare the `uniswapV2FlashCallback` function and override it.
+Declare the `pegasysV2FlashCallback` function and override it.
 
 ```solidity
-    function uniswapV2FlashCallback(
+    function pegasysV2FlashCallback(
         uint256 fee0,
         uint256 fee1,
         bytes calldata data
@@ -132,7 +132,7 @@ Send the profits to the `payer`: the original `msg.sender` of the `initFlash` fu
 # The full function
 
 ```solidity
-    function uniswapV2FlashCallback(
+    function pegasysV2FlashCallback(
         uint256 fee0,
         uint256 fee1,
         bytes calldata data

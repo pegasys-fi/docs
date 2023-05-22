@@ -2,7 +2,7 @@
 
 # Class: Position
 
-Represents a position on a Uniswap V2 Pool
+Represents a position on a Pegasys V2 Pool
 
 ## Table of contents
 

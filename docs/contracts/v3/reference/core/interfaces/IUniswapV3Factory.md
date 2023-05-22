@@ -1,4 +1,4 @@
-The Uniswap V2 Factory facilitates creation of Uniswap V2 pools and control over the protocol fees
+The Pegasys V2 Factory facilitates creation of Pegasys V2 pools and control over the protocol fees
 
 ## Functions
 

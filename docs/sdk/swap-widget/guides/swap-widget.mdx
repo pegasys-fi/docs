@@ -10,7 +10,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 # Getting Started with the Swap Widget
 
-This guide walks you through the steps to embed the swap widget in your website in 2 minutes — whether your site is already a decentralized application (dApp) or not. With the swap widget, your users can trade ERC-20 tokens on the Uniswap Protocol without leaving your site!
+This guide walks you through the steps to embed the swap widget in your website in 2 minutes — whether your site is already a decentralized application (dApp) or not. With the swap widget, your users can trade ERC-20 tokens on the Pegasys Protocol without leaving your site!
 
 Here’s a live preview of the swap widget.
 
@@ -18,12 +18,12 @@ Here’s a live preview of the swap widget.
   width="376"
   height="376"
   scrolling="no"
-  src="https://widgets-uniswap.vercel.app/_renderer.html?_fixtureId=%7B%22path%22%3A%22src%2Fcosmos%2FSwap.fixture.tsx%22%2C%22name%22%3Anull%7D"
+  src="https://widgets-pegasys.vercel.app/_renderer.html?_fixtureId=%7B%22path%22%3A%22src%2Fcosmos%2FSwap.fixture.tsx%22%2C%22name%22%3Anull%7D"
 ></iframe>
 
 Example use cases include:
 
-- Building a custom frontend for the Uniswap Protocol
+- Building a custom frontend for the Pegasys Protocol
 - Swapping assets in a DeFi application
 - Acquiring a token to participate in your web3 community (e.g. FWB or a gaming token)
 - Converting to the required currency for an NFT purchase (e.g. WETH)
@@ -47,13 +47,13 @@ import { SwapWidget } from '@pegasys-fi/widgets'
 import '@pegasys-fi/widgets/fonts.css'
 
 function App() {
-  <div className="Uniswap">
+  <div className="Pegasys">
     <SwapWidget />
   </div>
 }
 ```
 
-That’s it! You should now see a fully functional swap widget on your site. The widget is self-contained and gracefully handles all interactions with the Uniswap Protocol. It leverages the [Auto Router](/sdk/v2/guides/routing) to compute the best price across all Uniswap v1 and v2 pools.
+That’s it! You should now see a fully functional swap widget on your site. The widget is self-contained and gracefully handles all interactions with the Pegasys Protocol. It leverages the [Auto Router](/sdk/v2/guides/routing) to compute the best price across all Pegasys v1 and v2 pools.
 
 See a full implementation of the swap widget in the `/cra` and `/nextjs` branches of the [widgets-demo](https://github.com/Uniswap/widgets-demo) repo.
 
@@ -294,7 +294,7 @@ function App() {
 
 ## Customizing the Token Lists {#customizing-token-lists}
 
-By default, the widget will use the [Uniswap Labs default token list](https://tokenlists.org/token-list?url=https://gateway.ipfs.io/ipns/tokens.uniswap.org) in the selector.
+By default, the widget will use the [Uniswap Labs default token list](https://tokenlists.org/token-list?url=https://gateway.ipfs.io/ipns/tokens.pegasys.fi) in the selector.
 
 ### Customizing the Default Token List {#customizing-default-token-list}
 
@@ -377,7 +377,7 @@ import { SwapWidget } from '@pegasys-fi/widgets'
 import '@pegasys-fi/widgets/fonts.css'
 
 // Default token list from Uniswap
-const UNISWAP_TOKEN_LIST = 'https://gateway.ipfs.io/ipns/tokens.uniswap.org'
+const UNISWAP_TOKEN_LIST = 'https://gateway.ipfs.io/ipns/tokens.pegasys.fi'
 
 // Use the native token of the connected chain as the default input token
 const NATIVE = 'NATIVE' // Special address for native token

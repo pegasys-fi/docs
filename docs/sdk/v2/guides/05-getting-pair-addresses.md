@@ -12,7 +12,7 @@ The most obvious way to get the address for a pair is to call [getPair](../../..
 
 # CREATE2
 
-Thanks to some [fancy footwork in the factory](https://github.com/Pegasys-fi/v1-core/blob/master/contracts/UniswapV1Factory.sol#L32), we can also compute pair addresses _without any on-chain lookups_ because of [CREATE2](https://eips.ethereum.org/EIPS/eip-1014). The following values are required for this technique:
+Thanks to some [fancy footwork in the factory](https://github.com/Pegasys-fi/v1-core/blob/master/contracts/PegasysV1Factory.sol#L32), we can also compute pair addresses _without any on-chain lookups_ because of [CREATE2](https://eips.ethereum.org/EIPS/eip-1014). The following values are required for this technique:
 
 |                        |                                                                                |
 | :--------------------- | :----------------------------------------------------------------------------- |
@@ -29,7 +29,7 @@ Thanks to some [fancy footwork in the factory](https://github.com/Pegasys-fi/v1-
 
 ### TypeScript
 
-This example makes use of the [Uniswap SDK](../reference/getting-started). In reality, the SDK computes pair addresses behind the scenes, obviating the need to compute them manually like this.
+This example makes use of the [Pegasys SDK](../reference/getting-started). In reality, the SDK computes pair addresses behind the scenes, obviating the need to compute them manually like this.
 
 ```typescript
 import { FACTORY_ADDRESS, INIT_CODE_HASH } from '@pegasys-fi/v2-sdk'
