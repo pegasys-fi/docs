@@ -27,8 +27,8 @@ Each subgraph has a dedicated endpoint for querying data, as well as a page on [
 - Graphql Endpoint: https://api.thegraph.com/subgraphs/name/ianlapham/governance-tracking
 - Code: https://github.com/ianlapham/uniswap-governance-subgraph
 
-##### V2
+##### V1
 
-- Explorer Page: https://thegraph.com/explorer/subgraph/ianlapham/uniswapv2
-- Graphql Endpoint: https://api.thegraph.com/subgraphs/name/ianlapham/uniswapv2
-- Code: https://github.com/Uniswap/uniswap-v2-subgraph
+- Explorer Page: https://thegraph.com/explorer/subgraph/ianlapham/uniswapv1
+- Graphql Endpoint: https://api.thegraph.com/subgraphs/name/ianlapham/uniswapv1
+- Code: https://github.com/Uniswap/uniswap-v1-subgraph

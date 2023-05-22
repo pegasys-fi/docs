@@ -23,7 +23,7 @@ The second concern is precision loss due to, for example, chained price ratio ca
 To address this issue, all math operations are performed as fraction operations, ensuring arbitrary precision up
 until the point that values are rounded for display purposes, or truncated to fit inside a fixed bit width.
 
-The SDK works for all chains on which the [factory](../../../contracts/v2/reference/smart-contracts/factory#address) is deployed.
+The SDK works for all chains on which the [factory](../../../contracts/v1/reference/smart-contracts/factory#address) is deployed.
 
 ## Code
 
@@ -31,7 +31,7 @@ The [source code is available on GitHub](https://github.com/Uniswap/uniswap-sdk)
 
 ## Dependencies
 
-The SDK declares its dependencies as [peer dependencies](https://github.com/Uniswap/uniswap-sdk/blob/v2/package.json#L33).
+The SDK declares its dependencies as [peer dependencies](https://github.com/Uniswap/uniswap-sdk/blob/v1/package.json#L33).
 This is for two reasons:
 
 - prevent installation of unused dependencies (e.g. `@ethersproject/providers` and `@ethersproject/contracts`, only used in [`Fetcher`](fetcher))

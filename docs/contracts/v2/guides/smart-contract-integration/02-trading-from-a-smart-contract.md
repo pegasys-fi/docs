@@ -35,7 +35,7 @@ require(DAI.transferFrom(msg.sender, address(this), amountIn), 'transferFrom fai
 Now that our contract owns 50 DAI, we need to approve to the [router](../../reference/smart-contracts/router-02) to withdraw this DAI:
 
 ```solidity
-require(DAI.approve(address(UniswapV2Router02), amountIn), 'approve failed.');
+require(DAI.approve(address(UniswapV1Router02), amountIn), 'approve failed.');
 ```
 
 ## swapExactTokensForETH
@@ -46,8 +46,8 @@ Now we're ready to swap:
 // amountOutMin must be retrieved from an oracle of some kind
 address[] memory path = new address[](2);
 path[0] = address(DAI);
-path[1] = UniswapV2Router02.WETH();
-UniswapV2Router02.swapExactTokensForETH(amountIn, amountOutMin, path, msg.sender, block.timestamp);
+path[1] = UniswapV1Router02.WETH();
+UniswapV1Router02.swapExactTokensForETH(amountIn, amountOutMin, path, msg.sender, block.timestamp);
 ```
 
 # Safety Considerations
@@ -56,4 +56,4 @@ Because Ethereum transactions occur in an adversarial environment, smart contrac
 
 The best way to protect against these attacks is to use an external price feed or "price oracle". The best "oracle" is simply _traders' off-chain observation of the current price_, which can be passed into the trade as a safety check. This strategy is best for situations _where users initiate trades on their own behalf_.
 
-However, when an off-chain price can't be used, an on-chain oracle should be used instead. Determining the best oracle for a given situation is a not part of this guide, but for more details on the Uniswap V2 approach to oracles, see [Oracles](../../concepts/core-concepts/oracles).
+However, when an off-chain price can't be used, an on-chain oracle should be used instead. Determining the best oracle for a given situation is a not part of this guide, but for more details on the Uniswap V1 approach to oracles, see [Oracles](../../concepts/core-concepts/oracles).

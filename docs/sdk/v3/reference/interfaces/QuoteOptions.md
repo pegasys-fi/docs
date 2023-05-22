@@ -9,7 +9,7 @@ Optional arguments to send to the quoter.
 ### Properties
 
 - [sqrtPriceLimitX96](QuoteOptions.md#sqrtpricelimitx96)
-- [useQuoterV2](QuoteOptions.md#usequoterv2)
+- [useQuoterV1](QuoteOptions.md#usequoterv1)
 
 ## Properties
 
@@ -25,9 +25,9 @@ The optional price limit for the trade.
 
 ___
 
-### useQuoterV2
+### useQuoterV1
 
-• `Optional` **useQuoterV2**: `boolean`
+• `Optional` **useQuoterV1**: `boolean`
 
 The optional quoter interface to use
 

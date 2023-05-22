@@ -3,15 +3,15 @@ id: router-01
 title: Router01
 ---
 
-> UniswapV2Router01 should not be used any longer, because of the discovery of a [low severity bug](../smart-contracts/router-01#getamountin) and the fact that some methods do not work with tokens that take fees on transfer. The current recommendation is to use [UniswapV2Router02](../smart-contracts/router-02).
+> UniswapV1Router01 should not be used any longer, because of the discovery of a [low severity bug](../smart-contracts/router-01#getamountin) and the fact that some methods do not work with tokens that take fees on transfer. The current recommendation is to use [UniswapV1Router02](../smart-contracts/router-02).
 
 # Code
 
-[`UniswapV2Router01.sol`](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol)
+[`UniswapV1Router01.sol`](https://github.com/Uniswap/uniswap-v1-periphery/blob/master/contracts/UniswapV1Router01.sol)
 
 # Address
 
-`UniswapV2Router01` is deployed at `0xf164fC0Ec4E93095b804a4795bBe1e041497b92a` on the Ethereum [mainnet](https://etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), and the [Ropsten](https://ropsten.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), [Rinkeby](https://rinkeby.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), [Görli](https://goerli.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), and [Kovan](https://kovan.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a) testnets. It was built from commit [2ad7da2](https://github.com/Uniswap/uniswap-v2-periphery/tree/2ad7da28a6f70ec4299364bc1608af8f30e7646b).
+`UniswapV1Router01` is deployed at `0xf164fC0Ec4E93095b804a4795bBe1e041497b92a` on the Ethereum [mainnet](https://etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), and the [Ropsten](https://ropsten.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), [Rinkeby](https://rinkeby.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), [Görli](https://goerli.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), and [Kovan](https://kovan.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a) testnets. It was built from commit [2ad7da2](https://github.com/Uniswap/uniswap-v1-periphery/tree/2ad7da28a6f70ec4299364bc1608af8f30e7646b).
 
 # Read-Only Functions
 
@@ -402,13 +402,13 @@ See[getAmountsIn](library#getamountsin).
 # Interface
 
 ```solidity
-import '@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router01.sol';
+import '@uniswap/v1-periphery/contracts/interfaces/IUniswapV1Router01.sol';
 ```
 
 ```solidity
 pragma solidity >=0.6.2;
 
-interface IUniswapV2Router01 {
+interface IUniswapV1Router01 {
   function factory() external pure returns (address);
   function WETH() external pure returns (address);
 
@@ -506,7 +506,7 @@ interface IUniswapV2Router01 {
 # ABI
 
 ```typescript
-import IUniswapV2Router01 from '@uniswap/v2-periphery/build/IUniswapV2Router01.json'
+import IUniswapV1Router01 from '@uniswap/v1-periphery/build/IUniswapV1Router01.json'
 ```
 
-[https://unpkg.com/@uniswap/v2-periphery@1.0.0-beta.0/build/IUniswapV2Router01.json](https://unpkg.com/@uniswap/v2-periphery@1.0.0-beta.0/build/IUniswapV2Router01.json)
+[https://unpkg.com/@uniswap/v1-periphery@1.0.0-beta.0/build/IUniswapV1Router01.json](https://unpkg.com/@uniswap/v1-periphery@1.0.0-beta.0/build/IUniswapV1Router01.json)

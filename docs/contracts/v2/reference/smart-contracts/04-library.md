@@ -7,7 +7,7 @@ title: Library
 
 ## Code
 
-[`UniswapV2Library.sol`](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol)
+[`UniswapV1Library.sol`](https://github.com/Uniswap/uniswap-v1-periphery/blob/master/contracts/libraries/UniswapV1Library.sol)
 
 # Internal Functions
 
@@ -25,7 +25,7 @@ Sorts token addresses.
 function pairFor(address factory, address tokenA, address tokenB) internal pure returns (address pair);
 ```
 
-Calculates the address for a pair without making any external calls via the v2 SDK.
+Calculates the address for a pair without making any external calls via the v1 SDK.
 
 ## getReserves
 
