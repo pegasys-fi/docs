@@ -21,4 +21,4 @@ To learn more about querying a subgraph refer to [The Graph's documentation](htt
 
 ## Versions
 
-The [Uniswap V2 Subgraph](https://thegraph.com/explorer/subgraph/uniswap/uniswap-v2) only tracks data on Uniswap V2. For Uniswap V1 information see the [V1 Subgraph](https://thegraph.com/explorer/subgraph/graphprotocol/uniswap).
+The [Uniswap V2 Subgraph](https://thegraph.com/explorer/subgraph/uniswap/uniswap-v2) only tracks data on Uniswap V2.

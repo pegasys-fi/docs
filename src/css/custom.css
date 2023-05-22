@@ -459,8 +459,7 @@ html[data-theme='dark'] .DocSearch-Hit a {
 }
 
 .menu__link.V3_active,
-.V2_active,
-.V1_active {
+.V2_active {
   display: none;
 }
 
@@ -477,10 +476,6 @@ html[data-theme='dark'] .DocSearch-Hit a {
 }
 
 .menu__link.V2_active.V2 {
-  display: flex;
-}
-
-.menu__link.V1_active.V1 {
   display: flex;
 }
 

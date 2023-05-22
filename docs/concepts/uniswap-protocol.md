@@ -9,7 +9,7 @@ sidebar_position: 2
 
 The Uniswap protocol is a peer-to-peer[^1] system designed for exchanging cryptocurrencies [(ERC-20 Tokens)](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) on the [Ethereum](https://ethereum.org/) blockchain. The protocol is implemented as a set of persistent, non-upgradable smart contracts; designed to prioritize censorship resistance, security, self-custody, and to function without any trusted intermediaries who may selectively restrict access.
 
-There are currently three versions of the Uniswap protocol. V1 and V2 are open source and licensed under GPL. V3 is open source with slight modifications, which are viewable [here](https://github.com/Uniswap/uniswap-v3-core/blob/main/LICENSE). Each version of Uniswap, once deployed, will function in perpetuity, with 100% uptime, provided the continued existence of the Ethereum blockchain.
+There are currently three versions of the Uniswap protocol. V2 is open source and licensed under GPL. V3 is open source with slight modifications, which are viewable [here](https://github.com/Uniswap/uniswap-v3-core/blob/main/LICENSE). Each version of Uniswap, once deployed, will function in perpetuity, with 100% uptime, provided the continued existence of the Ethereum blockchain.
 
 ## How does the Uniswap protocol compare to a typical market?
 
