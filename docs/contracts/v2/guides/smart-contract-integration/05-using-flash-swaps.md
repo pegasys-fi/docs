@@ -3,7 +3,7 @@ id: using-flash-swaps
 title: Flash Swaps
 ---
 
-Flash swaps are an integral feature of Uniswap V2. In fact, under the hood, all swaps are actually flash swaps! This simply means that pair contracts send output tokens to the recipient _before_ enforcing that enough input tokens have been received. This is slightly atypical, as one might expect a pair to ensure it's received payment before delivery. However, because Ethereum transactions are _atomic_, we can roll back the entire swap if it turns out that the contract hasn't received enough tokens to make itself whole by the end of the transaction.
+Flash swaps are an integral feature of Uniswap V1. In fact, under the hood, all swaps are actually flash swaps! This simply means that pair contracts send output tokens to the recipient _before_ enforcing that enough input tokens have been received. This is slightly atypical, as one might expect a pair to ensure it's received payment before delivery. However, because Ethereum transactions are _atomic_, we can roll back the entire swap if it turns out that the contract hasn't received enough tokens to make itself whole by the end of the transaction.
 
 To see how this all works, let's start by examining the interface of the `swap` function:
 
@@ -18,31 +18,31 @@ For the sake of example, let's assume that we're dealing with a DAI/WETH pair, w
 To differentiate between the "typical" trading case and the flash swap case, pairs use the `data` parameter. Specifically, if `data.length` equals 0, the contract assumes that payment has already been received, and simply transfers the tokens to the `to` address. But, if `data.length` is greater than 0, the contract transfers the tokens and then calls the following function on the `to` address:
 
 ```solidity
-function uniswapV2Call(address sender, uint amount0, uint amount1, bytes calldata data);
+function uniswapV1Call(address sender, uint amount0, uint amount1, bytes calldata data);
 ```
 
-The logic behind this identification strategy is simple: the vast majority of valid flash swap use cases involve interactions with external protocols. The best way to pass information dictating how these interactions happen (function arguments, safety parameters, addresses, etc.) is via the `data` parameter. It's expected that `data` will be `abi.decode`d from within `uniswapV2Call`. In the rare case where no data is required, callers should ensure that `data.length` equals 1 (i.e. encode a single junk byte as `bytes`), and then ignore this argument in `uniswapV2Call`.
+The logic behind this identification strategy is simple: the vast majority of valid flash swap use cases involve interactions with external protocols. The best way to pass information dictating how these interactions happen (function arguments, safety parameters, addresses, etc.) is via the `data` parameter. It's expected that `data` will be `abi.decode`d from within `uniswapV1Call`. In the rare case where no data is required, callers should ensure that `data.length` equals 1 (i.e. encode a single junk byte as `bytes`), and then ignore this argument in `uniswapV1Call`.
 
-Pairs call `uniswapV2Call` with the `sender` argument set to the `msg.sender` of the `swap`. `amount0` and `amount1` are simply `amount0Out` and `amount1Out`.
+Pairs call `uniswapV1Call` with the `sender` argument set to the `msg.sender` of the `swap`. `amount0` and `amount1` are simply `amount0Out` and `amount1Out`.
 
-# Using uniswapV2Call
+# Using uniswapV1Call
 
-There are several conditions that should be checked in all `uniswapV2Call` functions:
+There are several conditions that should be checked in all `uniswapV1Call` functions:
 
 ```solidity
-function uniswapV2Call(address sender, uint amount0, uint amount1, bytes calldata data) {
-  address token0 = IUniswapV2Pair(msg.sender).token0(); // fetch the address of token0
-  address token1 = IUniswapV2Pair(msg.sender).token1(); // fetch the address of token1
-  assert(msg.sender == IUniswapV2Factory(factoryV2).getPair(token0, token1)); // ensure that msg.sender is a V2 pair
+function uniswapV1Call(address sender, uint amount0, uint amount1, bytes calldata data) {
+  address token0 = IUniswapV1Pair(msg.sender).token0(); // fetch the address of token0
+  address token1 = IUniswapV1Pair(msg.sender).token1(); // fetch the address of token1
+  assert(msg.sender == IUniswapV1Factory(factoryV1).getPair(token0, token1)); // ensure that msg.sender is a V1 pair
   // rest of the function goes here!
 }
 ```
 
-The first 2 lines simply fetch the token addresses from the pair, and the 3rd ensures that the `msg.sender` is an actual Uniswap V2 pair address.
+The first 2 lines simply fetch the token addresses from the pair, and the 3rd ensures that the `msg.sender` is an actual Uniswap V1 pair address.
 
 # Repayment
 
-At the end of `uniswapV2Call`, contracts must return enough tokens to the pair to make it whole. Specifically, this means that the product of the pair reserves after the swap, discounting all token amounts sent by 0.3% LP fee, must be greater than before.
+At the end of `uniswapV1Call`, contracts must return enough tokens to the pair to make it whole. Specifically, this means that the product of the pair reserves after the swap, discounting all token amounts sent by 0.3% LP fee, must be greater than before.
 
 ## Multi-Token
 
@@ -70,18 +70,18 @@ For further exploration of flash swaps, see the <a href='/whitepaper.pdf' target
 
 # Example
 
-A fully functional example of flash swaps is available: [`ExampleFlashSwap.sol`](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleFlashSwap.sol).
+A fully functional example of flash swaps is available: [`ExampleFlashSwap.sol`](https://github.com/Uniswap/uniswap-v1-periphery/blob/master/contracts/examples/ExampleFlashSwap.sol).
 
 # Interface
 
 ```solidity
-import '@uniswap/v2-core/contracts/interfaces/IUniswapV2Callee.sol';
+import '@uniswap/v1-core/contracts/interfaces/IUniswapV1Callee.sol';
 ```
 
 ```solidity
 pragma solidity >=0.5.0;
 
-interface IUniswapV2Callee {
-  function uniswapV2Call(address sender, uint amount0, uint amount1, bytes calldata data) external;
+interface IUniswapV1Callee {
+  function uniswapV1Call(address sender, uint amount0, uint amount1, bytes calldata data) external;
 }
 ```

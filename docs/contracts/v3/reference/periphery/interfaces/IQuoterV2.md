@@ -37,7 +37,7 @@ Returns the amount out received for a given exact input swap without executing t
 
 ```solidity
   function quoteExactInputSingle(
-    struct IQuoterV2.QuoteExactInputSingleParams params
+    struct IQuoterV1.QuoteExactInputSingleParams params
   ) external returns (uint256 amountOut, uint160 sqrtPriceX96After, uint32 initializedTicksCrossed, uint256 gasEstimate)
 ```
 
@@ -47,7 +47,7 @@ Returns the amount out received for a given exact input but for a swap of a sing
 
 | Name     | Type                                         | Description                                                        |
 | :------- | :------------------------------------------- | :----------------------------------------------------------------- |
-| `params` | struct IQuoterV2.QuoteExactInputSingleParams | The params for the quote, encoded as `QuoteExactInputSingleParams` |
+| `params` | struct IQuoterV1.QuoteExactInputSingleParams | The params for the quote, encoded as `QuoteExactInputSingleParams` |
 
 tokenIn The token being swapped in
 tokenOut The token being swapped out
@@ -59,7 +59,7 @@ sqrtPriceLimitX96 The price limit of the pool that cannot be exceeded by the swa
 
 | Name                      | Type                                         | Description                                           |
 | :------------------------ | :------------------------------------------- | :---------------------------------------------------- |
-| `amountOut`               | struct IQuoterV2.QuoteExactInputSingleParams | The amount of `tokenOut` that would be received       |
+| `amountOut`               | struct IQuoterV1.QuoteExactInputSingleParams | The amount of `tokenOut` that would be received       |
 | `sqrtPriceX96After`       |                                              | The sqrt price of the pool after the swap             |
 | `initializedTicksCrossed` |                                              | The number of initialized ticks that the swap crossed |
 | `gasEstimate`             |                                              | The estimate of the gas that the swap consumes        |
@@ -95,7 +95,7 @@ Returns the amount in required for a given exact output swap without executing t
 
 ```solidity
   function quoteExactOutputSingle(
-    struct IQuoterV2.QuoteExactOutputSingleParams params
+    struct IQuoterV1.QuoteExactOutputSingleParams params
   ) external returns (uint256 amountIn, uint160 sqrtPriceX96After, uint32 initializedTicksCrossed, uint256 gasEstimate)
 ```
 
@@ -105,7 +105,7 @@ Returns the amount in required to receive the given exact output amount but for 
 
 | Name     | Type                                          | Description                                                         |
 | :------- | :-------------------------------------------- | :------------------------------------------------------------------ |
-| `params` | struct IQuoterV2.QuoteExactOutputSingleParams | The params for the quote, encoded as `QuoteExactOutputSingleParams` |
+| `params` | struct IQuoterV1.QuoteExactOutputSingleParams | The params for the quote, encoded as `QuoteExactOutputSingleParams` |
 
 tokenIn The token being swapped in
 tokenOut The token being swapped out
@@ -117,7 +117,7 @@ sqrtPriceLimitX96 The price limit of the pool that cannot be exceeded by the swa
 
 | Name                      | Type                                          | Description                                                                   |
 | :------------------------ | :-------------------------------------------- | :---------------------------------------------------------------------------- |
-| `amountIn`                | struct IQuoterV2.QuoteExactOutputSingleParams | The amount required as the input for the swap in order to receive `amountOut` |
+| `amountIn`                | struct IQuoterV1.QuoteExactOutputSingleParams | The amount required as the input for the swap in order to receive `amountOut` |
 | `sqrtPriceX96After`       |                                               | The sqrt price of the pool after the swap                                     |
 | `initializedTicksCrossed` |                                               | The number of initialized ticks that the swap crossed                         |
 | `gasEstimate`             |                                               | The estimate of the gas that the swap consumes                                |

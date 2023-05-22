@@ -4,18 +4,18 @@ sidebar_position: 1
 title: Overview
 ---
 
-# The Uniswap V2 SDK
+# The Uniswap V1 SDK
 
-Welcome to the Uniswap Protocol V2 SDK. To begin, we recommend looking at the [**Guides**](./guides/01-quick-start.md) and for deeper reference see the [**V2 SDK Github**](https://github.com/Uniswap/v2-sdk) repo.
+Welcome to the Uniswap Protocol V1 SDK. To begin, we recommend looking at the [**Guides**](./guides/01-quick-start.md) and for deeper reference see the [**V1 SDK Github**](https://github.com/Uniswap/v1-sdk) repo.
 
 
-# Uniswap V2 SDK
+# Uniswap V1 SDK
 
-- [**V2 SDK Github**](https://github.com/Uniswap/v2-sdk)
+- [**V1 SDK Github**](https://github.com/Uniswap/v1-sdk)
 - [**SDK Core Github**](https://github.com/Uniswap/sdk-core)
-- [**SDK NPM Package**](https://www.npmjs.com/package/@uniswap/v2-sdk)
+- [**SDK NPM Package**](https://www.npmjs.com/package/@uniswap/v1-sdk)
 
-[![Unit Tests](https://github.com/Uniswap/v2-sdk/workflows/Unit%20Tests/badge.svg)](https://github.com/Uniswap/v2-sdk/actions?query=workflow%3A%22Unit+Tests%22)
-[![Lint](https://github.com/Uniswap/v2-sdk/workflows/Lint/badge.svg)](https://github.com/Uniswap/v2-sdk/actions?query=workflow%3ALint)
-[![npm version](https://img.shields.io/npm/v/@uniswap/v2-sdk/latest.svg)](https://www.npmjs.com/package/@uniswap/v2-sdk/v/latest)
-[![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@uniswap/v2-sdk/latest.svg)](https://bundlephobia.com/result?p=@uniswap/v2-sdk@latest)
+[![Unit Tests](https://github.com/Uniswap/v1-sdk/workflows/Unit%20Tests/badge.svg)](https://github.com/Uniswap/v1-sdk/actions?query=workflow%3A%22Unit+Tests%22)
+[![Lint](https://github.com/Uniswap/v1-sdk/workflows/Lint/badge.svg)](https://github.com/Uniswap/v1-sdk/actions?query=workflow%3ALint)
+[![npm version](https://img.shields.io/npm/v/@uniswap/v1-sdk/latest.svg)](https://www.npmjs.com/package/@uniswap/v1-sdk/v/latest)
+[![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@uniswap/v1-sdk/latest.svg)](https://bundlephobia.com/result?p=@uniswap/v1-sdk@latest)

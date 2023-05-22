@@ -7,7 +7,7 @@ This documentation covers Uniswap-specific functionality. For ERC-20 functionali
 
 # Code
 
-[`UniswapV2Pair.sol`](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol)
+[`UniswapV1Pair.sol`](https://github.com/Uniswap/uniswap-v1-core/blob/master/contracts/UniswapV1Pair.sol)
 
 # Address
 
@@ -173,13 +173,13 @@ See the <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>whit
 # Interface
 
 ```solidity
-import '@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol';
+import '@uniswap/v1-core/contracts/interfaces/IUniswapV1Pair.sol';
 ```
 
 ```solidity
 pragma solidity >=0.5.0;
 
-interface IUniswapV2Pair {
+interface IUniswapV1Pair {
   event Approval(address indexed owner, address indexed spender, uint value);
   event Transfer(address indexed from, address indexed to, uint value);
 
@@ -232,7 +232,7 @@ interface IUniswapV2Pair {
 # ABI
 
 ```typescript
-import IUniswapV2Pair from '@uniswap/v2-core/build/IUniswapV2Pair.json'
+import IUniswapV1Pair from '@uniswap/v1-core/build/IUniswapV1Pair.json'
 ```
 
-[https://unpkg.com/@uniswap/v2-core@1.0.0/build/IUniswapV2Pair.json](https://unpkg.com/@uniswap/v2-core@1.0.0/build/IUniswapV2Pair.json)
+[https://unpkg.com/@uniswap/v1-core@1.0.0/build/IUniswapV1Pair.json](https://unpkg.com/@uniswap/v1-core@1.0.0/build/IUniswapV1Pair.json)

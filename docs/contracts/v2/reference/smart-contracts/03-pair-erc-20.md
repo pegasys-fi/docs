@@ -7,7 +7,7 @@ This documentation covers ERC-20 functionality for denominating pool tokens. For
 
 # Code
 
-[`UniswapV2ERC20.sol`](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol)
+[`UniswapV1ERC20.sol`](https://github.com/Uniswap/uniswap-v1-core/blob/master/contracts/UniswapV1ERC20.sol)
 
 # Events
 
@@ -35,7 +35,7 @@ Emitted each time a transfer occurs via [transfer](#transfer-1), [transferFrom](
 function name() external pure returns (string memory);
 ```
 
-Returns `Uniswap V2` for all pairs.
+Returns `Uniswap V1` for all pairs.
 
 ## symbol
 
@@ -43,7 +43,7 @@ Returns `Uniswap V2` for all pairs.
 function symbol() external pure returns (string memory);
 ```
 
-Returns `UNI-V2` for all pairs.
+Returns `UNI-V1` for all pairs.
 
 ## decimals
 
@@ -148,13 +148,13 @@ Sets the allowance for a spender where approval is granted via a signature.
 # Interface
 
 ```solidity
-import '@uniswap/v2-core/contracts/interfaces/IUniswapV2ERC20.sol';
+import '@uniswap/v1-core/contracts/interfaces/IUniswapV1ERC20.sol';
 ```
 
 ```solidity
 pragma solidity >=0.5.0;
 
-interface IUniswapV2ERC20 {
+interface IUniswapV1ERC20 {
   event Approval(address indexed owner, address indexed spender, uint value);
   event Transfer(address indexed from, address indexed to, uint value);
 
@@ -180,7 +180,7 @@ interface IUniswapV2ERC20 {
 # ABI
 
 ```typescript
-import IUniswapV2ERC20 from '@uniswap/v2-core/build/IUniswapV2ERC20.json'
+import IUniswapV1ERC20 from '@uniswap/v1-core/build/IUniswapV1ERC20.json'
 ```
 
-[https://unpkg.com/@uniswap/v2-core@1.0.0/build/IUniswapV2ERC20.json](https://unpkg.com/@uniswap/v2-core@1.0.0/build/IUniswapV2ERC20.json)
+[https://unpkg.com/@uniswap/v1-core@1.0.0/build/IUniswapV1ERC20.json](https://unpkg.com/@uniswap/v1-core@1.0.0/build/IUniswapV1ERC20.json)
