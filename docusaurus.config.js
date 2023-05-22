@@ -27,7 +27,7 @@ module.exports = {
     },
     algolia: {
       apiKey: '32465e2ab6f7554ff014e64c0d92171c',
-      indexName: 'v2-docs',
+      indexName: 'v1-docs',
       appId: 'S0IDD0YGLZ',
     },
     navbar: {
@@ -41,25 +41,25 @@ module.exports = {
           to: '/concepts/overview',
           label: 'Concepts',
           position: 'left',
-          className: 'V2_active',
+          className: 'V1_active',
         },
         {
-          to: '/contracts/v2/overview',
+          to: '/contracts/v1/overview',
           label: 'Contracts',
           position: 'left',
-          className: 'V2_active',
+          className: 'V1_active',
         },
         {
-          to: '/sdk/v2/overview',
+          to: '/sdk/v1/overview',
           label: 'SDKs',
           position: 'left',
-          className: 'V2_active',
+          className: 'V1_active',
         },
         {
           to: '/api/subgraph/overview',
           label: 'APIs',
           position: 'left',
-          className: 'V2_active',
+          className: 'V1_active',
         },
         {
           label: 'Give Feedback',
@@ -99,7 +99,7 @@ module.exports = {
             },
             {
               label: 'Bug Bounty',
-              href: 'https://github.com/Pegasys-fi/v2-periphery/blob/main/bug-bounty.md',
+              href: 'https://github.com/Pegasys-fi/v1-periphery/blob/main/bug-bounty.md',
             },
             {
               label: '#dev-chat',
@@ -115,20 +115,20 @@ module.exports = {
           title: 'Github',
           items: [
             {
-              label: 'v2-core',
-              href: 'https://github.com/Pegasys-fi/v2-core',
+              label: 'v1-core',
+              href: 'https://github.com/Pegasys-fi/v1-core',
             },
             {
-              label: 'v2-sdk',
-              href: 'https://github.com/Pegasys-fi/v2-sdk',
+              label: 'v1-sdk',
+              href: 'https://github.com/Pegasys-fi/v1-sdk',
             },
             {
-              label: 'v2-periphery',
-              href: 'https://github.com/Pegasys-fi/v2-periphery',
+              label: 'v1-periphery',
+              href: 'https://github.com/Pegasys-fi/v1-periphery',
             },
             {
               label: 'Deployment addresses',
-              href: 'https://github.com/Pegasys-fi/v2-periphery/blob/main/deploys.md',
+              href: 'https://github.com/Pegasys-fi/v1-periphery/blob/main/deploys.md',
             },
           ],
         },
@@ -265,38 +265,38 @@ module.exports = {
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
-          // 1/9/23 V2 SDK Guide Redirects
+          // 1/9/23 V1 SDK Guide Redirects
           {
-            to: '/sdk/v2/guides/background',
-            from: '/sdk/v2/guides/quick-start',
+            to: '/sdk/v1/guides/background',
+            from: '/sdk/v1/guides/quick-start',
           },
           {
-            to: '/sdk/v2/guides/quoting',
-            from: ['/sdk/v2/guides/creating-a-pool', '/sdk/v2/guides/fetching-prices'],
+            to: '/sdk/v1/guides/quoting',
+            from: ['/sdk/v1/guides/creating-a-pool', '/sdk/v1/guides/fetching-prices'],
           },
           {
-            to: '/sdk/v2/guides/trading',
-            from: '/sdk/v2/guides/creating-a-trade',
+            to: '/sdk/v1/guides/trading',
+            from: '/sdk/v1/guides/creating-a-trade',
           },
           {
-            to: '/sdk/v2/guides/routing',
-            from: '/sdk/v2/guides/auto-router',
+            to: '/sdk/v1/guides/routing',
+            from: '/sdk/v1/guides/auto-router',
           },
           {
-            to: '/sdk/v2/guides/liquidity/modifying-position',
-            from: ['/sdk/v2/guides/liquidity/adding', '/sdk/v2/guides/liquidity/removing'],
+            to: '/sdk/v1/guides/liquidity/modifying-position',
+            from: ['/sdk/v1/guides/liquidity/adding', '/sdk/v1/guides/liquidity/removing'],
           },
         ],
         createRedirects(existingPath) {
-          // V2 Redirects
+          // V1 Redirects
           if (existingPath.includes('/concepts/overview')) {
             return [existingPath.replace('/concepts/overview', '/protocol/introduction')]
           }
-          if (existingPath.includes('/contracts/v2/reference')) {
-            return [existingPath.replace('/contracts/v2/reference', '/protocol/reference')]
+          if (existingPath.includes('/contracts/v1/reference')) {
+            return [existingPath.replace('/contracts/v1/reference', '/protocol/reference')]
           }
-          if (existingPath.includes('/contracts/v2/guides')) {
-            return [existingPath.replace('/contracts/v2/guides', '/protocol/guides')]
+          if (existingPath.includes('/contracts/v1/guides')) {
+            return [existingPath.replace('/contracts/v1/guides', '/protocol/guides')]
           }
           // V1 Redirects
           if (existingPath.includes('/contracts/v1/reference')) {
@@ -309,12 +309,12 @@ module.exports = {
           if (existingPath.includes('/contracts/permit2')) {
             return [existingPath.replace('/contracts/permit2', '/protocol/permit2')]
           }
-          // v2-sdk Redirects
-          if (existingPath.includes('/sdk/v2/overview')) {
-            return [existingPath.replace('/sdk/v2/overview', '/sdk/introduction')]
+          // v1-sdk Redirects
+          if (existingPath.includes('/sdk/v1/overview')) {
+            return [existingPath.replace('/sdk/v1/overview', '/sdk/introduction')]
           }
-          if (existingPath.includes('/sdk/v2/guides')) {
-            return [existingPath.replace('/sdk/v2/guides', '/sdk/guides')]
+          if (existingPath.includes('/sdk/v1/guides')) {
+            return [existingPath.replace('/sdk/v1/guides', '/sdk/guides')]
           }
           // swap-widgets Redirects
           if (existingPath.includes('/sdk/swap-widget/overview')) {
