@@ -4,24 +4,24 @@ title: Overview
 sidebar_position: 1
 ---
 
-# The Pegasys V1 Smart Contracts
+# The Pegasys V2 Smart Contracts
 
-Welcome to the Pegasys protocol V1 docs.
+Welcome to the Pegasys V2 smart contracts documentation.
 
-The pages here contain conceptual and technical documentation of the Pegasys V1 protocol.
+The pages here contain guides and technical documentation for the Pegasys V2 Smart Contracts.
+You can use these docs to learn about the V2 Protocol Smart Contracts and develop on-chain integrations.
 
-If you are new to Pegasys, you might want to check out the [Protocol overview](../V1/concepts/protocol-overview/how-pegasys-works) first.
+# Guides
 
-You can also take a look at the V1 Protocol <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>Whitepaper</a>.
+If you are new to the Pegasys Protocol, we recommend you start with the [basic concepts](../../concepts/protocol) first.
 
-# Developer links
+You can then setup your [local environment](./guides/local-environment) and execute your [first swap](./guides/swaps/single-swaps).
 
-The V1 Pegasys protocol is separated across two repositories
+# Reference
 
-- [`v1-core`](https://github.com/Pegasys-fi/v1-core)
-- [`v1-periphery`](https://github.com/Pegasys-fi/v1-periphery)
+For a deeper dive, read through the [technical reference](./reference/overview) docs.
 
-The V1 SDK, which can assist developers when interacting with the Pegasys V1 Protocol can be found here.
+# Resources
 
-- [`pegasys-sdk`](https://github.com/Pegasys-fi/v1-sdk)
-- [`pegasys-sdk-core`](https://github.com/Pegasys-fi/sdk-core)
+- [**V2 Core**](https://github.com/Pegasys-fi/v2-core)
+- [**V2 Periphery**](https://github.com/Pegasys-fi/v2-periphery)
