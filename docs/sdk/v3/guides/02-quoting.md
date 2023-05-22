@@ -5,7 +5,7 @@ title: Getting a Quote
 
 ## Introduction
 
-This guide will cover how to get the current quotes for any token pair on the Pegasys protocol. It is based on the [Quoting code example](https://github.com/Uniswap/examples/tree/main/v2-sdk/quoting), found in the Pegasys code examples [repository](https://github.com/Uniswap/examples). To run this example, check out the examples's [README](https://github.com/Uniswap/examples/blob/main/v2-sdk/minting-position/README.md) and follow the setup instructions.
+This guide will cover how to get the current quotes for any token pair on the Pegasys protocol. It is based on the [Quoting code example](https://github.com/uniswap/examples/tree/main/v3-sdk/quoting), found in the Pegasys code examples [repository](https://github.com/Uniswap/examples). To run this example, check out the examples's [README](https://github.com/uniswap/examples/blob/main/v3-sdk/minting-position/README.md) and follow the setup instructions.
 
 :::info
 If you need a briefer on the SDK and to learn more about how these guides connect to the examples repository, please visit our [background](./01-background.md) page!
@@ -29,7 +29,7 @@ For this guide, the following Pegasys packages are used:
 - [`@pegasys-fi/v2-sdk`](https://www.npmjs.com/package/@pollum-io/v2-sdk)
 - [`@pegasys-fi/sdk-core`](https://www.npmjs.com/package/@pollum-io/sdk-core)
 
-The core code of this guide can be found in [`quote.ts`](https://github.com/Uniswap/examples/blob/main/v2-sdk/quoting/src/libs/quote.ts)
+The core code of this guide can be found in [`quote.ts`](https://github.com/uniswap/examples/blob/main/v3-sdk/quoting/src/libs/quote.ts)
 
 ## Computing the Pool's deployment address
 
@@ -37,7 +37,7 @@ To interact with the **USDC - WETH** Pool contract, we first need to compute its
 The SDK provides a utility method for that:
 
 ```typescript reference title="Computing the Pool's address" referenceLinkText="View on Github" customStyling
-https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v2-sdk/quoting/src/libs/quote.ts#L40-L45
+https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v3-sdk/quoting/src/libs/quote.ts#L40-L45
 ```
 
 Since each *Pegasys V2 Pool* is uniquely identified by 3 characteristics (token in, token out, fee), we use those
@@ -45,7 +45,7 @@ in combination with the address of the *PoolFactory* contract to compute the add
 These parameters have already been defined in our configuration file:
 
 ```typescript reference title="Configuration Parameters" referenceLinkText="View on Github" customStyling
-https://github.com/Uniswap/examples/blob/1ef393c2b8f8206a3dc5a42562382c267bcc361b/v2-sdk/quoting/src/config.ts#L34-L39
+https://github.com/Uniswap/examples/blob/1ef393c2b8f8206a3dc5a42562382c267bcc361b/v3-sdk/quoting/src/config.ts#L34-L39
 ```
 
 ## Referencing the Pool contract and fetching metadata
@@ -53,21 +53,21 @@ https://github.com/Uniswap/examples/blob/1ef393c2b8f8206a3dc5a42562382c267bcc361
 Now that we have the deployment address of the **USDC - ETH** Pool, we can construct an instance of an **ethers** `Contract` to interact with it:
 
 ```typescript reference title="Setting up a reference to the Pool contract" referenceLinkText="View on Github" customStyling
-https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v2-sdk/quoting/src/libs/quote.ts#L47-L51
+https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v3-sdk/quoting/src/libs/quote.ts#L47-L51
 ```
 
 To construct the *Contract* we need to provide the address of the contract, its ABI and the provider that will carry out the RPC call for us.
 We get access to the contract's ABI through the [@pegasys-fi/v2-core](https://www.npmjs.com/package/@pollum-io/v2-core) package, which holds the core smart contracts of the Pegasys V2 protocol:
 
 ```typescript reference title="Pegasys V2 Pool smart contract ABI" referenceLinkText="View on Github" customStyling
-https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v2-sdk/quoting/src/libs/quote.ts#L5
+https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v3-sdk/quoting/src/libs/quote.ts#L5
 ```
 
 Having constructed our reference to the contract, we can now access its methods through our provider.
 We use a batch `Promise` call. This approach queries state data concurrently, rather than sequentially, to avoid out of sync data that may be returned if sequential queries are executed over the span of two blocks:
 
 ```typescript reference title="Getting Pool metadata from the Pool smart contract" referenceLinkText="View on Github" customStyling
-https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v2-sdk/quoting/src/libs/quote.ts#L52-L56
+https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v3-sdk/quoting/src/libs/quote.ts#L52-L56
 ```
 
 The return values of these methods will become inputs to the quote fetching function.
@@ -81,13 +81,13 @@ In this example, the metadata we fetch is already present in our inputs. This gu
 Like we did for the Pool contract, we need to construct an instance of an **ethers** `Contract` for our Quoter contract in order to interact with it:
 
 ```typescript reference title="Setting up a reference to the Quoter contract" referenceLinkText="View on Github" customStyling
-https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v2-sdk/quoting/src/libs/quote.ts#L14-L18
+https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v3-sdk/quoting/src/libs/quote.ts#L14-L18
 ```
 
 We get access to the contract's ABI through the [@pegasys-fi/v2-periphery](https://www.npmjs.com/package/@pollum-io/v2-periphery) package, which holds the periphery smart contracts of the Pegasys V2 protocol:
 
 ```typescript reference title="Pegasys V2 Quoter smart contract ABI" referenceLinkText="View on Github" customStyling
-https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v2-sdk/quoting/src/libs/quote.ts#L4
+https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v3-sdk/quoting/src/libs/quote.ts#L4
 ```
 
 We can now use our Quoter contract to obtain the quote.
@@ -98,7 +98,7 @@ To get around this difficulty, we can use the `callStatic` method provided by th
 This is a useful method that submits a state-changing transaction to an Ethereum node, but asks the node to simulate the state change, rather than to execute it. Our script can then return the result of the simulated state change:
 
 ```typescript reference title="Getting Quotes from the Quoter contract" referenceLinkText="View on Github" customStyling
-https://github.com/Uniswap/examples/blob/2e8fb5ef56e502d4eb0261e4abff262c33a30760/v2-sdk/quoting/src/libs/quote.ts#L21-L30
+https://github.com/Uniswap/examples/blob/2e8fb5ef56e502d4eb0261e4abff262c33a30760/v3-sdk/quoting/src/libs/quote.ts#L21-L30
 ```
 
 The result of the call is the number of output tokens you'd receive for the quoted swap.
