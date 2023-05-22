@@ -1,4 +1,4 @@
-[@uniswap/v2-sdk](../README.md) / [Exports](../modules.md) / Trade
+[@pegasys-fi/v2-sdk](../README.md) / [Exports](../modules.md) / Trade
 
 # Class: Trade<TInput, TOutput, TTradeType\>
 

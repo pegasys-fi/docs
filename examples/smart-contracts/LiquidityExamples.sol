@@ -3,7 +3,7 @@ pragma solidity =0.7.6;
 pragma abicoder v2;
 
 import '@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol';
-import '@uniswap/v2-core/contracts/libraries/TickMath.sol';
+import '@pegasys-fi/v2-core/contracts/libraries/TickMath.sol';
 import '../libraries/TransferHelper.sol';
 import '../interfaces/INonfungiblePositionManager.sol';
 

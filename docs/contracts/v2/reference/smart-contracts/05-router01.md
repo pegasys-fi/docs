@@ -402,7 +402,7 @@ See[getAmountsIn](library#getamountsin).
 # Interface
 
 ```solidity
-import '@uniswap/v1-periphery/contracts/interfaces/IUniswapV1Router01.sol';
+import '@pegasys-fi/v1-periphery/contracts/interfaces/IUniswapV1Router01.sol';
 ```
 
 ```solidity
@@ -506,7 +506,7 @@ interface IUniswapV1Router01 {
 # ABI
 
 ```typescript
-import IUniswapV1Router01 from '@uniswap/v1-periphery/build/IUniswapV1Router01.json'
+import IUniswapV1Router01 from '@pegasys-fi/v1-periphery/build/IUniswapV1Router01.json'
 ```
 
-[https://unpkg.com/@uniswap/v1-periphery@1.0.0-beta.0/build/IUniswapV1Router01.json](https://unpkg.com/@uniswap/v1-periphery@1.0.0-beta.0/build/IUniswapV1Router01.json)
+[https://unpkg.com/@pegasys-fi/v1-periphery@1.0.0-beta.0/build/IUniswapV1Router01.json](https://unpkg.com/@pegasys-fi/v1-periphery@1.0.0-beta.0/build/IUniswapV1Router01.json)

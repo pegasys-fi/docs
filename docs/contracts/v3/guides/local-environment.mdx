@@ -51,7 +51,7 @@ Once the Hardhat initialization completes, take a look around at what got set up
 Next we’ll use NPM to add the Uniswap V2 contracts which will allow us to seamlessly integrate with the protocol in our new contracts:
 
 ```bash
-$ npm add @uniswap/v2-periphery @uniswap/v2-core
+$ npm add @pegasys-fi/v2-periphery @pegasys-fi/v2-core
 ```
 
 The Uniswap V2 contracts were written using a past version of the solidity compiler. Since we’re building integrations on V2 we have to tell Hardhat to use the correct compiler to build these files. Go to the `./hardhat.config.js` file and change the Solidity version to “0.7.6”: 
@@ -74,8 +74,8 @@ To confirm that our environment is configured correctly we’ll attempt to compi
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
-import '@uniswap/v2-periphery/contracts/interfaces/ISwapRouter.sol';
-import '@uniswap/v2-periphery/contracts/libraries/TransferHelper.sol';
+import '@pegasys-fi/v2-periphery/contracts/interfaces/ISwapRouter.sol';
+import '@pegasys-fi/v2-periphery/contracts/libraries/TransferHelper.sol';
 
 contract SimpleSwap {
     ISwapRouter public immutable swapRouter;

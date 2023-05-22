@@ -1,4 +1,4 @@
-[@uniswap/v2-sdk](../README.md) / [Exports](../modules.md) / IncreaseSpecificOptions
+[@pegasys-fi/v2-sdk](../README.md) / [Exports](../modules.md) / IncreaseSpecificOptions
 
 # Interface: IncreaseSpecificOptions
 

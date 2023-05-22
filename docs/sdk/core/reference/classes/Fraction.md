@@ -1,4 +1,4 @@
-[@uniswap/sdk-core](../README.md) / [Exports](../modules.md) / Fraction
+[@pegasys-fi/sdk-core](../README.md) / [Exports](../modules.md) / Fraction
 
 # Class: Fraction
 

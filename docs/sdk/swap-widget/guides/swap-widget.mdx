@@ -35,7 +35,7 @@ You can make the widget feel like a native part of your app by customizing the c
 To get started, install the widgets library using npm or Yarn. If you don’t already use it, you’ll need to install `react-redux` as well.
 
 ```bash npm2yarn
-npm install --save @uniswap/widgets react-redux
+npm install --save @pegasys-fi/widgets react-redux
 ```
 
 ## Adding the Swap Widget to Your App {#adding-the-widget}
@@ -43,8 +43,8 @@ npm install --save @uniswap/widgets react-redux
 Next, embed the React component in your application.
 
 ```jsx
-import { SwapWidget } from '@uniswap/widgets'
-import '@uniswap/widgets/fonts.css'
+import { SwapWidget } from '@pegasys-fi/widgets'
+import '@pegasys-fi/widgets/fonts.css'
 
 function App() {
   <div className="Uniswap">
@@ -61,8 +61,8 @@ See a full implementation of the swap widget in the `/cra` and `/nextjs` branche
 All code snippets will work seamlessly if you use [Next.js](https://nextjs.org/) or [Create React App](https://create-react-app.dev/) V5. However, if you’re using Create React App V4, you’ll need to use the following `import` statements instead:
 
 ```jsx
-import { SwapWidget } from '@uniswap/widgets/dist/index.js'
-import '@uniswap/widgets/dist/fonts.css'
+import { SwapWidget } from '@pegasys-fi/widgets/dist/index.js'
+import '@pegasys-fi/widgets/dist/fonts.css'
 ```
 
 :::
@@ -93,8 +93,8 @@ If you maintain a web3 provider on your app, you should also consider intercepti
 The widget will match the network currently selected by the passed provider. If the user switches networks in your app or in their connected wallet, that change will propagate to the widget as well. If the user connects to a network that is not supported by the swap widget, the widget will gracefully disable itself.
 
 ```tsx
-import { SwapWidget } from '@uniswap/widgets'
-import '@uniswap/widgets/fonts.css'
+import { SwapWidget } from '@pegasys-fi/widgets'
+import '@pegasys-fi/widgets/fonts.css'
 
 // We recommend you pass a web3 provider.
 import { provider } from './your/provider'
@@ -133,8 +133,8 @@ The swap widget has a fixed height of 360px and a default width of 360px. You ca
 You can customize the width by passing a number (of pixels) or a valid CSS width to the `width` prop of the widget.
 
 ```tsx
-import { SwapWidget } from '@uniswap/widgets'
-import '@uniswap/widgets/fonts.css'
+import { SwapWidget } from '@pegasys-fi/widgets'
+import '@pegasys-fi/widgets/fonts.css'
 
 function App() {
   <div className="Uniswap">
@@ -184,7 +184,7 @@ Check out [examples](/sdk/swap-widget/guides/examples) of the swap widget, and t
 You can override specific attributes of the widget by creating a `Theme` object and defining the properties you wish to override. Any properties left undefined will fallback to the default theme. For example, here is a simple `Theme` that removes the border radius and sets a custom font family.
 
 ```tsx
-import { Theme, SwapWidget } from '@uniswap/widgets'
+import { Theme, SwapWidget } from '@pegasys-fi/widgets'
 
 // Define a custom theme to override default attributes
 const theme: Theme = {
@@ -202,7 +202,7 @@ function App() {
 Please note that the `borderRadius` attribute is a multiplier from 0 to 1 of how much radius to apply. Since the widget uses different values of border radius (e.g. internal edges have tighter radii than external edges), `borderRadius` will apply your multiplier value on all instances so that the border radii still look proportionally correct.
 
 :::note Importing Fonts
-The swap widget fonts must be imported explicitly with `import '@uniswap/widgets/fonts.css'`. However, if you’re overriding the swap widget fonts with your own, or with a default font such as Helvetica in the example above, you can remove this `import` statement.
+The swap widget fonts must be imported explicitly with `import '@pegasys-fi/widgets/fonts.css'`. However, if you’re overriding the swap widget fonts with your own, or with a default font such as Helvetica in the example above, you can remove this `import` statement.
 :::
 
 ### Enabling Token Color Extraction {#enabling-color-extraction}
@@ -212,8 +212,8 @@ By default, the background color of the output module will be set by the `modul
 To enable color extraction, set the `tokenColorExtraction` property to `true` in your `Theme` object.
 
 ```tsx
-import { Theme, SwapWidget } from '@uniswap/widgets'
-import '@uniswap/widgets/fonts.css'
+import { Theme, SwapWidget } from '@pegasys-fi/widgets'
+import '@pegasys-fi/widgets/fonts.css'
 
 const enableColorExtractionTheme: Theme = {
   tokenColorExtraction: true, // Enable color extraction of the output token
@@ -231,8 +231,8 @@ function App() {
 The swap widget provides a default light theme and dark theme as a starting point. You can import each one and extend it to create your own theme. If your app can toggle between light and dark mode, you can propagate that state down to the widget by following the example below.
 
 ```tsx
-import { darkTheme, lightTheme, Theme, SwapWidget } from '@uniswap/widgets'
-import '@uniswap/widgets/fonts.css'
+import { darkTheme, lightTheme, Theme, SwapWidget } from '@pegasys-fi/widgets'
+import '@pegasys-fi/widgets/fonts.css'
 
 let darkMode = true // Dynamically toggle dark mode on and off
 function App() {
@@ -247,8 +247,8 @@ function App() {
 You can match the user’s system preference for light/dark mode by using the `useSystemTheme` hook. This will return the default widget light or dark theme according to the user’s system configuration. You can extend this base theme with further customizations, as you will see in the next section.
 
 ```tsx
-import { SwapWidget } from '@uniswap/widgets'
-import '@uniswap/widgets/fonts.css'
+import { SwapWidget } from '@pegasys-fi/widgets'
+import '@pegasys-fi/widgets/fonts.css'
 
 function useSystemTheme() {
   // Access
@@ -267,8 +267,8 @@ function App() {
 You can extend any theme with custom attributes. The below example extends the base light and dark themes with custom colors.
 
 ```tsx
-import { darkTheme, lightTheme, Theme, SwapWidget } from '@uniswap/widgets'
-import '@uniswap/widgets/fonts.css'
+import { darkTheme, lightTheme, Theme, SwapWidget } from '@pegasys-fi/widgets'
+import '@pegasys-fi/widgets/fonts.css'
 
 const myLightTheme: Theme = {
   ...lightTheme, // Extend the lightTheme
@@ -301,8 +301,8 @@ By default, the widget will use the [Uniswap Labs default token list](https://to
 If you want to offer a different set of tokens in the widget, you can provide a custom `tokenList` parameter. You can [browse popular token lists](https://tokenlists.org/) to find one that suits your needs and then pass the URL as a parameter.
 
 ```jsx
-import { SwapWidget } from '@uniswap/widgets'
-import '@uniswap/widgets/fonts.css'
+import { SwapWidget } from '@pegasys-fi/widgets'
+import '@pegasys-fi/widgets/fonts.css'
 
 const CMC_TOKEN_LIST = 'https://api.coinmarketcap.com/data-api/v2/uniswap/all.json'
 
@@ -322,8 +322,8 @@ The first option is to [create a full token list](https://github.com/Uniswap/tok
 The second and easiest option is to construct a custom token list inline as an array of tokens. The schema is equivalent to the `tokens` array from the [tokenlist JSON schema](https://github.com/Uniswap/token-lists/blob/main/src/tokenlist.schema.json). This option lets you skip deployment, hosting, and versioning of a full URI token list. Here is an example of an inline token list containing only the DAI, USDT, and USDC tokens (in addition to ETH which is always available, regardless of token list).
 
 ```jsx
-import { SwapWidget } from '@uniswap/widgets'
-import '@uniswap/widgets/fonts.css'
+import { SwapWidget } from '@pegasys-fi/widgets'
+import '@pegasys-fi/widgets/fonts.css'
 
 // You can also pass a token list as JSON, as long as it matches the schema
 const MY_TOKEN_LIST = [
@@ -373,8 +373,8 @@ If your page does not need any particular defaults, then the recommended default
 The following example sets the default input to 2 ETH and the default output token to WBTC.
 
 ```tsx
-import { SwapWidget } from '@uniswap/widgets'
-import '@uniswap/widgets/fonts.css'
+import { SwapWidget } from '@pegasys-fi/widgets'
+import '@pegasys-fi/widgets/fonts.css'
 
 // Default token list from Uniswap
 const UNISWAP_TOKEN_LIST = 'https://gateway.ipfs.io/ipns/tokens.uniswap.org'

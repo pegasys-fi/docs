@@ -32,7 +32,7 @@ Thanks to some [fancy footwork in the factory](https://github.com/Uniswap/uniswa
 This example makes use of the [Uniswap SDK](../reference/getting-started). In reality, the SDK computes pair addresses behind the scenes, obviating the need to compute them manually like this.
 
 ```typescript
-import { FACTORY_ADDRESS, INIT_CODE_HASH } from '@uniswap/sdk'
+import { FACTORY_ADDRESS, INIT_CODE_HASH } from '@pegasys-fi/v2-sdk'
 import { pack, keccak256 } from '@ethersproject/solidity'
 import { getCreate2Address } from '@ethersproject/address'
 

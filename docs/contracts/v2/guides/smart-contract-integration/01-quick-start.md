@@ -41,21 +41,21 @@ npm init
 ## Adding dependencies
 
 Now that we have an npm package, we can add our dependencies. Let's add both the
-[`@uniswap/v1-core`](https://www.npmjs.com/package/@uniswap/v1-core) and
-[`@uniswap/v1-periphery`](https://www.npmjs.com/package/@uniswap/v1-periphery) packages.
+[`@pegasys-fi/v1-core`](https://www.npmjs.com/package/@pegasys-fi/v1-core) and
+[`@pegasys-fi/v1-periphery`](https://www.npmjs.com/package/@pegasys-fi/v1-periphery) packages.
 
 ```shell script
-npm i --save @uniswap/v1-core
-npm i --save @uniswap/v1-periphery
+npm i --save @pegasys-fi/v1-core
+npm i --save @pegasys-fi/v1-periphery
 ```
 
-If you check the `node_modules/@uniswap` directory, you can now find the Uniswap V1 contracts.
+If you check the `node_modules/@pegasys-fi` directory, you can now find the Uniswap V1 contracts.
 
 ```shell script
-moody@MacBook-Pro ~/I/u/demo> ls node_modules/@uniswap/v1-core/contracts
+moody@MacBook-Pro ~/I/u/demo> ls node_modules/@pegasys-fi/v1-core/contracts
 UniswapV1ERC20.sol    UniswapV1Pair.sol     libraries/
 UniswapV1Factory.sol  interfaces/           test/
-moody@MacBook-Pro ~/I/u/demo> ls node_modules/@uniswap/v1-periphery/contracts/
+moody@MacBook-Pro ~/I/u/demo> ls node_modules/@pegasys-fi/v1-periphery/contracts/
 UniswapV1Migrator.sol  examples/              test/
 UniswapV1Router01.sol  interfaces/
 UniswapV1Router02.sol  libraries/
@@ -121,8 +121,8 @@ The [`UniswapV1Library`](../../reference/smart-contracts/library) has some helpf
 pragma solidity ^0.6.6;
 
 import './interfaces/ILiquidityValueCalculator.sol';
-import '@uniswap/v1-periphery/contracts/libraries/UniswapV1Library.sol';
-import '@uniswap/v1-core/contracts/interfaces/IUniswapV1Pair.sol';
+import '@pegasys-fi/v1-periphery/contracts/libraries/UniswapV1Library.sol';
+import '@pegasys-fi/v1-core/contracts/interfaces/IUniswapV1Pair.sol';
 
 contract LiquidityValueCalculator is ILiquidityValueCalculator {
     function pairInfo(address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB, uint totalSupply) {
@@ -140,8 +140,8 @@ Finally we just need to compute the share value. We will leave that as an exerci
 pragma solidity ^0.6.6;
 
 import './interfaces/ILiquidityValueCalculator.sol';
-import '@uniswap/v1-periphery/contracts/libraries/UniswapV1Library.sol';
-import '@uniswap/v1-core/contracts/interfaces/IUniswapV1Pair.sol';
+import '@pegasys-fi/v1-periphery/contracts/libraries/UniswapV1Library.sol';
+import '@pegasys-fi/v1-core/contracts/interfaces/IUniswapV1Pair.sol';
 
 contract LiquidityValueCalculator is ILiquidityValueCalculator {
     address public factory;
@@ -186,7 +186,7 @@ to compute the pair address.
 To get the bytecode for deploying UniswapV1Factory, you can import the file via:
 
 ```javascript
-const UniswapV1FactoryBytecode = require('@uniswap/v1-core/build/UniswapV1Factory.json').bytecode
+const UniswapV1FactoryBytecode = require('@pegasys-fi/v1-core/build/UniswapV1Factory.json').bytecode
 ```
 
 We recommend using a standard ERC20 from `@openzeppelin/contracts` for deploying an ERC20.

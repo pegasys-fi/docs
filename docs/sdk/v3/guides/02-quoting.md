@@ -26,8 +26,8 @@ At the end of the guide, we should be able to fetch a quote for the given input 
 
 For this guide, the following Uniswap packages are used:
 
-- [`@uniswap/v2-sdk`](https://www.npmjs.com/package/@uniswap/v2-sdk)
-- [`@uniswap/sdk-core`](https://www.npmjs.com/package/@uniswap/sdk-core)
+- [`@pegasys-fi/v2-sdk`](https://www.npmjs.com/package/@pegasys-fi/v2-sdk)
+- [`@pegasys-fi/sdk-core`](https://www.npmjs.com/package/@pegasys-fi/sdk-core)
 
 The core code of this guide can be found in [`quote.ts`](https://github.com/Uniswap/examples/blob/main/v2-sdk/quoting/src/libs/quote.ts)
 
@@ -57,7 +57,7 @@ https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024b
 ```
 
 To construct the *Contract* we need to provide the address of the contract, its ABI and the provider that will carry out the RPC call for us.
-We get access to the contract's ABI through the [@uniswap/v2-core](https://www.npmjs.com/package/@uniswap/v2-core) package, which holds the core smart contracts of the Uniswap V2 protocol:
+We get access to the contract's ABI through the [@pegasys-fi/v2-core](https://www.npmjs.com/package/@pegasys-fi/v2-core) package, which holds the core smart contracts of the Uniswap V2 protocol:
 
 ```typescript reference title="Uniswap V2 Pool smart contract ABI" referenceLinkText="View on Github" customStyling
 https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v2-sdk/quoting/src/libs/quote.ts#L5
@@ -84,7 +84,7 @@ Like we did for the Pool contract, we need to construct an instance of an **ethe
 https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v2-sdk/quoting/src/libs/quote.ts#L14-L18
 ```
 
-We get access to the contract's ABI through the [@uniswap/v2-periphery](https://www.npmjs.com/package/@uniswap/v2-periphery) package, which holds the periphery smart contracts of the Uniswap V2 protocol:
+We get access to the contract's ABI through the [@pegasys-fi/v2-periphery](https://www.npmjs.com/package/@pegasys-fi/v2-periphery) package, which holds the periphery smart contracts of the Uniswap V2 protocol:
 
 ```typescript reference title="Uniswap V2 Quoter smart contract ABI" referenceLinkText="View on Github" customStyling
 https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v2-sdk/quoting/src/libs/quote.ts#L4

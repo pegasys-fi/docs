@@ -1,4 +1,4 @@
-[@uniswap/v2-sdk](../README.md) / [Exports](../modules.md) / Multicall
+[@pegasys-fi/v2-sdk](../README.md) / [Exports](../modules.md) / Multicall
 
 # Class: Multicall
 

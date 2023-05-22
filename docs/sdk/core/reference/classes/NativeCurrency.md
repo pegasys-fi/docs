@@ -1,4 +1,4 @@
-[@uniswap/sdk-core](../README.md) / [Exports](../modules.md) / NativeCurrency
+[@pegasys-fi/sdk-core](../README.md) / [Exports](../modules.md) / NativeCurrency
 
 # Class: NativeCurrency
 

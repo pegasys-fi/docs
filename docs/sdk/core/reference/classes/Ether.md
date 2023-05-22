@@ -1,4 +1,4 @@
-[@uniswap/sdk-core](../README.md) / [Exports](../modules.md) / Ether
+[@pegasys-fi/sdk-core](../README.md) / [Exports](../modules.md) / Ether
 
 # Class: Ether
 

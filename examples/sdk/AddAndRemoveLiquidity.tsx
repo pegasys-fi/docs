@@ -1,6 +1,6 @@
-import { CurrencyAmount, Percent, Token } from '@uniswap/sdk-core'
-import { abi as IUniswapV2PoolABI } from '@uniswap/v2-core/artifacts/contracts/interfaces/IUniswapV2Pool.sol/IUniswapV2Pool.json'
-import { nearestUsableTick, NonfungiblePositionManager, Pool, Position } from '@uniswap/v2-sdk'
+import { CurrencyAmount, Percent, Token } from '@pegasys-fi/sdk-core'
+import { abi as IUniswapV2PoolABI } from '@pegasys-fi/v2-core/artifacts/contracts/interfaces/IUniswapV2Pool.sol/IUniswapV2Pool.json'
+import { nearestUsableTick, NonfungiblePositionManager, Pool, Position } from '@pegasys-fi/v2-sdk'
 import { ethers } from 'ethers'
 
 // default uses “http://localhost:8545”

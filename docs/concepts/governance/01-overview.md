@@ -18,10 +18,10 @@ For reference material on the Uniswap Governance system please see [Governance R
 ### ABI
 
 ```typescript
-import Uni from '@uniswap/governance/build/Uni.json'
+import Uni from '@pegasys-fi/governance/build/Uni.json'
 ```
 
-[https://unpkg.com/@uniswap/governance@1.0.2/build/Uni.json](https://unpkg.com/@uniswap/governance@1.0.2/build/Uni.json)
+[https://unpkg.com/@pegasys-fi/governance@1.0.2/build/Uni.json](https://unpkg.com/@pegasys-fi/governance@1.0.2/build/Uni.json)
 
 ## Timelock
 
@@ -30,10 +30,10 @@ import Uni from '@uniswap/governance/build/Uni.json'
 ### ABI
 
 ```typescript
-import Timelock from '@uniswap/governance/build/Timelock.json'
+import Timelock from '@pegasys-fi/governance/build/Timelock.json'
 ```
 
-[https://unpkg.com/@uniswap/governance@1.0.2/build/Timelock.json](https://unpkg.com/@uniswap/governance@1.0.2/build/Timelock.json)
+[https://unpkg.com/@pegasys-fi/governance@1.0.2/build/Timelock.json](https://unpkg.com/@pegasys-fi/governance@1.0.2/build/Timelock.json)
 
 ## GovernorAlpha (Deprecated)
 
@@ -41,12 +41,12 @@ import Timelock from '@uniswap/governance/build/Timelock.json'
 
 ### ABI
 
-The `GovernorAlpha` ABI is viewable on [Etherscan](https://etherscan.io/address/0x5e4be8Bc9637f0EAA1A755019e06A68ce081D58F), as well as via an [npm package](https://www.npmjs.com/package/@uniswap/governance).
+The `GovernorAlpha` ABI is viewable on [Etherscan](https://etherscan.io/address/0x5e4be8Bc9637f0EAA1A755019e06A68ce081D58F), as well as via an [npm package](https://www.npmjs.com/package/@pegasys-fi/governance).
 
-[https://unpkg.com/@uniswap/governance@1.0.2/build/GovernorAlpha.json](https://unpkg.com/@uniswap/governance@1.0.2/build/GovernorAlpha.json)
+[https://unpkg.com/@pegasys-fi/governance@1.0.2/build/GovernorAlpha.json](https://unpkg.com/@pegasys-fi/governance@1.0.2/build/GovernorAlpha.json)
 
 ```typescript
-import GovernorAlpha from '@uniswap/governance/build/GovernorAlpha.json'
+import GovernorAlpha from '@pegasys-fi/governance/build/GovernorAlpha.json'
 ```
 
 ## GovernorAlpha v1 (Deprecated)

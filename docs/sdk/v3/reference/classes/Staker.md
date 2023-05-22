@@ -1,4 +1,4 @@
-[@uniswap/v2-sdk](../README.md) / [Exports](../modules.md) / Staker
+[@pegasys-fi/v2-sdk](../README.md) / [Exports](../modules.md) / Staker
 
 # Class: Staker
 

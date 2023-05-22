@@ -1,4 +1,4 @@
-[@uniswap/v2-sdk](../README.md) / [Exports](../modules.md) / MethodParameters
+[@pegasys-fi/v2-sdk](../README.md) / [Exports](../modules.md) / MethodParameters
 
 # Interface: MethodParameters
 

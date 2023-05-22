@@ -5,7 +5,7 @@ title: Deployment Addresses
 
 # Uniswap Contract Deployments
 
-The latest version of `@uniswap/v2-core`, `@uniswap/v2-periphery`, `@uniswap/swap-router-contracts`, and `@uniswap/v2-staker` are deployed at the addresses listed below. Integrators should **no longer assume that they are deployed to the same addresses across chains** and be extremely careful to confirm mappings below.
+The latest version of `@pegasys-fi/v2-core`, `@pegasys-fi/v2-periphery`, `@pegasys-fi/swap-router-contracts`, and `@pegasys-fi/v2-staker` are deployed at the addresses listed below. Integrators should **no longer assume that they are deployed to the same addresses across chains** and be extremely careful to confirm mappings below.
 
 | Contract                                                                                                                                                     | Mainnet, Polygon, Optimism, Arbitrum, Testnets Address | Celo Address                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ | -------------------------------------------- |
@@ -32,10 +32,10 @@ The new `UniversalRouter` has been deployed to the following addresses on the fo
 
 These addresses are final and were deployed from these npm package versions:
 
-- [`@uniswap/v2-core@1.0.0`](https://github.com/Uniswap/uniswap-v2-core/tree/v1.0.0)
-- [`@uniswap/v2-periphery@1.0.0`](https://github.com/Uniswap/uniswap-v2-periphery/tree/v1.0.0)
-- [`@uniswap/swap-router-contracts@1.1.0`](https://github.com/Uniswap/swap-router-contracts/tree/v1.1.0)
-- [`@uniswap/v2-staker@1.0.2`](https://github.com/Uniswap/v2-staker/tree/v1.0.2)
+- [`@pegasys-fi/v2-core@1.0.0`](https://github.com/Uniswap/uniswap-v2-core/tree/v1.0.0)
+- [`@pegasys-fi/v2-periphery@1.0.0`](https://github.com/Uniswap/uniswap-v2-periphery/tree/v1.0.0)
+- [`@pegasys-fi/swap-router-contracts@1.1.0`](https://github.com/Uniswap/swap-router-contracts/tree/v1.1.0)
+- [`@pegasys-fi/v2-staker@1.0.2`](https://github.com/Uniswap/v2-staker/tree/v1.0.2)
 
 # Uniswap Pool Deployments
 
