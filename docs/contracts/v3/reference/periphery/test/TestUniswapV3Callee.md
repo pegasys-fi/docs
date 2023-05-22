@@ -28,9 +28,9 @@
   ) external
 ```
 
-### uniswapV3SwapCallback
+### uniswapV2SwapCallback
 
 ```solidity
-  function uniswapV3SwapCallback(
+  function uniswapV2SwapCallback(
   ) external
 ```

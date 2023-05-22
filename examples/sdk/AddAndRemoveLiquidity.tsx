@@ -1,17 +1,16 @@
-import { Pool, Position, NonfungiblePositionManager, nearestUsableTick } from '@uniswap/v3-sdk'
-
+import { CurrencyAmount, Percent, Token } from '@uniswap/sdk-core'
+import { abi as IUniswapV2PoolABI } from '@uniswap/v2-core/artifacts/contracts/interfaces/IUniswapV2Pool.sol/IUniswapV2Pool.json'
+import { nearestUsableTick, NonfungiblePositionManager, Pool, Position } from '@uniswap/v2-sdk'
 import { ethers } from 'ethers'
-import { Percent, Token, CurrencyAmount } from '@uniswap/sdk-core'
-import { abi as IUniswapV3PoolABI } from '@uniswap/v3-core/artifacts/contracts/interfaces/IUniswapV3Pool.sol/IUniswapV3Pool.json'
 
 // default uses “http://localhost:8545”
-// can also input your own connection with "https://mainnet.infura.io/v3/<YOUR-ENDPOINT-HERE>" as an input
+// can also input your own connection with "https://mainnet.infura.io/v2/<YOUR-ENDPOINT-HERE>" as an input
 const provider = new ethers.providers.JsonRpcProvider()
 
 // pool address for DAI/USDC 0.05%
 const poolAddress = '0x6c6bc977e13df9b0de53b251522280bb72383700'
 
-const poolContract = new ethers.Contract(poolAddress, IUniswapV3PoolABI, provider)
+const poolContract = new ethers.Contract(poolAddress, IUniswapV2PoolABI, provider)
 
 interface Immutables {
   factory: string

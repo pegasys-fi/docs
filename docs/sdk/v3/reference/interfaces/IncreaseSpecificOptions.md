@@ -1,4 +1,4 @@
-[@uniswap/v3-sdk](../README.md) / [Exports](../modules.md) / IncreaseSpecificOptions
+[@uniswap/v2-sdk](../README.md) / [Exports](../modules.md) / IncreaseSpecificOptions
 
 # Interface: IncreaseSpecificOptions
 
@@ -18,4 +18,4 @@ Indicates the ID of the position to increase liquidity for.
 
 #### Defined in
 
-[nonfungiblePositionManager.ts:41](https://github.com/Uniswap/v3-sdk/blob/08a7c05/src/nonfungiblePositionManager.ts#L41)
+[nonfungiblePositionManager.ts:41](https://github.com/Uniswap/v2-sdk/blob/08a7c05/src/nonfungiblePositionManager.ts#L41)

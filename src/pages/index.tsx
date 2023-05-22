@@ -31,36 +31,36 @@ export const actions = [
   {
     title: 'Integrate with Uniswap',
     icon: HelpCircle,
-    to: '/sdk/v3/overview',
+    to: '/sdk/v2/overview',
     text: `Learn how to integrate with Uniswap by building a dApp through guided examples.`,
   },
   {
     title: 'The Uniswap smart contracts',
     icon: BookOpen,
-    to: '/contracts/v3/overview',
+    to: '/contracts/v2/overview',
     text: `Learn about the architecture of the Uniswap Protocol smart contracts through guided examples.`,
   },
 ]
 
 export const developerLinks = [
   {
-    title: 'uniswap-v3-core',
-    href: 'https://github.com/Uniswap/uniswap-v3-core',
+    title: 'uniswap-v2-core',
+    href: 'https://github.com/Uniswap/uniswap-v2-core',
     icon: GitHub,
   },
   {
-    title: 'uniswap-v3-sdk',
-    href: 'https://github.com/Uniswap/uniswap-v3-sdk',
+    title: 'uniswap-v2-sdk',
+    href: 'https://github.com/Uniswap/uniswap-v2-sdk',
     icon: GitHub,
   },
   {
-    title: 'uniswap-v3-periphery',
-    href: 'https://github.com/Uniswap/uniswap-v3-periphery',
+    title: 'uniswap-v2-periphery',
+    href: 'https://github.com/Uniswap/uniswap-v2-periphery',
     icon: GitHub,
   },
   {
     title: 'Deployment addresses',
-    href: 'https://github.com/Uniswap/uniswap-v3-periphery/blob/main/deploys.md',
+    href: 'https://github.com/Uniswap/uniswap-v2-periphery/blob/main/deploys.md',
     icon: GitHub,
   },
   {
@@ -74,22 +74,22 @@ export const dAppGuides = [
   {
     title: 'Fetch token prices',
     text: 'Fetch the price of tokens in a specific Pool',
-    to: 'sdk/v3/guides/quoting',
+    to: 'sdk/v2/guides/quoting',
   },
   {
     title: 'Create a Trade',
     text: 'Fetch a Quote for a Trade and execute the Trade',
-    to: '/sdk/v3/guides/trading',
+    to: '/sdk/v2/guides/trading',
   },
   {
     title: 'Route trades',
     text: 'Use Routing to get optimized prices for your Trades',
-    to: '/sdk/v3/guides/routing',
+    to: '/sdk/v2/guides/routing',
   },
   {
     title: 'Provide liquidity',
     text: "Contribute to a Pool's liquidity by using tokens to earn fees",
-    to: '/sdk/v3/guides/liquidity/minting',
+    to: '/sdk/v2/guides/liquidity/minting',
   },
   {
     title: 'UI Component',
@@ -101,27 +101,27 @@ export const smartContractGuides = [
   {
     title: 'Setup your environment',
     text: 'Prepare your local environment by installing the required dependencies',
-    to: '/contracts/v3/guides/local-environment',
+    to: '/contracts/v2/guides/local-environment',
   },
   {
     title: 'Implement a Swap',
     text: 'Start swapping from a smart contract in Solidity',
-    to: '/contracts/v3/guides/swaps/single-swaps',
+    to: '/contracts/v2/guides/swaps/single-swaps',
   },
   {
     title: 'Provide Liquidity',
     text: 'Provide liquidity from a smart contract in Solidity',
-    to: '/contracts/v3/guides/providing-liquidity/setting-up',
+    to: '/contracts/v2/guides/providing-liquidity/setting-up',
   },
   {
     title: 'Mine Liquidity',
     text: 'Start Mining liquidity from a smart contract in Solidity',
-    to: '/contracts/v3/guides/liquidity-mining/overview',
+    to: '/contracts/v2/guides/liquidity-mining/overview',
   },
   {
     title: 'Implement Flash Swaps',
     text: 'Implement Flash Swaps from a smart contract in Solidity',
-    to: '/contracts/v3/guides/flash-integrations/inheritance-constructors',
+    to: '/contracts/v2/guides/flash-integrations/inheritance-constructors',
   },
 ]
 

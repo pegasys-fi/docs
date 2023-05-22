@@ -27,7 +27,7 @@ module.exports = {
     },
     algolia: {
       apiKey: '32465e2ab6f7554ff014e64c0d92171c',
-      indexName: 'v3-docs',
+      indexName: 'v2-docs',
       appId: 'S0IDD0YGLZ',
     },
     navbar: {
@@ -41,25 +41,25 @@ module.exports = {
           to: '/concepts/overview',
           label: 'Concepts',
           position: 'left',
-          className: 'V3_active',
+          className: 'V2_active',
         },
         {
-          to: '/contracts/v3/overview',
+          to: '/contracts/v2/overview',
           label: 'Contracts',
           position: 'left',
-          className: 'V3_active',
+          className: 'V2_active',
         },
         {
-          to: '/sdk/v3/overview',
+          to: '/sdk/v2/overview',
           label: 'SDKs',
           position: 'left',
-          className: 'V3_active',
+          className: 'V2_active',
         },
         {
           to: '/api/subgraph/overview',
           label: 'APIs',
           position: 'left',
-          className: 'V3_active',
+          className: 'V2_active',
         },
         {
           label: 'Give Feedback',
@@ -99,7 +99,7 @@ module.exports = {
             },
             {
               label: 'Bug Bounty',
-              href: 'https://github.com/Uniswap/uniswap-v3-periphery/blob/main/bug-bounty.md',
+              href: 'https://github.com/Uniswap/uniswap-v2-periphery/blob/main/bug-bounty.md',
             },
             {
               label: '#dev-chat',
@@ -115,20 +115,20 @@ module.exports = {
           title: 'Github',
           items: [
             {
-              label: 'uniswap-v3-core',
-              href: 'https://github.com/Uniswap/uniswap-v3-core',
+              label: 'uniswap-v2-core',
+              href: 'https://github.com/Uniswap/uniswap-v2-core',
             },
             {
-              label: 'uniswap-v3-sdk',
-              href: 'https://github.com/Uniswap/uniswap-v3-sdk',
+              label: 'uniswap-v2-sdk',
+              href: 'https://github.com/Uniswap/uniswap-v2-sdk',
             },
             {
-              label: 'uniswap-v3-periphery',
-              href: 'https://github.com/Uniswap/uniswap-v3-periphery',
+              label: 'uniswap-v2-periphery',
+              href: 'https://github.com/Uniswap/uniswap-v2-periphery',
             },
             {
               label: 'Deployment addresses',
-              href: 'https://github.com/Uniswap/uniswap-v3-periphery/blob/main/deploys.md',
+              href: 'https://github.com/Uniswap/uniswap-v2-periphery/blob/main/deploys.md',
             },
           ],
         },
@@ -265,38 +265,38 @@ module.exports = {
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
-          // 1/9/23 V3 SDK Guide Redirects
+          // 1/9/23 V2 SDK Guide Redirects
           {
-            to: '/sdk/v3/guides/background',
-            from: '/sdk/v3/guides/quick-start',
+            to: '/sdk/v2/guides/background',
+            from: '/sdk/v2/guides/quick-start',
           },
           {
-            to: '/sdk/v3/guides/quoting',
-            from: ['/sdk/v3/guides/creating-a-pool', '/sdk/v3/guides/fetching-prices'],
+            to: '/sdk/v2/guides/quoting',
+            from: ['/sdk/v2/guides/creating-a-pool', '/sdk/v2/guides/fetching-prices'],
           },
           {
-            to: '/sdk/v3/guides/trading',
-            from: '/sdk/v3/guides/creating-a-trade',
+            to: '/sdk/v2/guides/trading',
+            from: '/sdk/v2/guides/creating-a-trade',
           },
           {
-            to: '/sdk/v3/guides/routing',
-            from: '/sdk/v3/guides/auto-router',
+            to: '/sdk/v2/guides/routing',
+            from: '/sdk/v2/guides/auto-router',
           },
           {
-            to: '/sdk/v3/guides/liquidity/modifying-position',
-            from: ['/sdk/v3/guides/liquidity/adding', '/sdk/v3/guides/liquidity/removing'],
+            to: '/sdk/v2/guides/liquidity/modifying-position',
+            from: ['/sdk/v2/guides/liquidity/adding', '/sdk/v2/guides/liquidity/removing'],
           },
         ],
         createRedirects(existingPath) {
-          // V3 Redirects
+          // V2 Redirects
           if (existingPath.includes('/concepts/overview')) {
             return [existingPath.replace('/concepts/overview', '/protocol/introduction')]
           }
-          if (existingPath.includes('/contracts/v3/reference')) {
-            return [existingPath.replace('/contracts/v3/reference', '/protocol/reference')]
+          if (existingPath.includes('/contracts/v2/reference')) {
+            return [existingPath.replace('/contracts/v2/reference', '/protocol/reference')]
           }
-          if (existingPath.includes('/contracts/v3/guides')) {
-            return [existingPath.replace('/contracts/v3/guides', '/protocol/guides')]
+          if (existingPath.includes('/contracts/v2/guides')) {
+            return [existingPath.replace('/contracts/v2/guides', '/protocol/guides')]
           }
           // V1 Redirects
           if (existingPath.includes('/contracts/v1/reference')) {
@@ -309,12 +309,12 @@ module.exports = {
           if (existingPath.includes('/contracts/permit2')) {
             return [existingPath.replace('/contracts/permit2', '/protocol/permit2')]
           }
-          // v3-sdk Redirects
-          if (existingPath.includes('/sdk/v3/overview')) {
-            return [existingPath.replace('/sdk/v3/overview', '/sdk/introduction')]
+          // v2-sdk Redirects
+          if (existingPath.includes('/sdk/v2/overview')) {
+            return [existingPath.replace('/sdk/v2/overview', '/sdk/introduction')]
           }
-          if (existingPath.includes('/sdk/v3/guides')) {
-            return [existingPath.replace('/sdk/v3/guides', '/sdk/guides')]
+          if (existingPath.includes('/sdk/v2/guides')) {
+            return [existingPath.replace('/sdk/v2/guides', '/sdk/guides')]
           }
           // swap-widgets Redirects
           if (existingPath.includes('/sdk/swap-widget/overview')) {

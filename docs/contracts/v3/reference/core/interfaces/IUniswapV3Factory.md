@@ -1,4 +1,4 @@
-The Uniswap V3 Factory facilitates creation of Uniswap V3 pools and control over the protocol fees
+The Uniswap V2 Factory facilitates creation of Uniswap V2 pools and control over the protocol fees
 
 ## Functions
 
