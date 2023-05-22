@@ -6,25 +6,25 @@ Encapsulates the logic for getting info about a NFT token ID
 
 ```solidity
   function getPositionInfo(
-    contract IUniswapV2Factory factory,
+    contract IPegasysV2Factory factory,
     contract INonfungiblePositionManager nonfungiblePositionManager,
     uint256 tokenId
-  ) internal view returns (contract IUniswapV2Pool pool, int24 tickLower, int24 tickUpper, uint128 liquidity)
+  ) internal view returns (contract IPegasysV2Pool pool, int24 tickLower, int24 tickUpper, uint128 liquidity)
 ```
 
 #### Parameters:
 
 | Name                         | Type                                 | Description                                                              |
 | :--------------------------- | :----------------------------------- | :----------------------------------------------------------------------- |
-| `factory`                    | contract IUniswapV2Factory           | The address of the Uniswap V2 Factory used in computing the pool address |
+| `factory`                    | contract IPegasysV2Factory           | The address of the Pegasys V2 Factory used in computing the pool address |
 | `nonfungiblePositionManager` | contract INonfungiblePositionManager | The address of the nonfungible position manager to query                 |
-| `tokenId`                    | uint256                              | The unique identifier of an Uniswap V2 LP token                          |
+| `tokenId`                    | uint256                              | The unique identifier of an Pegasys V2 LP token                          |
 
 #### Return Values:
 
 | Name        | Type           | Description                               |
 | :---------- | :------------- | :---------------------------------------- |
-| `pool`      | IUniswapV2Pool | The address of the Uniswap V2 pool        |
-| `tickLower` | int24          | The lower tick of the Uniswap V2 position |
-| `tickUpper` | int24          | The upper tick of the Uniswap V2 position |
+| `pool`      | IPegasysV2Pool | The address of the Pegasys V2 pool        |
+| `tickLower` | int24          | The lower tick of the Pegasys V2 position |
+| `tickUpper` | int24          | The upper tick of the Pegasys V2 position |
 | `liquidity` | uint128        | The amount of liquidity staked            |

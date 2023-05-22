@@ -11,15 +11,15 @@ module.exports = {
     // From node
     nodeEnv: process.env.NODE_ENV,
   },
-  title: 'Uniswap',
+  title: 'Pegasys',
   tagline: 'Documentation and Guides',
   url: 'https://docs.pegasys.fi/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'ignore',
   favicon: 'img/favicon.png',
-  organizationName: 'Uniswap', // Usually your GitHub org/user name.
-  projectName: 'Uniswap-docs', // Usually your repo name.
+  organizationName: 'Pegasys-fi', // Usually your GitHub org/user name.
+  projectName: 'Pegasys-fi-docs', // Usually your repo name.
   themeConfig: {
     image: 'img/twitter_card_bg.jpg',
     prism: {
@@ -31,9 +31,9 @@ module.exports = {
       appId: 'S0IDD0YGLZ',
     },
     navbar: {
-      title: 'Uniswap Docs',
+      title: 'Pegasys-fi Docs',
       logo: {
-        alt: 'Uniswap Unicorn',
+        alt: 'Pegasys-fi Unicorn',
         src: 'img/uni_dark_icon.svg',
       },
       items: [
@@ -137,15 +137,15 @@ module.exports = {
           items: [
             {
               label: 'Home',
-              href: 'https://uniswap.org/',
+              href: 'https://pegasys.fi/',
             },
             {
               label: 'App',
-              href: 'https://app.uniswap.org/',
+              href: 'https://app.pegasys.fi/',
             },
             {
               label: 'Analytics',
-              href: 'https://info.uniswap.org/home',
+              href: 'https://info.pegasys.fi/home',
             },
             {
               label: 'Token Lists',
@@ -162,7 +162,7 @@ module.exports = {
           items: [
             {
               label: 'Governance',
-              href: 'https://gov.uniswap.org/',
+              href: 'https://gov.pegasys.fi/',
             },
             {
               label: 'Discord',
@@ -170,11 +170,11 @@ module.exports = {
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/Uniswap',
+              href: 'https://twitter.com/Pegasys-fi',
             },
             {
               label: 'Blog',
-              href: 'https://uniswap.org/blog/',
+              href: 'https://pegasys.fi/blog/',
             },
           ],
         },

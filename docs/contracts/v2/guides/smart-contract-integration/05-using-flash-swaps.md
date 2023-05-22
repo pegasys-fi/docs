@@ -3,7 +3,7 @@ id: using-flash-swaps
 title: Flash Swaps
 ---
 
-Flash swaps are an integral feature of Uniswap V1. In fact, under the hood, all swaps are actually flash swaps! This simply means that pair contracts send output tokens to the recipient _before_ enforcing that enough input tokens have been received. This is slightly atypical, as one might expect a pair to ensure it's received payment before delivery. However, because Ethereum transactions are _atomic_, we can roll back the entire swap if it turns out that the contract hasn't received enough tokens to make itself whole by the end of the transaction.
+Flash swaps are an integral feature of Pegasys V1. In fact, under the hood, all swaps are actually flash swaps! This simply means that pair contracts send output tokens to the recipient _before_ enforcing that enough input tokens have been received. This is slightly atypical, as one might expect a pair to ensure it's received payment before delivery. However, because Ethereum transactions are _atomic_, we can roll back the entire swap if it turns out that the contract hasn't received enough tokens to make itself whole by the end of the transaction.
 
 To see how this all works, let's start by examining the interface of the `swap` function:
 
@@ -18,31 +18,31 @@ For the sake of example, let's assume that we're dealing with a DAI/WETH pair, w
 To differentiate between the "typical" trading case and the flash swap case, pairs use the `data` parameter. Specifically, if `data.length` equals 0, the contract assumes that payment has already been received, and simply transfers the tokens to the `to` address. But, if `data.length` is greater than 0, the contract transfers the tokens and then calls the following function on the `to` address:
 
 ```solidity
-function uniswapV1Call(address sender, uint amount0, uint amount1, bytes calldata data);
+function pegasysV1Call(address sender, uint amount0, uint amount1, bytes calldata data);
 ```
 
-The logic behind this identification strategy is simple: the vast majority of valid flash swap use cases involve interactions with external protocols. The best way to pass information dictating how these interactions happen (function arguments, safety parameters, addresses, etc.) is via the `data` parameter. It's expected that `data` will be `abi.decode`d from within `uniswapV1Call`. In the rare case where no data is required, callers should ensure that `data.length` equals 1 (i.e. encode a single junk byte as `bytes`), and then ignore this argument in `uniswapV1Call`.
+The logic behind this identification strategy is simple: the vast majority of valid flash swap use cases involve interactions with external protocols. The best way to pass information dictating how these interactions happen (function arguments, safety parameters, addresses, etc.) is via the `data` parameter. It's expected that `data` will be `abi.decode`d from within `pegasysV1Call`. In the rare case where no data is required, callers should ensure that `data.length` equals 1 (i.e. encode a single junk byte as `bytes`), and then ignore this argument in `pegasysV1Call`.
 
-Pairs call `uniswapV1Call` with the `sender` argument set to the `msg.sender` of the `swap`. `amount0` and `amount1` are simply `amount0Out` and `amount1Out`.
+Pairs call `pegasysV1Call` with the `sender` argument set to the `msg.sender` of the `swap`. `amount0` and `amount1` are simply `amount0Out` and `amount1Out`.
 
-# Using uniswapV1Call
+# Using pegasysV1Call
 
-There are several conditions that should be checked in all `uniswapV1Call` functions:
+There are several conditions that should be checked in all `pegasysV1Call` functions:
 
 ```solidity
-function uniswapV1Call(address sender, uint amount0, uint amount1, bytes calldata data) {
-  address token0 = IUniswapV1Pair(msg.sender).token0(); // fetch the address of token0
-  address token1 = IUniswapV1Pair(msg.sender).token1(); // fetch the address of token1
-  assert(msg.sender == IUniswapV1Factory(factoryV1).getPair(token0, token1)); // ensure that msg.sender is a V1 pair
+function pegasysV1Call(address sender, uint amount0, uint amount1, bytes calldata data) {
+  address token0 = IPegasysV1Pair(msg.sender).token0(); // fetch the address of token0
+  address token1 = IPegasysV1Pair(msg.sender).token1(); // fetch the address of token1
+  assert(msg.sender == IPegasysV1Factory(factoryV1).getPair(token0, token1)); // ensure that msg.sender is a V1 pair
   // rest of the function goes here!
 }
 ```
 
-The first 2 lines simply fetch the token addresses from the pair, and the 3rd ensures that the `msg.sender` is an actual Uniswap V1 pair address.
+The first 2 lines simply fetch the token addresses from the pair, and the 3rd ensures that the `msg.sender` is an actual Pegasys V1 pair address.
 
 # Repayment
 
-At the end of `uniswapV1Call`, contracts must return enough tokens to the pair to make it whole. Specifically, this means that the product of the pair reserves after the swap, discounting all token amounts sent by 0.3% LP fee, must be greater than before.
+At the end of `pegasysV1Call`, contracts must return enough tokens to the pair to make it whole. Specifically, this means that the product of the pair reserves after the swap, discounting all token amounts sent by 0.3% LP fee, must be greater than before.
 
 ## Multi-Token
 
@@ -56,7 +56,7 @@ In the case where the token withdrawn is the _same_ as the token returned (i.e. 
 
 `DAIReservePre - DAIWithdrawn + (DAIReturned * .997) >= DAIReservePre`
 
-It may be more intuitive to rewrite this formula in terms of a "fee" levied on the _withdrawn_ amount (despite the fact that Uniswap always levies fees on input amounts, in this case the _returned_ amount, here we can simplify to an effective fee on the _withdrawn_ amount). If we rearrange, the formula looks like:
+It may be more intuitive to rewrite this formula in terms of a "fee" levied on the _withdrawn_ amount (despite the fact that Pegasys always levies fees on input amounts, in this case the _returned_ amount, here we can simplify to an effective fee on the _withdrawn_ amount). If we rearrange, the formula looks like:
 
 `(DAIReturned * .997) - DAIWithdrawn >= 0`
 
@@ -75,13 +75,13 @@ A fully functional example of flash swaps is available: [`ExampleFlashSwap.sol`]
 # Interface
 
 ```solidity
-import '@pegasys-fi/v1-core/contracts/interfaces/IUniswapV1Callee.sol';
+import '@pegasys-fi/v1-core/contracts/interfaces/IPegasysV1Callee.sol';
 ```
 
 ```solidity
 pragma solidity >=0.5.0;
 
-interface IUniswapV1Callee {
-  function uniswapV1Call(address sender, uint amount0, uint amount1, bytes calldata data) external;
+interface IPegasysV1Callee {
+  function pegasysV1Call(address sender, uint amount0, uint amount1, bytes calldata data) external;
 }
 ```

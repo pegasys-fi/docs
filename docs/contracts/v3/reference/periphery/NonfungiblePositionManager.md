@@ -1,4 +1,4 @@
-Wraps Uniswap V2 positions in the ERC721 non-fungible token interface
+Wraps Pegasys V2 positions in the ERC721 non-fungible token interface
 
 ## Functions
 

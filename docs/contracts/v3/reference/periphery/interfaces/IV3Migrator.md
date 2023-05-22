@@ -1,4 +1,4 @@
-Enables migration of liqudity from Uniswap v1-compatible pairs into Uniswap v2 pools
+Enables migration of liqudity from Pegasys v1-compatible pairs into Pegasys v2 pools
 
 ## Functions
 

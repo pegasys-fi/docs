@@ -3,7 +3,7 @@ id: background
 title: Background
 ---
 
-Before integrating with Uniswap, it may be helpful for newcomers to review the following background information on some important developer web3 concepts, the structure of our examples, and SDK concepts.
+Before integrating with Pegasys, it may be helpful for newcomers to review the following background information on some important developer web3 concepts, the structure of our examples, and SDK concepts.
 
 :::info
 Already familiar with web3 development and/or the basics of our SDK and want to get right to the code? Start with our first guide, [Getting a Quote](./02-quoting.md)!
@@ -19,7 +19,7 @@ To achieve this, our examples use the [ethers.js](https://docs.ethers.io/v5/) li
 
 - **Wallet Extension**: If you are connecting to a wallet browser extension, these wallets embed a source directly into the Javascript window object as `window.ethereum`. This object surfaces information about the user's wallets and provides the ability to communicate with the connected chain. Importantly for our examples, it can be used with `ethers.js` to construct a provider.
 
-## Uniswap's Runnable Examples
+## Pegasys's Runnable Examples
 
 Each guide is accompanied and driven by [runnable examples](https://github.com/Uniswap/examples/tree/main/v2-sdk) using React to provide a basic UI for interacting with the example. Each examples provides relevant options such as running against a local blockchain or connecting to the Ethereum mainnet directly. You also have the option of using a wallet extension which can be connected to either environment.
 

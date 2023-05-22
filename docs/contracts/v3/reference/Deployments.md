@@ -3,13 +3,13 @@ id: deployments
 title: Deployment Addresses
 ---
 
-# Uniswap Contract Deployments
+# Pegasys Contract Deployments
 
 The latest version of `@pegasys-fi/v2-core`, `@pegasys-fi/v2-periphery`, `@pegasys-fi/swap-router-contracts`, and `@pegasys-fi/v2-staker` are deployed at the addresses listed below. Integrators should **no longer assume that they are deployed to the same addresses across chains** and be extremely careful to confirm mappings below.
 
 | Contract                                                                                                                                                     | Mainnet, Polygon, Optimism, Arbitrum, Testnets Address | Celo Address                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ | -------------------------------------------- |
-| [UniswapV2Factory](https://github.com/Pegasys-fi/v2-core/blob/v1.0.0/contracts/UniswapV2Factory.sol)                                                    | `0x1F98431c8aD98523631AE4a59f267346ea31F984`           | `0xAfE208a311B21f13EF87E33A90049fC17A7acDEc` |
+| [PegasysV2Factory](https://github.com/Pegasys-fi/v2-core/blob/v1.0.0/contracts/PegasysV2Factory.sol)                                                    | `0x1F98431c8aD98523631AE4a59f267346ea31F984`           | `0xAfE208a311B21f13EF87E33A90049fC17A7acDEc` |
 | [Multicall2](https://etherscan.io/address/0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696#code)                                                                   | `0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696`           | `0x633987602DE5C4F337e3DbF265303A1080324204` |
 | [ProxyAdmin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.4.1-solc-0.7-2/contracts/proxy/ProxyAdmin.sol)                                   | `0xB753548F6E010e7e680BA186F9Ca1BdAB2E90cf2`           | `0xc1b262Dd7643D4B7cA9e51631bBd900a564BF49A` |
 | [TickLens](https://github.com/Pegasys-fi/v2-periphery/blob/v1.0.0/contracts/lens/TickLens.sol)                                                          | `0xbfd8137f7d1516D3ea5cA83523914859ec47F573`           | `0x5f115D9113F88e0a0Db1b5033D90D4a9690AcD3D` |
@@ -37,11 +37,11 @@ These addresses are final and were deployed from these npm package versions:
 - [`@pegasys-fi/swap-router-contracts@1.1.0`](https://github.com/Pegasys-fi/swap-router-contracts/tree/v1.1.0)
 - [`@pegasys-fi/v2-staker@1.0.2`](https://github.com/Pegasys-fi/v2-staker/tree/v1.0.2)
 
-# Uniswap Pool Deployments
+# Pegasys Pool Deployments
 
-Every Uniswap pool is a unique instance of the `UniswapV2Pool` contract and is deployed at its own unique address. The contract source code of the pool will be auto-verified on etherscan. For example, here is the [ETH/USDC 0.3% pool](https://etherscan.io/address/0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8) on Ethereum mainnet.
+Every Pegasys pool is a unique instance of the `PegasysV2Pool` contract and is deployed at its own unique address. The contract source code of the pool will be auto-verified on etherscan. For example, here is the [ETH/USDC 0.3% pool](https://etherscan.io/address/0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8) on Ethereum mainnet.
 
-You can look up the address of an existing pool on [Uniswap Info](https://info.uniswap.org/#/) or by calling the [`getPool`](../reference/core/interfaces/IUniswapV2Factory.md#getpool) function on the `UniswapV2Factory` contract.
+You can look up the address of an existing pool on [Pegasys Info](https://info.pegasys.fi/#/) or by calling the [`getPool`](../reference/core/interfaces/IPegasysV2Factory.md#getpool) function on the `PegasysV2Factory` contract.
 
 ```solidity
 getPool("0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", 3000)
@@ -49,7 +49,7 @@ getPool("0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "0xc02aaa39b223fe8d0a0e5c4
 
 # Wrapped Native Token Addresses
 
-The Uniswap Protocol supports trading of ERC20 tokens. In order to swap a native asset like ETH (or MATIC on Polygon), the Uniswap protocol wraps these assets in an ERC20 wrapped native token contract. The protocol uses the following WETH9 addresses on Ethereum and WMATIC addresses on Polygon.
+The Pegasys Protocol supports trading of ERC20 tokens. In order to swap a native asset like ETH (or MATIC on Polygon), the Pegasys protocol wraps these assets in an ERC20 wrapped native token contract. The protocol uses the following WETH9 addresses on Ethereum and WMATIC addresses on Polygon.
 
 | Network          | ChainId  | Wrapped Native Token | Address                                      |
 | ---------------- | -------- | --------------------- | -------------------------------------------- |

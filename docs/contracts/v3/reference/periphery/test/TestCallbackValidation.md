@@ -4,5 +4,5 @@
 
 ```solidity
   function verifyCallback(
-  ) external returns (contract IUniswapV2Pool pool)
+  ) external returns (contract IPegasysV2Pool pool)
 ```
