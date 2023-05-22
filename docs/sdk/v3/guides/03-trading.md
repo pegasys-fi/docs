@@ -27,8 +27,8 @@ Included in the example application is functionality to wrap/unwrap ETH as neede
 
 For this guide, the following Uniswap packages are used:
 
-- [`@pegasys-fi/v2-sdk`](https://www.npmjs.com/package/@pegasys-fi/v2-sdk)
-- [`@pegasys-fi/sdk-core`](https://www.npmjs.com/package/@pegasys-fi/sdk-core)
+- [`@pegasys-fi/v2-sdk`](https://www.npmjs.com/package/@pollum-io/v2-sdk)
+- [`@pegasys-fi/sdk-core`](https://www.npmjs.com/package/@pollum-io/sdk-core)
 
 The core code of this guide can be found in [`trading.ts`](https://github.com/Uniswap/examples/blob/main/v2-sdk/trading/src/libs/trading.ts)
 

@@ -22,8 +22,8 @@ At the end of the guide, given the inputs above, we should be able to add or rem
 
 For this guide, the following Pegasys packages are used:
 
-- [`@pegasys-fi/v2-sdk`](https://www.npmjs.com/package/@pegasys-fi/v2-sdk)
-- [`@pegasys-fi/sdk-core`](https://www.npmjs.com/package/@pegasys-fi/sdk-core)
+- [`@pegasys-fi/v2-sdk`](https://www.npmjs.com/package/@pollum-io/v2-sdk)
+- [`@pegasys-fi/sdk-core`](https://www.npmjs.com/package/@pollum-io/sdk-core)
 
 The core code of this guide can be found in [`addLiquidity()`](https://github.com/Uniswap/examples/blob/d34a53412dbf905802da2249391788a225719bb8/v2-sdk/modifying-position/src/example/Example.tsx#L33) and [`removeLiquidity()`](https://github.com/Uniswap/examples/blob/733d586070afe2c8cceb35d557a77eac7a19a656/v2-sdk/modifying-position/src/example/Example.tsx#L83)
 

@@ -13,9 +13,7 @@ Welcome to the Pegasys Protocol V1 SDK. To begin, we recommend looking at the [*
 
 - [**V1 SDK Github**](https://github.com/Pegasys-fi/v1-sdk)
 - [**SDK Core Github**](https://github.com/Pegasys-fi/sdk-core)
-- [**SDK NPM Package**](https://www.npmjs.com/package/@pegasys-fi/v1-sdk)
+- [**SDK NPM Package**](https://www.npmjs.com/package/@pollum-io/v1-sdk)
 
-[![Unit Tests](https://github.com/Pegasys-fi/v1-sdk/workflows/Unit%20Tests/badge.svg)](https://github.com/Pegasys-fi/v1-sdk/actions?query=workflow%3A%22Unit+Tests%22)
-[![Lint](https://github.com/Pegasys-fi/v1-sdk/workflows/Lint/badge.svg)](https://github.com/Pegasys-fi/v1-sdk/actions?query=workflow%3ALint)
-[![npm version](https://img.shields.io/npm/v/@pegasys-fi/v1-sdk/latest.svg)](https://www.npmjs.com/package/@pegasys-fi/v1-sdk/v/latest)
-[![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@pegasys-fi/v1-sdk/latest.svg)](https://bundlephobia.com/result?p=@pegasys-fi/v1-sdk@latest)
+[![npm version](https://img.shields.io/npm/v/@pegasys-fi/v1-sdk/latest.svg)](https://www.npmjs.com/package/@pollum-io/v1-sdk/v/latest)
+[![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@pegasys-fi/v1-sdk/latest.svg)](https://bundlephobia.com/result?p=@pollum-io/v1-sdk@latest)
