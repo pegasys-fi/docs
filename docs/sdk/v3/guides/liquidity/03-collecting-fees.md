@@ -5,7 +5,7 @@ title: Collecting Fees
 
 ## Introduction
 
-This guide will cover how to collect fees from a liquidity position on the Pegasys V2 protocol. It is based on the [collecting fees code example](https://github.com/Uniswap/examples/tree/main/v2-sdk/collecting-fees), found in the Pegasys code examples [repository](https://github.com/Uniswap/examples). To run this example, check out the examples's [README](https://github.com/Uniswap/examples/blob/main/v2-sdk/collecting-fees/README.md) and follow the setup instructions.
+This guide will cover how to collect fees from a liquidity position on the Pegasys V2 protocol. It is based on the [collecting fees code example](https://github.com/uniswap/examples/tree/main/v3-sdk/collecting-fees), found in the Pegasys code examples [repository](https://github.com/Uniswap/examples). To run this example, check out the examples's [README](https://github.com/uniswap/examples/blob/main/v3-sdk/collecting-fees/README.md) and follow the setup instructions.
 
 :::info
 If you need a briefer on the SDK and to learn more about how these guides connect to the examples repository, please visit our [background](../01-background.md) page!
@@ -25,7 +25,7 @@ For this guide, the following Pegasys packages are used:
 - [`@pegasys-fi/v2-sdk`](https://www.npmjs.com/package/@pollum-io/v2-sdk)
 - [`@pegasys-fi/sdk-core`](https://www.npmjs.com/package/@pollum-io/sdk-core)
 
-The core code of this guide can be found in [`collectFees()`](https://github.com/Uniswap/examples/blob/main/v2-sdk/collecting-fees/src/libs/liquidity.ts#L35).
+The core code of this guide can be found in [`collectFees()`](https://github.com/uniswap/examples/blob/main/v3-sdk/collecting-fees/src/libs/liquidity.ts#L35).
 
 :::note
 This guide assumes you are familiar with our [Minting a Position](./01-minting-position.md) guide. A minted position is required to add or remove liquidity from, so the buttons will be disabled until a position is minted.
@@ -35,12 +35,12 @@ Also note that we do not need to give approval to the `NonfungiblePositionManage
 
 ## Setting up our fee collection
 
-All of the fee collecting logic can be found in the [`collectFees`](https://github.com/Uniswap/examples/blob/be67e7df220b0a270c9d18bbaab529e017213adf/v2-sdk/collecting-fees/src/example/Example.tsx#L24) function. Notice how the **Collect Fees** button is disabled until a position is minted. This happens because there will be no fees to collect unless there is a position whose liquidity has been traded against.
+All of the fee collecting logic can be found in the [`collectFees`](https://github.com/Uniswap/examples/blob/be67e7df220b0a270c9d18bbaab529e017213adf/v3-sdk/collecting-fees/src/example/Example.tsx#L24) function. Notice how the **Collect Fees** button is disabled until a position is minted. This happens because there will be no fees to collect unless there is a position whose liquidity has been traded against.
 
 To start, we construct an options object of type  [`CollectOptions`](https://github.com/Pegasys-fi/v2-sdk/blob/08a7c050cba00377843497030f502c05982b1c43/src/nonfungiblePositionManager.ts#L105) that holds the data about the fees we want to collect:
 
 ```typescript reference title="Constructing the CollectOptions" referenceLinkText="View on Github" customStyling
-https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v2-sdk/collecting-fees/src/libs/liquidity.ts#L44-L61
+https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v3-sdk/collecting-fees/src/libs/liquidity.ts#L44-L61
 ```
 
 Similar to the other functions exposed by the `NonfungiblePositionManager`, we pass the `tokenId` and the `recipient` of the fees, which in this case is our function's input position id and our wallet's address.
@@ -52,13 +52,13 @@ The other two `CurrencyAmount` parameters (`expectedCurrencyOwed0` and `expected
 We then get the call parameters for collecting our fees from our `NonfungiblePositionManager` using the constructed `CollectOptions`:
 
 ```typescript reference title="Getting the calldata and value for the transaction" referenceLinkText="View on Github" customStyling
-https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v2-sdk/collecting-fees/src/libs/liquidity.ts#L64-L65
+https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v3-sdk/collecting-fees/src/libs/liquidity.ts#L64-L65
 ```
 
 The function above returns the calldata and value required to construct the transaction for collecting accrued fees. Now that we have both the calldata and value we needed for the transaction, we can build and execute the it:
 
 ```typescript reference title="Building and submitting the transaction" referenceLinkText="View on Github" customStyling
-https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v2-sdk/collecting-fees/src/libs/liquidity.ts#L68-L77
+https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v3-sdk/collecting-fees/src/libs/liquidity.ts#L68-L77
 ```
 
 After pressing the button, if someone has traded against our position, we should be able to note how the balance of USDC and DAI increases as we collect fees.
