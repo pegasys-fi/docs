@@ -1,4 +1,4 @@
-[@uniswap/v3-sdk](../README.md) / [Exports](../modules.md) / LiquidityMath
+[@uniswap/v2-sdk](../README.md) / [Exports](../modules.md) / LiquidityMath
 
 # Class: LiquidityMath
 
@@ -22,7 +22,7 @@ Cannot be constructed.
 
 #### Defined in
 
-[utils/liquidityMath.ts:8](https://github.com/Uniswap/v3-sdk/blob/08a7c05/src/utils/liquidityMath.ts#L8)
+[utils/liquidityMath.ts:8](https://github.com/Uniswap/v2-sdk/blob/08a7c05/src/utils/liquidityMath.ts#L8)
 
 ## Methods
 
@@ -43,4 +43,4 @@ Cannot be constructed.
 
 #### Defined in
 
-[utils/liquidityMath.ts:10](https://github.com/Uniswap/v3-sdk/blob/08a7c05/src/utils/liquidityMath.ts#L10)
+[utils/liquidityMath.ts:10](https://github.com/Uniswap/v2-sdk/blob/08a7c05/src/utils/liquidityMath.ts#L10)

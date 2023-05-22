@@ -1,11 +1,11 @@
 ---
-sidebar_label: Uniswap V3 Staker Design
+sidebar_label: Uniswap V2 Staker Design
 sidebar_position: 1
 ---
 
-# Uniswap V3 Staker Design
+# Uniswap V2 Staker Design
 
-The liquidity mining staker design is comprised of one canonical position staking contract, Staker. The technical reference for this contract is [here](../../periphery/staker/UniswapV3Staker.md) and the source code is [here](https://github.com/Uniswap/uniswap-v3-staker).
+The liquidity mining staker design is comprised of one canonical position staking contract, Staker. The technical reference for this contract is [here](../../periphery/staker/UniswapV2Staker.md) and the source code is [here](https://github.com/Uniswap/uniswap-v2-staker).
 
 ## Data Structures
 
@@ -28,7 +28,7 @@ struct Stake {
 
 struct IncentiveKey {
         IERC20Minimal rewardToken;
-        IUniswapV3Pool pool;
+        IUniswapV2Pool pool;
         uint256 startTime;
         uint256 endTime;
         address refundee;
@@ -38,7 +38,7 @@ struct IncentiveKey {
 State:
 
 ```solidity
-IUniswapV3Factory public immutable factory;
+IUniswapV2Factory public immutable factory;
 INonfungiblePositionManager public immutable nonfungiblePositionManager;
 
 /// @dev bytes32 refers to the return value of IncentiveId.compute
@@ -126,7 +126,7 @@ struct EndIncentiveParams {
 
 **Check:**
 
-- Make sure sender is univ3 nft
+- Make sure sender is univ2 nft
 
 **Effects:**
 
@@ -189,7 +189,7 @@ To unstake an NFT, you call `unstakeToken`, which takes all the same arguments a
 ### `getRewardInfo`
 
 - It computes `secondsInsideX128` (the total liquidity seconds for which rewards are owed) for a given Stake, by:
-  - using`snapshotCumulativesInside` from the Uniswap v3 core contract to get `secondsPerLiquidityInRangeX128`, and subtracting `secondsPerLiquidityInRangeInitialX128`.
+  - using`snapshotCumulativesInside` from the Uniswap v2 core contract to get `secondsPerLiquidityInRangeX128`, and subtracting `secondsPerLiquidityInRangeInitialX128`.
   - Multiplying that by `stake.liquidity` to get the total seconds accrued by the liquidity in that period
 - Note that X128 means it's a `UQ32X128`.
 

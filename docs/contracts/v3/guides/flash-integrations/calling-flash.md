@@ -22,7 +22,7 @@ The `FlashParams` struct will contain the token addresses and amounts we wish to
     }
 ```
 
-The `FlashCallbackData` struct will contain the data we want to send to the callback. This includes `poolKey`, which expresses the sorted tokens with the matched fee tier, returned by the [**PoolAddress**](https://github.com/Uniswap/uniswap-v3-periphery/blob/main/contracts/libraries/PoolAddress.sol) library.
+The `FlashCallbackData` struct will contain the data we want to send to the callback. This includes `poolKey`, which expresses the sorted tokens with the matched fee tier, returned by the [**PoolAddress**](https://github.com/Uniswap/uniswap-v2-periphery/blob/main/contracts/libraries/PoolAddress.sol) library.
 
 ```solidity
     struct FlashCallbackData {
@@ -46,10 +46,10 @@ Now we'll start our function by assigning the relevant parameters from the `Flas
     }
 ```
 
-Next we will declare `pool` as type [**IUniswapV3Pool**], which allows us to call `flash` on our desired pool contract.
+Next we will declare `pool` as type [**IUniswapV2Pool**], which allows us to call `flash` on our desired pool contract.
 
 ```solidity
-        IUniswapV3Pool pool = IUniswapV3Pool(PoolAddress.computeAddress(factory, poolKey));
+        IUniswapV2Pool pool = IUniswapV2Pool(PoolAddress.computeAddress(factory, poolKey));
 ```
 
 ## Calling Flash
@@ -103,7 +103,7 @@ The full function:
 function initFlash(FlashParams memory params) external {
         PoolAddress.PoolKey memory poolKey =
             PoolAddress.PoolKey({token0: params.token0, token1: params.token1, fee: params.fee1});
-        IUniswapV3Pool pool = IUniswapV3Pool(PoolAddress.computeAddress(factory, poolKey));
+        IUniswapV2Pool pool = IUniswapV2Pool(PoolAddress.computeAddress(factory, poolKey));
         pool.flash(
             address(this),
             params.amount0,

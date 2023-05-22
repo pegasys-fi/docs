@@ -1,4 +1,4 @@
-[@uniswap/v3-sdk](../README.md) / [Exports](../modules.md) / FullMath
+[@uniswap/v2-sdk](../README.md) / [Exports](../modules.md) / FullMath
 
 # Class: FullMath
 
@@ -22,7 +22,7 @@ Cannot be constructed.
 
 #### Defined in
 
-[utils/fullMath.ts:8](https://github.com/Uniswap/v3-sdk/blob/08a7c05/src/utils/fullMath.ts#L8)
+[utils/fullMath.ts:8](https://github.com/Uniswap/v2-sdk/blob/08a7c05/src/utils/fullMath.ts#L8)
 
 ## Methods
 
@@ -44,4 +44,4 @@ Cannot be constructed.
 
 #### Defined in
 
-[utils/fullMath.ts:10](https://github.com/Uniswap/v3-sdk/blob/08a7c05/src/utils/fullMath.ts#L10)
+[utils/fullMath.ts:10](https://github.com/Uniswap/v2-sdk/blob/08a7c05/src/utils/fullMath.ts#L10)

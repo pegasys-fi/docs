@@ -4,12 +4,12 @@ title: Overview
 sidebar_position: 1
 ---
 
-# The Uniswap V3 Smart Contracts
+# The Uniswap V2 Smart Contracts
 
-Welcome to the Uniswap V3 smart contracts documentation.
+Welcome to the Uniswap V2 smart contracts documentation.
 
-The pages here contain guides and technical documentation for the Uniswap V3 Smart Contracts.
-You can use these docs to learn about the V3 Protocol Smart Contracts and develop on-chain integrations.
+The pages here contain guides and technical documentation for the Uniswap V2 Smart Contracts.
+You can use these docs to learn about the V2 Protocol Smart Contracts and develop on-chain integrations.
 
 # Guides
 
@@ -23,5 +23,5 @@ For a deeper dive, read through the [technical reference](./reference/overview) 
 
 # Resources
 
-- [**V3 Core**](https://github.com/Uniswap/v3-core)
-- [**V3 Periphery**](https://github.com/Uniswap/v3-periphery)
+- [**V2 Core**](https://github.com/Uniswap/v2-core)
+- [**V2 Periphery**](https://github.com/Uniswap/v2-periphery)

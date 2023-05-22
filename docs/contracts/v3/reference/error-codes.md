@@ -31,7 +31,7 @@ TransferHelper.sol
 
 - `TF`: Transfer Failed : errors with TF if transfer fails
 
-UniswapV3Pool.sol
+UniswapV2Pool.sol
 
 - `LOK`: The reentrancy guard. A transaction cannot re-enter the pool mid-swap
 

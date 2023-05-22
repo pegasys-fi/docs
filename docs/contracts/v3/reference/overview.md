@@ -4,17 +4,17 @@ title: Overview
 sidebar_position: 1
 ---
 
-Uniswap V3 is a binary smart contract system comprised of many libraries, which together make the Core and Periphery.
+Uniswap V2 is a binary smart contract system comprised of many libraries, which together make the Core and Periphery.
 
 Core contracts provide fundamental safety guarantees for all parties interacting with Uniswap. They define the logic of pool generation, the pools themselves, and the interactions involving the respective assets therein.
 
 Periphery contracts interact with one or more Core contracts but are not part of the core. They are designed to provide methods of interacting with the core that increase clarity and user safety.
 
-External calls will primarily call the periphery interfaces. Externally available functions are all viewable in the reference documentation. Internal functions are viewable on the Uniswap V3 Github repo.
+External calls will primarily call the periphery interfaces. Externally available functions are all viewable in the reference documentation. Internal functions are viewable on the Uniswap V2 Github repo.
 
 ## Core
 
-> [**Core Source Code**](https://github.com/Uniswap/uniswap-v3-core)
+> [**Core Source Code**](https://github.com/Uniswap/uniswap-v2-core)
 
 The core consists of a single factory, a pool deployer, and the many pools the factory will create.
 
@@ -22,13 +22,13 @@ A significant amount of care and attention has been given to gas optimization in
 
 ### Factory
 
-> [**Factory Reference**](./core/UniswapV3Factory)
+> [**Factory Reference**](./core/UniswapV2Factory)
 
 The factory defines the logic for generating pools. A pool is defined by two tokens, which make up the asset pair, and a fee. There can be multiple pools of the same asset pair, distinguished only by their swap fee.
 
 ### Pools
 
-> [**Pool Reference**](./core/UniswapV3Pool).
+> [**Pool Reference**](./core/UniswapV2Pool).
 
 Pools primarily serve as automated market makers for the paired assets. Additionally, they expose price oracle data and may be used as an asset source for flash transactions.
 
