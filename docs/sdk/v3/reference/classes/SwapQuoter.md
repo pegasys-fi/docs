@@ -2,7 +2,7 @@
 
 # Class: SwapQuoter
 
-Represents the Uniswap V2 QuoterV1 contract with a method for returning the formatted
+Represents the Pegasys V2 QuoterV1 contract with a method for returning the formatted
 calldata needed to call the quoter contract.
 
 ## Table of contents

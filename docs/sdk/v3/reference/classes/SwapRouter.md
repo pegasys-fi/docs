@@ -2,7 +2,7 @@
 
 # Class: SwapRouter
 
-Represents the Uniswap V2 SwapRouter, and has static methods for helping execute trades.
+Represents the Pegasys V2 SwapRouter, and has static methods for helping execute trades.
 
 ## Table of contents
 

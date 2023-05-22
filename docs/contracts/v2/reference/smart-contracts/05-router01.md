@@ -3,15 +3,15 @@ id: router-01
 title: Router01
 ---
 
-> UniswapV1Router01 should not be used any longer, because of the discovery of a [low severity bug](../smart-contracts/router-01#getamountin) and the fact that some methods do not work with tokens that take fees on transfer. The current recommendation is to use [UniswapV1Router02](../smart-contracts/router-02).
+> PegasysV1Router01 should not be used any longer, because of the discovery of a [low severity bug](../smart-contracts/router-01#getamountin) and the fact that some methods do not work with tokens that take fees on transfer. The current recommendation is to use [PegasysV1Router02](../smart-contracts/router-02).
 
 # Code
 
-[`UniswapV1Router01.sol`](https://github.com/Pegasys-fi/v1-periphery/blob/master/contracts/UniswapV1Router01.sol)
+[`PegasysV1Router01.sol`](https://github.com/Pegasys-fi/v1-periphery/blob/master/contracts/PegasysV1Router01.sol)
 
 # Address
 
-`UniswapV1Router01` is deployed at `0xf164fC0Ec4E93095b804a4795bBe1e041497b92a` on the Ethereum [mainnet](https://etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), and the [Ropsten](https://ropsten.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), [Rinkeby](https://rinkeby.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), [Görli](https://goerli.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), and [Kovan](https://kovan.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a) testnets. It was built from commit [2ad7da2](https://github.com/Pegasys-fi/v1-periphery/tree/2ad7da28a6f70ec4299364bc1608af8f30e7646b).
+`PegasysV1Router01` is deployed at `0xf164fC0Ec4E93095b804a4795bBe1e041497b92a` on the Ethereum [mainnet](https://etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), and the [Ropsten](https://ropsten.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), [Rinkeby](https://rinkeby.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), [Görli](https://goerli.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), and [Kovan](https://kovan.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a) testnets. It was built from commit [2ad7da2](https://github.com/Pegasys-fi/v1-periphery/tree/2ad7da28a6f70ec4299364bc1608af8f30e7646b).
 
 # Read-Only Functions
 
@@ -402,13 +402,13 @@ See[getAmountsIn](library#getamountsin).
 # Interface
 
 ```solidity
-import '@pegasys-fi/v1-periphery/contracts/interfaces/IUniswapV1Router01.sol';
+import '@pegasys-fi/v1-periphery/contracts/interfaces/IPegasysV1Router01.sol';
 ```
 
 ```solidity
 pragma solidity >=0.6.2;
 
-interface IUniswapV1Router01 {
+interface IPegasysV1Router01 {
   function factory() external pure returns (address);
   function WETH() external pure returns (address);
 
@@ -506,7 +506,7 @@ interface IUniswapV1Router01 {
 # ABI
 
 ```typescript
-import IUniswapV1Router01 from '@pegasys-fi/v1-periphery/build/IUniswapV1Router01.json'
+import IPegasysV1Router01 from '@pegasys-fi/v1-periphery/build/IPegasysV1Router01.json'
 ```
 
-[https://unpkg.com/@pegasys-fi/v1-periphery@1.0.0-beta.0/build/IUniswapV1Router01.json](https://unpkg.com/@pegasys-fi/v1-periphery@1.0.0-beta.0/build/IUniswapV1Router01.json)
+[https://unpkg.com/@pegasys-fi/v1-periphery@1.0.0-beta.0/build/IPegasysV1Router01.json](https://unpkg.com/@pegasys-fi/v1-periphery@1.0.0-beta.0/build/IPegasysV1Router01.json)

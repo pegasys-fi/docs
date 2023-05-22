@@ -4,12 +4,12 @@ sidebar_position: 1
 title: Overview
 ---
 
-# The Uniswap V1 SDK
+# The Pegasys V1 SDK
 
-Welcome to the Uniswap Protocol V1 SDK. To begin, we recommend looking at the [**Guides**](./guides/01-quick-start.md) and for deeper reference see the [**V1 SDK Github**](https://github.com/Pegasys-fi/v1-sdk) repo.
+Welcome to the Pegasys Protocol V1 SDK. To begin, we recommend looking at the [**Guides**](./guides/01-quick-start.md) and for deeper reference see the [**V1 SDK Github**](https://github.com/Pegasys-fi/v1-sdk) repo.
 
 
-# Uniswap V1 SDK
+# Pegasys V1 SDK
 
 - [**V1 SDK Github**](https://github.com/Pegasys-fi/v1-sdk)
 - [**SDK Core Github**](https://github.com/Pegasys-fi/sdk-core)

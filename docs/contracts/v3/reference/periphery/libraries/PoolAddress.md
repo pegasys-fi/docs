@@ -41,7 +41,7 @@ Deterministically computes the pool address given the factory and PoolKey
 
 | Name      | Type                       | Description                             |
 | :-------- | :------------------------- | :-------------------------------------- |
-| `factory` | address                    | The Uniswap V2 factory contract address |
+| `factory` | address                    | The Pegasys V2 factory contract address |
 | `key`     | struct PoolAddress.PoolKey | The PoolKey                             |
 
 #### Return Values:

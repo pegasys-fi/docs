@@ -7,11 +7,11 @@ Because routers are stateless and do not hold token balances, they can be replac
 
 # Code
 
-[`UniswapV1Router02.sol`](https://github.com/Pegasys-fi/v1-periphery/blob/master/contracts/UniswapV1Router02.sol)
+[`PegasysV1Router02.sol`](https://github.com/Pegasys-fi/v1-periphery/blob/master/contracts/PegasysV1Router02.sol)
 
 # Address
 
-`UniswapV1Router02` is deployed at `0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D` on the Ethereum [mainnet](https://etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), and the [Ropsten](https://ropsten.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), [Rinkeby](https://rinkeby.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), [Görli](https://goerli.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), and [Kovan](https://kovan.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D) testnets. It was built from commit [6961711](https://github.com/Pegasys-fi/v1-periphery/tree/69617118cda519dab608898d62aaa79877a61004).
+`PegasysV1Router02` is deployed at `0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D` on the Ethereum [mainnet](https://etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), and the [Ropsten](https://ropsten.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), [Rinkeby](https://rinkeby.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), [Görli](https://goerli.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), and [Kovan](https://kovan.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D) testnets. It was built from commit [6961711](https://github.com/Pegasys-fi/v1-periphery/tree/69617118cda519dab608898d62aaa79877a61004).
 
 # Read-Only Functions
 
@@ -530,13 +530,13 @@ Identical to [swapExactTokensForETH](#swapexacttokensforeth), but succeeds for t
 # Interface
 
 ```solidity
-import '@pegasys-fi/v1-periphery/contracts/interfaces/IUniswapV1Router02.sol';
+import '@pegasys-fi/v1-periphery/contracts/interfaces/IPegasysV1Router02.sol';
 ```
 
 ```solidity
 pragma solidity >=0.6.2;
 
-interface IUniswapV1Router01 {
+interface IPegasysV1Router01 {
     function factory() external pure returns (address);
     function WETH() external pure returns (address);
 
@@ -630,7 +630,7 @@ interface IUniswapV1Router01 {
     function getAmountsIn(uint amountOut, address[] calldata path) external view returns (uint[] memory amounts);
 }
 
-interface IUniswapV1Router02 is IUniswapV1Router01 {
+interface IPegasysV1Router02 is IPegasysV1Router01 {
     function removeLiquidityETHSupportingFeeOnTransferTokens(
         address token,
         uint liquidity,
@@ -675,7 +675,7 @@ interface IUniswapV1Router02 is IUniswapV1Router01 {
 # ABI
 
 ```typescript
-import IUniswapV1Router02 from '@pegasys-fi/v1-periphery/build/IUniswapV1Router02.json'
+import IPegasysV1Router02 from '@pegasys-fi/v1-periphery/build/IPegasysV1Router02.json'
 ```
 
-[https://unpkg.com/@pegasys-fi/v1-periphery@1.1.0-beta.0/build/IUniswapV1Router02.json](https://unpkg.com/@pegasys-fi/v1-periphery@1.1.0-beta.0/build/IUniswapV1Router02.json)
+[https://unpkg.com/@pegasys-fi/v1-periphery@1.1.0-beta.0/build/IPegasysV1Router02.json](https://unpkg.com/@pegasys-fi/v1-periphery@1.1.0-beta.0/build/IPegasysV1Router02.json)

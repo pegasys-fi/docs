@@ -3,7 +3,7 @@ id: smart-contracts
 title: Smart contracts
 ---
 
-Uniswap V1 is a binary smart contract system. [Core](#core) contracts provide fundamental safety guarantees for all parties interacting with Uniswap. [Periphery](#periphery) contracts interact with one or more core contracts but are not themselves part of the core.
+Pegasys V1 is a binary smart contract system. [Core](#core) contracts provide fundamental safety guarantees for all parties interacting with Pegasys. [Periphery](#periphery) contracts interact with one or more core contracts but are not themselves part of the core.
 
 # Core
 
@@ -29,7 +29,7 @@ Pairs have two primary purposes: serving as automated market makers and keeping 
 
 [Source code](https://github.com/Pegasys-fi/v1-periphery)
 
-The periphery is a constellation of smart contracts designed to support domain-specific interactions with the core. Because of Uniswap's permissionless nature, the contracts described below have no special privileges, and are in fact only a small subset of the universe of possible periphery-like contracts. However, they are useful examples of how to safely and efficiently interact with Uniswap V1.
+The periphery is a constellation of smart contracts designed to support domain-specific interactions with the core. Because of Pegasys's permissionless nature, the contracts described below have no special privileges, and are in fact only a small subset of the universe of possible periphery-like contracts. However, they are useful examples of how to safely and efficiently interact with Pegasys V1.
 
 ## Library
 
@@ -45,7 +45,7 @@ The router, which uses the library, fully supports all the basic requirements of
 
 # Design Decisions
 
-The following sections describe some of the notable design decisions made in Uniswap V1. These are safe to skip unless you're interested in gaining a deep technical understanding of how V1 works under the hood, or writing smart contract integrations!
+The following sections describe some of the notable design decisions made in Pegasys V1. These are safe to skip unless you're interested in gaining a deep technical understanding of how V1 works under the hood, or writing smart contract integrations!
 
 ## Sending Tokens
 
@@ -53,7 +53,7 @@ Typically, smart contracts which need tokens to perform some functionality requi
 
 ## WETH
 
-Uniswap V1 pairs do not support ETH directly, so ETH⇄ERC-20 pairs must be emulated with WETH. The motivation behind this choice was to remove ETH-specific code in the core, resulting in a leaner codebase. End users can be kept fully ignorant of this implementation detail, however, by simply wrapping/unwrapping ETH in the periphery.
+Pegasys V1 pairs do not support ETH directly, so ETH⇄ERC-20 pairs must be emulated with WETH. The motivation behind this choice was to remove ETH-specific code in the core, resulting in a leaner codebase. End users can be kept fully ignorant of this implementation detail, however, by simply wrapping/unwrapping ETH in the periphery.
 
 The router fully supports interacting with any WETH pair via ETH.
 

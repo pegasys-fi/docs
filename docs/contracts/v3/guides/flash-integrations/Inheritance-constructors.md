@@ -10,7 +10,7 @@ In this guide, we will write a smart contract that calls `flash` on a V2 pool an
 
 Flash transactions are an approach to transferring tokens on Ethereum that transfer token balances _before_ the necessary conditions are met for those balances to be transferred. In the context of a swap, this would mean the output is sent from the swap before the input is received.
 
-Uniswap V2 introduces a new function, `flash`, within the Pool contract. `Flash` withdraws a specified amount of both `token0` and `token1` to the `recipient` address. The withdrawn amount, plus the swap fees, will be due to the pool at the end of the transaction. `flash` includes a fourth parameter, `data`, which allows the caller to abi.encode any necessary data to be passed through the function and decoded later.
+Pegasys V2 introduces a new function, `flash`, within the Pool contract. `Flash` withdraws a specified amount of both `token0` and `token1` to the `recipient` address. The withdrawn amount, plus the swap fees, will be due to the pool at the end of the transaction. `flash` includes a fourth parameter, `data`, which allows the caller to abi.encode any necessary data to be passed through the function and decoded later.
 
 ```solidity
     function flash(
@@ -23,22 +23,22 @@ Uniswap V2 introduces a new function, `flash`, within the Pool contract. `Flash`
 
 ## The Flash Callback
 
-`flash` will withdraw the tokens, but how are they paid back? To understand this, we must look inside the flash function code. midway through the [**flash**](https://github.com/Pegasys-fi/v2-core/blob/main/contracts/UniswapV2Pool.sol#L791) function, we see this:
+`flash` will withdraw the tokens, but how are they paid back? To understand this, we must look inside the flash function code. midway through the [**flash**](https://github.com/Pegasys-fi/v2-core/blob/main/contracts/PegasysV2Pool.sol#L791) function, we see this:
 
 ```solidity
-IUniswapV2FlashCallback(msg.sender).uniswapV2FlashCallback(fee0, fee1, data);
+IPegasysV2FlashCallback(msg.sender).pegasysV2FlashCallback(fee0, fee1, data);
 ```
 
 This step calls the `FlashCallback` function on `msg.sender` - which passes the fee data needed to calculate the balances due to the pool, as well as any data encoded into the `data` parameter.
 
-In V2 there are three separate callback functions, `uniswapV2SwapCallback`, `uniswapV2MintCallback`, and `uniswapV2FlashCallback`, each available to be overridden with custom logic. To write our arbitrage contract, we'll be calling `flash` and overriding the `uniswapV2FlashCallback` with the steps needed to finish executing our transaction.
+In V2 there are three separate callback functions, `pegasysV2SwapCallback`, `pegasysV2MintCallback`, and `pegasysV2FlashCallback`, each available to be overridden with custom logic. To write our arbitrage contract, we'll be calling `flash` and overriding the `pegasysV2FlashCallback` with the steps needed to finish executing our transaction.
 
 ## Inheriting The V2 Contracts
 
-Inherit `IUniswapV2FlashCallback` and `PeripheryPayments`, as we will use each in our program. Note these two inherited contracts already extend many other contracts that we will be using, such as [LowGasSafeMath](../../reference/core/libraries/LowGasSafeMath.md) which we [attach](https://docs.soliditylang.org/en/v0.7.6/contracts.html?highlight=using#using-for), to types `uint256` and `int256`.
+Inherit `IPegasysV2FlashCallback` and `PeripheryPayments`, as we will use each in our program. Note these two inherited contracts already extend many other contracts that we will be using, such as [LowGasSafeMath](../../reference/core/libraries/LowGasSafeMath.md) which we [attach](https://docs.soliditylang.org/en/v0.7.6/contracts.html?highlight=using#using-for), to types `uint256` and `int256`.
 
 ```solidity
-contract PairFlash is IUniswapV2FlashCallback, PeripheryPayments {
+contract PairFlash is IPegasysV2FlashCallback, PeripheryPayments {
     using LowGasSafeMath for uint256;
     using LowGasSafeMath for int256;
 ```
@@ -67,7 +67,7 @@ The full import section and contract declaration:
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
-import '@pegasys-fi/v2-core/contracts/interfaces/callback/IUniswapV2FlashCallback.sol';
+import '@pegasys-fi/v2-core/contracts/interfaces/callback/IPegasysV2FlashCallback.sol';
 import '@pegasys-fi/v2-core/contracts/libraries/LowGasSafeMath.sol';
 
 import '@pegasys-fi/v2-periphery/contracts/base/PeripheryPayments.sol';
@@ -79,7 +79,7 @@ import '@pegasys-fi/v2-periphery/contracts/interfaces/ISwapRouter.sol';
 
 
 
-contract PairFlash is IUniswapV2FlashCallback, PeripheryPayments {
+contract PairFlash is IPegasysV2FlashCallback, PeripheryPayments {
     using LowGasSafeMath for uint256;
     using LowGasSafeMath for int256;
 

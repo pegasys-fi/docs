@@ -9,7 +9,7 @@ These parameters are fixed for a pool forever, i.e., the methods will always ret
   ) external view returns (address)
 ```
 
-The contract that deployed the pool, which must adhere to the IUniswapV2Factory interface
+The contract that deployed the pool, which must adhere to the IPegasysV2Factory interface
 
 #### Return Values:
 

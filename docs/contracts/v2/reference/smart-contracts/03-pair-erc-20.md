@@ -3,11 +3,11 @@ id: Pair-ERC-20
 title: Pair (ERC-20)
 ---
 
-This documentation covers ERC-20 functionality for denominating pool tokens. For Uniswap-specific functionality, see [Pair](../smart-contracts/pair).
+This documentation covers ERC-20 functionality for denominating pool tokens. For Pegasys-specific functionality, see [Pair](../smart-contracts/pair).
 
 # Code
 
-[`UniswapV1ERC20.sol`](https://github.com/Pegasys-fi/v1-core/blob/master/contracts/UniswapV1ERC20.sol)
+[`PegasysV1ERC20.sol`](https://github.com/Pegasys-fi/v1-core/blob/master/contracts/PegasysV1ERC20.sol)
 
 # Events
 
@@ -35,7 +35,7 @@ Emitted each time a transfer occurs via [transfer](#transfer-1), [transferFrom](
 function name() external pure returns (string memory);
 ```
 
-Returns `Uniswap V1` for all pairs.
+Returns `Pegasys V1` for all pairs.
 
 ## symbol
 
@@ -148,13 +148,13 @@ Sets the allowance for a spender where approval is granted via a signature.
 # Interface
 
 ```solidity
-import '@pegasys-fi/v1-core/contracts/interfaces/IUniswapV1ERC20.sol';
+import '@pegasys-fi/v1-core/contracts/interfaces/IPegasysV1ERC20.sol';
 ```
 
 ```solidity
 pragma solidity >=0.5.0;
 
-interface IUniswapV1ERC20 {
+interface IPegasysV1ERC20 {
   event Approval(address indexed owner, address indexed spender, uint value);
   event Transfer(address indexed from, address indexed to, uint value);
 
@@ -180,7 +180,7 @@ interface IUniswapV1ERC20 {
 # ABI
 
 ```typescript
-import IUniswapV1ERC20 from '@pegasys-fi/v1-core/build/IUniswapV1ERC20.json'
+import IPegasysV1ERC20 from '@pegasys-fi/v1-core/build/IPegasysV1ERC20.json'
 ```
 
-[https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IUniswapV1ERC20.json](https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IUniswapV1ERC20.json)
+[https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IPegasysV1ERC20.json](https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IPegasysV1ERC20.json)

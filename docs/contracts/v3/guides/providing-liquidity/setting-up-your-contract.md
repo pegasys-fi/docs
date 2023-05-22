@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Setting up the Contract
 
-This guide is an example of a custodial contract Uniswap V2 positions, which allows interaction with the Uniswap V2 Periphery by minting a position, adding liquidity to a position, decreasing liquidity, and collecting fees.
+This guide is an example of a custodial contract Pegasys V2 positions, which allows interaction with the Pegasys V2 Periphery by minting a position, adding liquidity to a position, decreasing liquidity, and collecting fees.
 
 First, declare the solidity version used to compile the contract and `abicoder v2` to allow arbitrary nested arrays and structs to be encoded and decoded in calldata, a feature we use when transacting with a pool.
 
@@ -19,7 +19,7 @@ pragma abicoder v2;
 Import the contracts needed from the npm package installation.
 
 ```solidity
-import '@pegasys-fi/v2-core/contracts/interfaces/IUniswapV2Pool.sol';
+import '@pegasys-fi/v2-core/contracts/interfaces/IPegasysV2Pool.sol';
 import '@pegasys-fi/v2-core/contracts/libraries/TickMath.sol';
 import '@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol';
 import '@pegasys-fi/v2-periphery/contracts/interfaces/ISwapRouter.sol';
@@ -120,7 +120,7 @@ To add a `Deposit` instance to the `deposits` mapping, create an internal functi
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
-import '@pegasys-fi/v2-core/contracts/interfaces/IUniswapV2Pool.sol';
+import '@pegasys-fi/v2-core/contracts/interfaces/IPegasysV2Pool.sol';
 import '@pegasys-fi/v2-core/contracts/libraries/TickMath.sol';
 import '@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol';
 import '../libraries/TransferHelper.sol';

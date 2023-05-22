@@ -1,6 +1,6 @@
 {
   "name": "@pegasys-fi/docs",
-  "description": "Uniswap docs",
+  "description": "Pegasys-fi docs",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",

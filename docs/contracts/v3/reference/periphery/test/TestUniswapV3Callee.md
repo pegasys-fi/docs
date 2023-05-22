@@ -28,9 +28,9 @@
   ) external
 ```
 
-### uniswapV2SwapCallback
+### pegasysV2SwapCallback
 
 ```solidity
-  function uniswapV2SwapCallback(
+  function pegasysV2SwapCallback(
   ) external
 ```

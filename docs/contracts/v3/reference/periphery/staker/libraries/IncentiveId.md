@@ -4,7 +4,7 @@
 
 ```solidity
   function compute(
-    struct IUniswapV2Staker.IncentiveKey key
+    struct IPegasysV2Staker.IncentiveKey key
   ) internal pure returns (bytes32 incentiveId)
 ```
 
@@ -14,7 +14,7 @@ Calculate the key for a staking incentive
 
 | Name  | Type                                 | Description                                             |
 | :---- | :----------------------------------- | :------------------------------------------------------ |
-| `key` | struct IUniswapV2Staker.IncentiveKey | The components used to compute the incentive identifier |
+| `key` | struct IPegasysV2Staker.IncentiveKey | The components used to compute the incentive identifier |
 
 #### Return Values:
 

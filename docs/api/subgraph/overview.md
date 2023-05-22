@@ -4,14 +4,14 @@ sidebar_position: 1
 title: Overview
 ---
 
-# The Uniswap Subgraph
+# The Pegasys Subgraph
 
-Uniswap uses multiple [subgraphs](https://thegraph.com/docs/about/introduction#what-the-graph-is) for indexing and organizing data from the Uniswap smart contracts.
-These subgraphs are hosted on The Graph hosted service and can be used to query Uniswap data.
+Pegasys uses multiple [subgraphs](https://thegraph.com/docs/about/introduction#what-the-graph-is) for indexing and organizing data from the Pegasys smart contracts.
+These subgraphs are hosted on The Graph hosted service and can be used to query Pegasys data.
 
 ## Versions and Production Endpoints
 
-Each version of Uniswap has its own dedicated subgraph, and governance contracts have a dedicated subgraph as well.
+Each version of Pegasys has its own dedicated subgraph, and governance contracts have a dedicated subgraph as well.
 
 Each subgraph has a dedicated endpoint for querying data, as well as a page on [The Graph explorer](https://thegraph.com/explorer/) the exposes the schema and available fields to query.
 

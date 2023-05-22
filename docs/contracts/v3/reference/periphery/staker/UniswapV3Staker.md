@@ -1,11 +1,11 @@
 ---
-sidebar_label: Uniswap V2 Staker Contract
+sidebar_label: Pegasys V2 Staker Contract
 sidebar_position: 2
 ---
 
-# Uniswap V2 Staker Contract
+# Pegasys V2 Staker Contract
 
-Below is the technical reference for the staker contract, [`UniswapV2Staker.sol`](https://github.com/Pegasys-fi/v2-staker/blob/main/contracts/UniswapV2Staker.sol). A technical guide for interacting with this staking contract will be released soon.
+Below is the technical reference for the staker contract, [`PegasysV2Staker.sol`](https://github.com/Pegasys-fi/v2-staker/blob/main/contracts/PegasysV2Staker.sol). A technical guide for interacting with this staking contract will be released soon.
 
 ## Functions
 
@@ -38,7 +38,7 @@ Returns information about a staked liquidity NFT
 
 ```solidity
   function constructor(
-    contract IUniswapV2Factory _factory,
+    contract IPegasysV2Factory _factory,
     contract INonfungiblePositionManager _nonfungiblePositionManager,
     uint256 _maxIncentiveStartLeadTime,
     uint256 _maxIncentiveDuration
@@ -49,7 +49,7 @@ Returns information about a staked liquidity NFT
 
 | Name                          | Type                                 | Description                                                                  |
 | :---------------------------- | :----------------------------------- | :--------------------------------------------------------------------------- |
-| `_factory`                    | contract IUniswapV2Factory           | the Uniswap V2 factory                                                       |
+| `_factory`                    | contract IPegasysV2Factory           | the Pegasys V2 factory                                                       |
 | `_nonfungiblePositionManager` | contract INonfungiblePositionManager | the NFT position manager contract address                                    |
 | `_maxIncentiveStartLeadTime`  | uint256                              | the max duration of an incentive in seconds                                  |
 | `_maxIncentiveDuration`       | uint256                              | the max amount of seconds into the future the incentive startTime can be set |
@@ -58,7 +58,7 @@ Returns information about a staked liquidity NFT
 
 ```solidity
   function createIncentive(
-    struct IUniswapV2Staker.IncentiveKey key,
+    struct IPegasysV2Staker.IncentiveKey key,
     uint256 reward
   ) external
 ```
@@ -69,14 +69,14 @@ Creates a new liquidity mining incentive program
 
 | Name     | Type                                 | Description                                   |
 | :------- | :----------------------------------- | :-------------------------------------------- |
-| `key`    | struct IUniswapV2Staker.IncentiveKey | Details of the incentive to create            |
+| `key`    | struct IPegasysV2Staker.IncentiveKey | Details of the incentive to create            |
 | `reward` | uint256                              | The amount of reward tokens to be distributed |
 
 ### endIncentive
 
 ```solidity
   function endIncentive(
-    struct IUniswapV2Staker.IncentiveKey key
+    struct IPegasysV2Staker.IncentiveKey key
   ) external returns (uint256 refund)
 ```
 
@@ -86,7 +86,7 @@ Ends an incentive after the incentive end time has passed and all stakes have be
 
 | Name  | Type                                 | Description                     |
 | :---- | :----------------------------------- | :------------------------------ |
-| `key` | struct IUniswapV2Staker.IncentiveKey | Details of the incentive to end |
+| `key` | struct IPegasysV2Staker.IncentiveKey | Details of the incentive to end |
 
 #### Return Values:
 
@@ -101,7 +101,7 @@ Ends an incentive after the incentive end time has passed and all stakes have be
   ) external returns (bytes4)
 ```
 
-Upon receiving a Uniswap V2 ERC721, creates the token deposit setting owner to `from`. Also stakes token
+Upon receiving a Pegasys V2 ERC721, creates the token deposit setting owner to `from`. Also stakes token
 in one or more incentives if properly formatted `data` has a length > 0.
 
 Whenever an {IERC721} `tokenId` token is transferred to this contract via {IERC721-safeTransferFrom}
@@ -138,13 +138,13 @@ Transfers ownership of a deposit from the sender to the given recipient
   ) external
 ```
 
-Withdraws a Uniswap V2 LP token `tokenId` from this contract to the recipient `to`
+Withdraws a Pegasys V2 LP token `tokenId` from this contract to the recipient `to`
 
 #### Parameters:
 
 | Name      | Type    | Description                                                                                       |
 | :-------- | :------ | :------------------------------------------------------------------------------------------------ |
-| `tokenId` | uint256 | The unique identifier of an Uniswap V2 LP token                                                   |
+| `tokenId` | uint256 | The unique identifier of an Pegasys V2 LP token                                                   |
 | `to`      | address | The address where the LP token will be sent                                                       |
 | `data`    | bytes   | An optional data array that will be passed along to the `to` address via the NFT safeTransferFrom |
 
@@ -152,36 +152,36 @@ Withdraws a Uniswap V2 LP token `tokenId` from this contract to the recipient `t
 
 ```solidity
   function stakeToken(
-    struct IUniswapV2Staker.IncentiveKey key,
+    struct IPegasysV2Staker.IncentiveKey key,
     uint256 tokenId
   ) external
 ```
 
-Stakes a Uniswap V2 LP token
+Stakes a Pegasys V2 LP token
 
 #### Parameters:
 
 | Name      | Type                                 | Description                                         |
 | :-------- | :----------------------------------- | :-------------------------------------------------- |
-| `key`     | struct IUniswapV2Staker.IncentiveKey | The key of the incentive for which to stake the NFT |
+| `key`     | struct IPegasysV2Staker.IncentiveKey | The key of the incentive for which to stake the NFT |
 | `tokenId` | uint256                              | The ID of the token to stake                        |
 
 ### unstakeToken
 
 ```solidity
   function unstakeToken(
-    struct IUniswapV2Staker.IncentiveKey key,
+    struct IPegasysV2Staker.IncentiveKey key,
     uint256 tokenId
   ) external
 ```
 
-Unstakes a Uniswap V2 LP token
+Unstakes a Pegasys V2 LP token
 
 #### Parameters:
 
 | Name      | Type                                 | Description                                           |
 | :-------- | :----------------------------------- | :---------------------------------------------------- |
-| `key`     | struct IUniswapV2Staker.IncentiveKey | The key of the incentive for which to unstake the NFT |
+| `key`     | struct IPegasysV2Staker.IncentiveKey | The key of the incentive for which to unstake the NFT |
 | `tokenId` | uint256                              | The ID of the token to unstake                        |
 
 ### claimReward
@@ -214,7 +214,7 @@ Transfers `amountRequested` of accrued `rewardToken` rewards from the contract t
 
 ```solidity
   function getRewardInfo(
-    struct IUniswapV2Staker.IncentiveKey key,
+    struct IPegasysV2Staker.IncentiveKey key,
     uint256 tokenId
   ) external view override returns (uint256 reward, uint160 secondsInsideX128)
 ```
@@ -225,7 +225,7 @@ Calculates the reward amount that will be received for the given stake
 
 | Name      | Type                                 | Description              |
 | :-------- | :----------------------------------- | :----------------------- |
-| `key`     | struct IUniswapV2Staker.IncentiveKey | The key of the incentive |
+| `key`     | struct IPegasysV2Staker.IncentiveKey | The key of the incentive |
 | `tokenId` | uint256                              | The ID of the token      |
 
 #### Return Values:

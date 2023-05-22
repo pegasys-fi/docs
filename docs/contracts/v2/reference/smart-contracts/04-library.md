@@ -7,7 +7,7 @@ title: Library
 
 ## Code
 
-[`UniswapV1Library.sol`](https://github.com/Pegasys-fi/v1-periphery/blob/master/contracts/libraries/UniswapV1Library.sol)
+[`PegasysV1Library.sol`](https://github.com/Pegasys-fi/v1-periphery/blob/master/contracts/libraries/PegasysV1Library.sol)
 
 # Internal Functions
 

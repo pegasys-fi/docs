@@ -1,4 +1,4 @@
-Functions for swapping tokens via Uniswap V2
+Functions for swapping tokens via Pegasys V2
 
 ## Parameter Structs
 

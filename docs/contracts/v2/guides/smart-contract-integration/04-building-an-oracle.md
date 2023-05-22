@@ -3,7 +3,7 @@ id: building-an-oracle
 title: Building an Oracle
 ---
 
-To build a price oracle on Uniswap V1, you must first understand the
+To build a price oracle on Pegasys V1, you must first understand the
 requirements for your use case. Once you understand the kind of price
 average you require, it is a matter of storing the cumulative price
 variable from the pair as often as necessary, and computing
@@ -46,7 +46,7 @@ than once per period.
 
 There are at least
 [two kinds of moving averages](https://www.investopedia.com/terms/m/movingaverage.asp#types-of-moving-averages)
-that you can compute using the Uniswap cumulative price variable.
+that you can compute using the Pegasys cumulative price variable.
 
 [Simple moving averages](https://www.investopedia.com/terms/s/sma.asp)
 give equal weight to each price measurement. We have built
@@ -82,7 +82,7 @@ in the current block, e.g. because there has not been any liquidity event (`mint
 block, you can compute the cumulative price counterfactually.
 
 We provide a library for use in oracle contracts that has the method
-[`UniswapV1OracleLibrary#currentCumulativePrices`](https://github.com/Pegasys-fi/v1-periphery/blob/master/contracts/libraries/UniswapV1OracleLibrary.sol#L16)
+[`PegasysV1OracleLibrary#currentCumulativePrices`](https://github.com/Pegasys-fi/v1-periphery/blob/master/contracts/libraries/PegasysV1OracleLibrary.sol#L16)
 for getting the cumulative price as of the current block.
 The current cumulative price returned by this method is computed _counterfactually_, meaning it requires no call to
 the relative gas-expensive `#sync` method on the pair.
@@ -90,7 +90,7 @@ It is correct regardless of whether a swap has already executed in the current b
 
 # Notes on overflow
 
-The `UniswapV1Pair` cumulative price variables are designed to eventually overflow,
+The `PegasysV1Pair` cumulative price variables are designed to eventually overflow,
 i.e. `price0CumulativeLast` and `price1CumulativeLast` and `blockTimestampLast` will overflow through 0.
 
 This should not pose an issue to your oracle design, as the price average computation is concerned with differences
@@ -134,6 +134,6 @@ It is possible to avoid regularly storing this cumulative price at the
 start of the period by utilizing storage proofs. However, this approach has limitations,
 especially in regard to gas cost and maximum length of the time period over which the average price can be measured.
 If you wish to try this approach, you can follow
-[this repository by Keydonix](https://github.com/Keydonix/uniswap-oracle/).
+[this repository by Keydonix](https://github.com/Keydonix/pegasys-oracle/).
 
-Keydonix has developed a general purpose price feed oracle built on Uniswap v1 that supports arbitrary time windows (up to 256 blocks) and doesn't require any active maintenance.
+Keydonix has developed a general purpose price feed oracle built on Pegasys v1 that supports arbitrary time windows (up to 256 blocks) and doesn't require any active maintenance.

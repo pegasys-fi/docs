@@ -23,22 +23,22 @@ import SearchBarWithAnalytics from '../theme/SearchBar'
 
 export const actions = [
   {
-    title: 'What is Uniswap',
+    title: 'What is Pegasys',
     icon: Info,
     to: '/concepts/overview',
-    text: `Learn about the core concepts of the Uniswap Protocol, Swaps, Pools, Concentrated Liquidity and more.`,
+    text: `Learn about the core concepts of the Pegasys Protocol, Swaps, Pools, Concentrated Liquidity and more.`,
   },
   {
-    title: 'Integrate with Uniswap',
+    title: 'Integrate with Pegasys',
     icon: HelpCircle,
     to: '/sdk/v2/overview',
-    text: `Learn how to integrate with Uniswap by building a dApp through guided examples.`,
+    text: `Learn how to integrate with Pegasys by building a dApp through guided examples.`,
   },
   {
-    title: 'The Uniswap smart contracts',
+    title: 'The Pegasys smart contracts',
     icon: BookOpen,
     to: '/contracts/v2/overview',
-    text: `Learn about the architecture of the Uniswap Protocol smart contracts through guided examples.`,
+    text: `Learn about the architecture of the Pegasys Protocol smart contracts through guided examples.`,
   },
 ]
 
@@ -298,7 +298,7 @@ const StyledIcon = styled.div`
 
 export default function Home() {
   return (
-    <Layout title={`Uniswap Docs`} description="Technical Documentation For The Uniswap Protocol">
+    <Layout title={`Pegasys Docs`} description="Technical Documentation For The Pegasys Protocol">
       <Container>
         <DocsHeader>
           <div
@@ -310,7 +310,7 @@ export default function Home() {
               alignItems: 'center',
             }}
           >
-            <h1 style={{ fontWeight: 600 }}> Welcome to Uniswap Docs</h1>
+            <h1 style={{ fontWeight: 600 }}> Welcome to Pegasys Docs</h1>
             <HideMedium>
               <SearchBarWithAnalytics />
             </HideMedium>
@@ -356,7 +356,7 @@ export default function Home() {
         >
           <div>
             <h2>Integrate your dApp</h2>
-            <p>Explore these guided tutorials to get started integrating with Uniswap in your dApp.</p>
+            <p>Explore these guided tutorials to get started integrating with Pegasys in your dApp.</p>
             <div>
               {dAppGuides.map((action) => (
                 <TraceEvent
@@ -385,7 +385,7 @@ export default function Home() {
           </div>
           <div>
             <h2>Integrate your smart contracts</h2>
-            <p>Explore these guided tutorials to get started integrating with Uniswap in your smart contracts.</p>
+            <p>Explore these guided tutorials to get started integrating with Pegasys in your smart contracts.</p>
             <div>
               {smartContractGuides.map((action) => (
                 <TraceEvent
@@ -482,7 +482,7 @@ export default function Home() {
             section={SectionName.BOTTOM_MENU_LINKS}
             name={SharedEventName.PAGE_CLICKED}
           >
-            <Link style={{ textDecoration: 'none' }} href={'https://gov.uniswap.org/'}>
+            <Link style={{ textDecoration: 'none' }} href={'https://gov.pegasys.fi/'}>
               <CenterCard>
                 <MessageCircle style={{ width: '48px', height: '48px' }} />
                 <div>
@@ -498,14 +498,14 @@ export default function Home() {
             element={ElementName.GITHUB}
             name={SharedEventName.PAGE_CLICKED}
           >
-            <Link style={{ textDecoration: 'none' }} href={'https://github.com/Uniswap'}>
+            <Link style={{ textDecoration: 'none' }} href={'https://github.com/Pegasys'}>
               <CenterCard>
                 <StyledIcon>
                   <GitHub style={{ width: '48px', height: '48px' }} />
                 </StyledIcon>
                 <div>
                   <h3>GitHub</h3>
-                  <p>View all Uniswap repositories.</p>
+                  <p>View all Pegasys repositories.</p>
                 </div>
               </CenterCard>
             </Link>
@@ -530,10 +530,10 @@ export default function Home() {
           >
             <img src={UGP} width={'120px'} />
             <div>
-              <h2 style={{ marginBottom: '0.5rem' }}>Uniswap Grants Program</h2>
+              <h2 style={{ marginBottom: '0.5rem' }}>Pegasys Grants Program</h2>
               <p style={{ margin: '0rem' }}>
-                Uniswap Governance offers grant funding for people who are building apps, tools, and activities for
-                Uniswap Protocol users, builders, and community members.{' '}
+                Pegasys Governance offers grant funding for people who are building apps, tools, and activities for
+                Pegasys Protocol users, builders, and community members.{' '}
               </p>
             </div>
           </WideCard>
