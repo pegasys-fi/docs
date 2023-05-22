@@ -148,7 +148,7 @@ Sets the allowance for a spender where approval is granted via a signature.
 # Interface
 
 ```solidity
-import '@uniswap/v1-core/contracts/interfaces/IUniswapV1ERC20.sol';
+import '@pegasys-fi/v1-core/contracts/interfaces/IUniswapV1ERC20.sol';
 ```
 
 ```solidity
@@ -180,7 +180,7 @@ interface IUniswapV1ERC20 {
 # ABI
 
 ```typescript
-import IUniswapV1ERC20 from '@uniswap/v1-core/build/IUniswapV1ERC20.json'
+import IUniswapV1ERC20 from '@pegasys-fi/v1-core/build/IUniswapV1ERC20.json'
 ```
 
-[https://unpkg.com/@uniswap/v1-core@1.0.0/build/IUniswapV1ERC20.json](https://unpkg.com/@uniswap/v1-core@1.0.0/build/IUniswapV1ERC20.json)
+[https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IUniswapV1ERC20.json](https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IUniswapV1ERC20.json)

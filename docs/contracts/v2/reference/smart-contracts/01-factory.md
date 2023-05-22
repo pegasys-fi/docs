@@ -89,7 +89,7 @@ Creates a pair for `tokenA` and `tokenB` if one doesn't exist already.
 # Interface
 
 ```solidity
-import '@uniswap/v1-core/contracts/interfaces/IUniswapV1Factory.sol';
+import '@pegasys-fi/v1-core/contracts/interfaces/IUniswapV1Factory.sol';
 ```
 
 ```solidity
@@ -112,7 +112,7 @@ interface IUniswapV1Factory {
 # ABI
 
 ```typescript
-import IUniswapV1Factory from '@uniswap/v1-core/build/IUniswapV1Factory.json'
+import IUniswapV1Factory from '@pegasys-fi/v1-core/build/IUniswapV1Factory.json'
 ```
 
-[https://unpkg.com/@uniswap/v1-core@1.0.0/build/IUniswapV1Factory.json](https://unpkg.com/@uniswap/v1-core@1.0.0/build/IUniswapV1Factory.json)
+[https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IUniswapV1Factory.json](https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IUniswapV1Factory.json)

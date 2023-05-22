@@ -29,7 +29,7 @@ The next piece of data we need is **decimals**.
 One option here is to simply pass in the correct value, which we may know is `18`. At this point, we're ready to represent DAI as a [Token](../reference/token):
 
 ```typescript
-import { ChainId, Token } from '@uniswap/sdk'
+import { ChainId, Token } from '@pegasys-fi/v2-sdk'
 
 const chainId = ChainId.MAINNET
 const tokenAddress = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // must be checksummed
@@ -41,7 +41,7 @@ const DAI = new Token(chainId, tokenAddress, decimals)
 If we don't know or don't want to hardcode the value, we could look it up ourselves via any method of retrieving on-chain data in a function that looks something like:
 
 ```typescript
-import { ChainId } from '@uniswap/sdk'
+import { ChainId } from '@pegasys-fi/v2-sdk'
 
 async function getDecimals(chainId: ChainId, tokenAddress: string): Promise<number> {
   // implementation details
@@ -53,7 +53,7 @@ async function getDecimals(chainId: ChainId, tokenAddress: string): Promise<numb
 If we don't want to provide or look up the value ourselves, we can ask the SDK to look it up for us with [Fetcher.fetchTokenData](../reference/fetcher#fetchtokendata)
 
 ```typescript
-import { ChainId, Token, Fetcher } from '@uniswap/sdk'
+import { ChainId, Token, Fetcher } from '@pegasys-fi/v2-sdk'
 
 const chainId = ChainId.MAINNET
 const tokenAddress = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // must be checksummed
@@ -72,7 +72,7 @@ If you're using another library, you'll have to fetch the data separately.
 Finally, we can talk about **symbol** and **name**. Because these fields aren't used anywhere in the SDK itself, they're optional, and can be provided if you want to use them in your application. However, the SDK will not fetch them for you, so you'll have to provide them:
 
 ```typescript
-import { ChainId, Token } from '@uniswap/sdk'
+import { ChainId, Token } from '@pegasys-fi/v2-sdk'
 
 const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18, 'DAI', 'Dai Stablecoin')
 ```
@@ -80,7 +80,7 @@ const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d
 or:
 
 ```typescript
-import { ChainId, Token, Fetcher } from '@uniswap/sdk'
+import { ChainId, Token, Fetcher } from '@pegasys-fi/v2-sdk'
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option
@@ -112,7 +112,7 @@ The data we need is the _reserves_ of the pair. To read more about reserves, see
 One option here is to simply pass in values which we've fetched ourselves to create a [Pair](../reference/pair):
 
 ```typescript
-import { ChainId, Token, WETH, Pair, TokenAmount } from '@uniswap/sdk'
+import { ChainId, Token, WETH, Pair, TokenAmount } from '@pegasys-fi/v2-sdk'
 
 const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
 
@@ -139,7 +139,7 @@ Note that these values can change as frequently as every block, and should be ke
 If we don't want to look up the value ourselves, we can ask the SDK to look them up for us with [Fetcher.fetchTokenData](../reference/fetcher#fetchtokendata):
 
 ```typescript
-import { ChainId, Token, WETH, Fetcher } from '@uniswap/sdk'
+import { ChainId, Token, WETH, Fetcher } from '@pegasys-fi/v2-sdk'
 
 const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
 

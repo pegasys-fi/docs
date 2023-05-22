@@ -1,4 +1,4 @@
-[@uniswap/sdk-core](../README.md) / [Exports](../modules.md) / SupportedChainId
+[@pegasys-fi/sdk-core](../README.md) / [Exports](../modules.md) / SupportedChainId
 
 # Enumeration: SupportedChainId
 

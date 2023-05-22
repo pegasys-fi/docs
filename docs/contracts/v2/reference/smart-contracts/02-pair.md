@@ -173,7 +173,7 @@ See the <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>whit
 # Interface
 
 ```solidity
-import '@uniswap/v1-core/contracts/interfaces/IUniswapV1Pair.sol';
+import '@pegasys-fi/v1-core/contracts/interfaces/IUniswapV1Pair.sol';
 ```
 
 ```solidity
@@ -232,7 +232,7 @@ interface IUniswapV1Pair {
 # ABI
 
 ```typescript
-import IUniswapV1Pair from '@uniswap/v1-core/build/IUniswapV1Pair.json'
+import IUniswapV1Pair from '@pegasys-fi/v1-core/build/IUniswapV1Pair.json'
 ```
 
-[https://unpkg.com/@uniswap/v1-core@1.0.0/build/IUniswapV1Pair.json](https://unpkg.com/@uniswap/v1-core@1.0.0/build/IUniswapV1Pair.json)
+[https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IUniswapV1Pair.json](https://unpkg.com/@pegasys-fi/v1-core@1.0.0/build/IUniswapV1Pair.json)

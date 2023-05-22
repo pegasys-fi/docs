@@ -1,4 +1,4 @@
-[@uniswap/sdk-core](../README.md) / [Exports](../modules.md) / Rounding
+[@pegasys-fi/sdk-core](../README.md) / [Exports](../modules.md) / Rounding
 
 # Enumeration: Rounding
 

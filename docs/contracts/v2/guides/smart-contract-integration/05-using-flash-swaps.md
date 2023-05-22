@@ -75,7 +75,7 @@ A fully functional example of flash swaps is available: [`ExampleFlashSwap.sol`]
 # Interface
 
 ```solidity
-import '@uniswap/v1-core/contracts/interfaces/IUniswapV1Callee.sol';
+import '@pegasys-fi/v1-core/contracts/interfaces/IUniswapV1Callee.sol';
 ```
 
 ```solidity

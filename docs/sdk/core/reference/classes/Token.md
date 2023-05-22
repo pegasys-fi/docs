@@ -1,4 +1,4 @@
-[@uniswap/sdk-core](../README.md) / [Exports](../modules.md) / Token
+[@pegasys-fi/sdk-core](../README.md) / [Exports](../modules.md) / Token
 
 # Class: Token
 

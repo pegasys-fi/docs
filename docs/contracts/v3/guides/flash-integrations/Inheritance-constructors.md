@@ -67,15 +67,15 @@ The full import section and contract declaration:
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
-import '@uniswap/v2-core/contracts/interfaces/callback/IUniswapV2FlashCallback.sol';
-import '@uniswap/v2-core/contracts/libraries/LowGasSafeMath.sol';
+import '@pegasys-fi/v2-core/contracts/interfaces/callback/IUniswapV2FlashCallback.sol';
+import '@pegasys-fi/v2-core/contracts/libraries/LowGasSafeMath.sol';
 
-import '@uniswap/v2-periphery/contracts/base/PeripheryPayments.sol';
-import '@uniswap/v2-periphery/contracts/base/PeripheryImmutableState.sol';
-import '@uniswap/v2-periphery/contracts/libraries/PoolAddress.sol';
-import '@uniswap/v2-periphery/contracts/libraries/CallbackValidation.sol';
-import '@uniswap/v2-periphery/contracts/libraries/TransferHelper.sol';
-import '@uniswap/v2-periphery/contracts/interfaces/ISwapRouter.sol';
+import '@pegasys-fi/v2-periphery/contracts/base/PeripheryPayments.sol';
+import '@pegasys-fi/v2-periphery/contracts/base/PeripheryImmutableState.sol';
+import '@pegasys-fi/v2-periphery/contracts/libraries/PoolAddress.sol';
+import '@pegasys-fi/v2-periphery/contracts/libraries/CallbackValidation.sol';
+import '@pegasys-fi/v2-periphery/contracts/libraries/TransferHelper.sol';
+import '@pegasys-fi/v2-periphery/contracts/interfaces/ISwapRouter.sol';
 
 
 

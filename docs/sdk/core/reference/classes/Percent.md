@@ -1,4 +1,4 @@
-[@uniswap/sdk-core](../README.md) / [Exports](../modules.md) / Percent
+[@pegasys-fi/sdk-core](../README.md) / [Exports](../modules.md) / Percent
 
 # Class: Percent
 

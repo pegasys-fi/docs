@@ -1,4 +1,4 @@
-[@uniswap/v2-sdk](../README.md) / [Exports](../modules.md) / RemoveLiquidityOptions
+[@pegasys-fi/v2-sdk](../README.md) / [Exports](../modules.md) / RemoveLiquidityOptions
 
 # Interface: RemoveLiquidityOptions
 

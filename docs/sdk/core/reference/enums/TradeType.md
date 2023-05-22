@@ -1,4 +1,4 @@
-[@uniswap/sdk-core](../README.md) / [Exports](../modules.md) / TradeType
+[@pegasys-fi/sdk-core](../README.md) / [Exports](../modules.md) / TradeType
 
 # Enumeration: TradeType
 
