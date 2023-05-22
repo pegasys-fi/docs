@@ -18,9 +18,7 @@ Pull requests are welcome!
 # Pegasys Swap Widget
 
 - [**Swap Widget Github Repo**](https://github.com/Pegasys-fi/widgets)
-- [**Swap Widget NPM Package**](https://www.npmjs.com/package/@pegasys-fi/widgets)
+- [**Swap Widget NPM Package**](https://www.npmjs.com/package/@pollum-io/widgets)
 
-[![Unit Tests](https://github.com/Pegasys-fi/widgets/workflows/Unit%20Tests/badge.svg)](https://github.com/Pegasys-fi/v2-sdk/actions?query=workflow%3A%22Unit+Tests%22)
-[![Lint](https://github.com/Pegasys-fi/widgets/workflows/Lint/badge.svg)](https://github.com/Pegasys-fi/v2-sdk/actions?query=workflow%3ALint)
-[![npm version](https://img.shields.io/npm/v/@pegasys-fi/widgets/latest.svg)](https://www.npmjs.com/package/@pegasys-fi/v2-sdk/v/latest)
-[![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@pegasys-fi/widgets/latest.svg)](https://bundlephobia.com/result?p=@pegasys-fi/v2-sdk@latest)
+[![npm version](https://img.shields.io/npm/v/@pegasys-fi/widgets/latest.svg)](https://www.npmjs.com/package/@pollum-io/v2-sdk/v/latest)
+[![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@pegasys-fi/widgets/latest.svg)](https://bundlephobia.com/result?p=@pollum-io/v2-sdk@latest)
