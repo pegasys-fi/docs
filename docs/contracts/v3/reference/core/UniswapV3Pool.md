@@ -219,7 +219,7 @@ noDelegateCall is applied indirectly via \_modifyPosition
 
 Swap token0 for token1, or token1 for token0
 
-The caller of this method receives a callback in the form of IUniswapV3SwapCallback#uniswapV3SwapCallback
+The caller of this method receives a callback in the form of IUniswapV2SwapCallback#uniswapV2SwapCallback
 
 #### Parameters:
 
@@ -251,7 +251,7 @@ The caller of this method receives a callback in the form of IUniswapV3SwapCallb
 
 Receive token0 and/or token1 and pay it back, plus a fee, in the callback
 
-The caller of this method receives a callback in the form of IUniswapV3FlashCallback#uniswapV3FlashCallback
+The caller of this method receives a callback in the form of IUniswapV2FlashCallback#uniswapV2FlashCallback
 Can be used to donate underlying tokens pro-rata to currently in-range liquidity providers by calling
 with 0 amount{0,1} and sending the donation amount(s) from the callback
 

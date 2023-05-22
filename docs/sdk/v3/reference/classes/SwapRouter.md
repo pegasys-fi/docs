@@ -1,8 +1,8 @@
-[@uniswap/v3-sdk](../README.md) / [Exports](../modules.md) / SwapRouter
+[@uniswap/v2-sdk](../README.md) / [Exports](../modules.md) / SwapRouter
 
 # Class: SwapRouter
 
-Represents the Uniswap V3 SwapRouter, and has static methods for helping execute trades.
+Represents the Uniswap V2 SwapRouter, and has static methods for helping execute trades.
 
 ## Table of contents
 
@@ -28,7 +28,7 @@ Cannot be constructed.
 
 #### Defined in
 
-[swapRouter.ts:57](https://github.com/Uniswap/v3-sdk/blob/08a7c05/src/swapRouter.ts#L57)
+[swapRouter.ts:57](https://github.com/Uniswap/v2-sdk/blob/08a7c05/src/swapRouter.ts#L57)
 
 ## Properties
 
@@ -38,7 +38,7 @@ Cannot be constructed.
 
 #### Defined in
 
-[swapRouter.ts:52](https://github.com/Uniswap/v3-sdk/blob/08a7c05/src/swapRouter.ts#L52)
+[swapRouter.ts:52](https://github.com/Uniswap/v2-sdk/blob/08a7c05/src/swapRouter.ts#L52)
 
 ## Methods
 
@@ -61,4 +61,4 @@ Produces the on-chain method name to call and the hex encoded parameters to pass
 
 #### Defined in
 
-[swapRouter.ts:64](https://github.com/Uniswap/v3-sdk/blob/08a7c05/src/swapRouter.ts#L64)
+[swapRouter.ts:64](https://github.com/Uniswap/v2-sdk/blob/08a7c05/src/swapRouter.ts#L64)

@@ -1,4 +1,4 @@
-[@uniswap/v3-sdk](../README.md) / [Exports](../modules.md) / TickLibrary
+[@uniswap/v2-sdk](../README.md) / [Exports](../modules.md) / TickLibrary
 
 # Class: TickLibrary
 
@@ -22,7 +22,7 @@ Cannot be constructed.
 
 #### Defined in
 
-[utils/tickLibrary.ts:25](https://github.com/Uniswap/v3-sdk/blob/08a7c05/src/utils/tickLibrary.ts#L25)
+[utils/tickLibrary.ts:25](https://github.com/Uniswap/v2-sdk/blob/08a7c05/src/utils/tickLibrary.ts#L25)
 
 ## Methods
 
@@ -48,4 +48,4 @@ Cannot be constructed.
 
 #### Defined in
 
-[utils/tickLibrary.ts:27](https://github.com/Uniswap/v3-sdk/blob/08a7c05/src/utils/tickLibrary.ts#L27)
+[utils/tickLibrary.ts:27](https://github.com/Uniswap/v2-sdk/blob/08a7c05/src/utils/tickLibrary.ts#L27)

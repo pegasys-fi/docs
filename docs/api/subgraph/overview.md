@@ -15,11 +15,11 @@ Each version of Uniswap has its own dedicated subgraph, and governance contracts
 
 Each subgraph has a dedicated endpoint for querying data, as well as a page on [The Graph explorer](https://thegraph.com/explorer/) the exposes the schema and available fields to query.
 
-##### V3
+##### V2
 
-- Explorer Page: https://thegraph.com/explorer/subgraph/uniswap/uniswap-v3
-- Graphql Endpoint: https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3
-- Code: https://github.com/Uniswap/uniswap-v3-subgraph
+- Explorer Page: https://thegraph.com/explorer/subgraph/uniswap/uniswap-v2
+- Graphql Endpoint: https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2
+- Code: https://github.com/Uniswap/uniswap-v2-subgraph
 
 ##### Governance
 

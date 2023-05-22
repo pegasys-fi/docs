@@ -3,7 +3,7 @@ pragma solidity =0.7.6;
 pragma abicoder v2;
 
 import '@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol';
-import '@uniswap/v3-core/contracts/libraries/TickMath.sol';
+import '@uniswap/v2-core/contracts/libraries/TickMath.sol';
 import '../libraries/TransferHelper.sol';
 import '../interfaces/INonfungiblePositionManager.sol';
 
@@ -32,7 +32,7 @@ contract LiquidityExamples is IERC721Receiver {
         uint256 tokenId,
         bytes calldata
     ) external override returns (bytes4) {
-        require(msg.sender == address(nonfungiblePositionManager), 'not a univ3 nft');
+        require(msg.sender == address(nonfungiblePositionManager), 'not a univ2 nft');
         _createDeposit(operator, tokenId);
         return this.onERC721Received.selector;
     }
