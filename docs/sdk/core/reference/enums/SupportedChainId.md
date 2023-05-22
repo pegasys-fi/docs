@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[constants.ts:10](https://github.com/Uniswap/sdk-core/blob/9997e88/src/constants.ts#L10)
+[constants.ts:10](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/constants.ts#L10)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[constants.ts:11](https://github.com/Uniswap/sdk-core/blob/9997e88/src/constants.ts#L11)
+[constants.ts:11](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/constants.ts#L11)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[constants.ts:19](https://github.com/Uniswap/sdk-core/blob/9997e88/src/constants.ts#L19)
+[constants.ts:19](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/constants.ts#L19)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[constants.ts:20](https://github.com/Uniswap/sdk-core/blob/9997e88/src/constants.ts#L20)
+[constants.ts:20](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/constants.ts#L20)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[constants.ts:7](https://github.com/Uniswap/sdk-core/blob/9997e88/src/constants.ts#L7)
+[constants.ts:7](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/constants.ts#L7)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[constants.ts:8](https://github.com/Uniswap/sdk-core/blob/9997e88/src/constants.ts#L8)
+[constants.ts:8](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/constants.ts#L8)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[constants.ts:4](https://github.com/Uniswap/sdk-core/blob/9997e88/src/constants.ts#L4)
+[constants.ts:4](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/constants.ts#L4)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[constants.ts:13](https://github.com/Uniswap/sdk-core/blob/9997e88/src/constants.ts#L13)
+[constants.ts:13](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/constants.ts#L13)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[constants.ts:14](https://github.com/Uniswap/sdk-core/blob/9997e88/src/constants.ts#L14)
+[constants.ts:14](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/constants.ts#L14)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[constants.ts:16](https://github.com/Uniswap/sdk-core/blob/9997e88/src/constants.ts#L16)
+[constants.ts:16](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/constants.ts#L16)
 
 ___
 
@@ -128,7 +128,7 @@ ___
 
 #### Defined in
 
-[constants.ts:17](https://github.com/Uniswap/sdk-core/blob/9997e88/src/constants.ts#L17)
+[constants.ts:17](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/constants.ts#L17)
 
 ___
 
@@ -138,7 +138,7 @@ ___
 
 #### Defined in
 
-[constants.ts:6](https://github.com/Uniswap/sdk-core/blob/9997e88/src/constants.ts#L6)
+[constants.ts:6](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/constants.ts#L6)
 
 ___
 
@@ -148,4 +148,4 @@ ___
 
 #### Defined in
 
-[constants.ts:5](https://github.com/Uniswap/sdk-core/blob/9997e88/src/constants.ts#L5)
+[constants.ts:5](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/constants.ts#L5)

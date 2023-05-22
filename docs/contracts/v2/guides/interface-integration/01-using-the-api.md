@@ -46,7 +46,7 @@ import { HttpLink } from 'apollo-link-http'
 
 export const client = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v1',
+    uri: 'https://api.thegraph.com/subgraphs/name/pegasys-fi/v1',
   }),
   cache: new InMemoryCache(),
 })
@@ -195,7 +195,7 @@ import gql from 'graphql-tag'
 
 export const client = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v1',
+    uri: 'https://api.thegraph.com/subgraphs/name/pegasys-fi/v1',
   }),
   fetchOptions: {
     mode: 'no-cors',

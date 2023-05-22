@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Uniswap V2 Staker Contract
 
-Below is the technical reference for the staker contract, [`UniswapV2Staker.sol`](https://github.com/Uniswap/uniswap-v2-staker/blob/main/contracts/UniswapV2Staker.sol). A technical guide for interacting with this staking contract will be released soon.
+Below is the technical reference for the staker contract, [`UniswapV2Staker.sol`](https://github.com/Pegasys-fi/v2-staker/blob/main/contracts/UniswapV2Staker.sol). A technical guide for interacting with this staking contract will be released soon.
 
 ## Functions
 
