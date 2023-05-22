@@ -5,7 +5,7 @@ title: Entities
 
 Entities define the schema of the subgraph, and represent the data that can be queried. Within each entity are sets of fields that store useful information related to the entity. Below is a list of the available entities within the Uniswap Subgraph, and descriptions for the available fields.
 
-To see an interactive sandbox of all entities see the [Graph Explorer](https://thegraph.com/explorer/subgraph/uniswap/uniswap-v1).
+To see an interactive sandbox of all entities see the [Graph Explorer](https://thegraph.com/explorer/subgraph/pegasys-fi/v1).
 
 Each entity is defined with a value type, which will always be a base AssemblyScript type, or a custom type provided by The Graph's custom TypeScript library. For more information on value types see [here](https://thegraph.com/docs/en/developing/assemblyscript-api/#api-reference).
 

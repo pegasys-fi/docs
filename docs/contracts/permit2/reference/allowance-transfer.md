@@ -4,7 +4,7 @@ title: AllowanceTransfer
 sidebar_position: 2
 ---
 
-> [**Source Code**](https://github.com/Uniswap/permit2/blob/main/src/AllowanceTransfer.sol)
+> [**Source Code**](https://github.com/Pegasys-fi/permit2/blob/main/src/AllowanceTransfer.sol)
 
 ## Overview
 

@@ -5,7 +5,7 @@ title: License Modifications
 
 ## Licensing
 
-Please note that Uniswap V2 is under [BUSL license](https://github.com/Uniswap/v2-core#licensing) until the Change Date, currently 2023-04-01. Exceptions to the license may be specified by Uniswap Governance via Additional Use Grants, which can, for example, allow V2 to be deployed on new chains. Please follow the [Uniswap Governance process](https://gov.uniswap.org/t/community-governance-process/7732) to request a DAO vote for exceptions to the license, or to move up the Change Date.
+Please note that Uniswap V2 is under [BUSL license](https://github.com/Pegasys-fi/v2-core#licensing) until the Change Date, currently 2023-04-01. Exceptions to the license may be specified by Uniswap Governance via Additional Use Grants, which can, for example, allow V2 to be deployed on new chains. Please follow the [Uniswap Governance process](https://gov.uniswap.org/t/community-governance-process/7732) to request a DAO vote for exceptions to the license, or to move up the Change Date.
 
 License changes must be enacted via the [ENS domain](https://ens.domains/) uniswap.eth, which is controlled by Uniswap Governance. This means (among other things) that Governance has the power to associate arbitrary text with any subdomain of the form X.uniswap.eth. Modifications of the Change Date should be specified at v2-core-license-date.uniswap.eth, and Additional Use Grants should be specified at v2-core-license-grants.uniswap.eth. The process for associating text with a subdomain is detailed below:
 
@@ -156,4 +156,3 @@ main().then(() => console.log('done'))
 
 - [Governor Bravo Proxy](https://etherscan.io/address/0x408ED6354d4973f66138C91495F2f2FCbd8724C3#readProxyContract)
 - [Governor Bravo Delegate](https://etherscan.io/address/0x53a328f4086d7c0f1fa19e594c9b842125263026#code)
-- [ENS Subnode Record Update Details](https://github.com/Uniswap/deploy-v2#licensing)

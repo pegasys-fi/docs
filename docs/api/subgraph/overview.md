@@ -17,9 +17,9 @@ Each subgraph has a dedicated endpoint for querying data, as well as a page on [
 
 ##### V2
 
-- Explorer Page: https://thegraph.com/explorer/subgraph/uniswap/uniswap-v2
-- Graphql Endpoint: https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2
-- Code: https://github.com/Uniswap/uniswap-v2-subgraph
+- Explorer Page: https://thegraph.com/explorer/subgraph/pegasys-fi/v2
+- Graphql Endpoint: https://api.thegraph.com/subgraphs/name/pegasys-fi/v2
+- Code: https://github.com/Pegasys-fi/v2-subgraph
 
 ##### Governance
 
@@ -31,4 +31,4 @@ Each subgraph has a dedicated endpoint for querying data, as well as a page on [
 
 - Explorer Page: https://thegraph.com/explorer/subgraph/ianlapham/uniswapv1
 - Graphql Endpoint: https://api.thegraph.com/subgraphs/name/ianlapham/uniswapv1
-- Code: https://github.com/Uniswap/uniswap-v1-subgraph
+- Code: https://github.com/Pegasys-fi/v1-subgraph

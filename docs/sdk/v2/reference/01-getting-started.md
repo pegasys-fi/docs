@@ -27,11 +27,11 @@ The SDK works for all chains on which the [factory](../../../contracts/v1/refere
 
 ## Code
 
-The [source code is available on GitHub](https://github.com/Uniswap/uniswap-sdk).
+The [source code is available on GitHub](https://github.com/Pegasys-fi/v2-sdk).
 
 ## Dependencies
 
-The SDK declares its dependencies as [peer dependencies](https://github.com/Uniswap/uniswap-sdk/blob/v1/package.json#L33).
+The SDK declares its dependencies as [peer dependencies](https://github.com/Pegasys-fi/sdk/blob/v1/package.json#L33).
 This is for two reasons:
 
 - prevent installation of unused dependencies (e.g. `@ethersproject/providers` and `@ethersproject/contracts`, only used in [`Fetcher`](fetcher))

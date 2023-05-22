@@ -180,7 +180,7 @@ Note you should only deploy the precompiled Uniswap contracts in the `build` dir
 This is because solidity appends a metadata hash to compiled contract artifacts which includes the hash of the contract
 source code path, and compilations on other machines will not result in the exact same bytecode.
 This is problematic because in Uniswap V1 we use the hash of the bytecode in the v1-periphery
-[`UniswapV1Library`](https://github.com/Uniswap/uniswap-v1-periphery/blob/master/contracts/libraries/UniswapV1Library.sol#L24),
+[`UniswapV1Library`](https://github.com/Pegasys-fi/v1-periphery/blob/master/contracts/libraries/UniswapV1Library.sol#L24),
 to compute the pair address.
 
 To get the bytecode for deploying UniswapV1Factory, you can import the file via:

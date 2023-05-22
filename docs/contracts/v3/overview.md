@@ -13,7 +13,7 @@ You can use these docs to learn about the V2 Protocol Smart Contracts and develo
 
 # Guides
 
-If you are new to the Uniswap Protocol, we recommend you start with the [basic concepts](../../concepts/uniswap-protocol) first.
+If you are new to the Uniswap Protocol, we recommend you start with the [basic concepts](../../concepts/protocol) first.
 
 You can then setup your [local environment](./guides/local-environment) and execute your [first swap](./guides/swaps/single-swaps).
 
@@ -23,5 +23,5 @@ For a deeper dive, read through the [technical reference](./reference/overview) 
 
 # Resources
 
-- [**V2 Core**](https://github.com/Uniswap/v2-core)
-- [**V2 Periphery**](https://github.com/Uniswap/v2-periphery)
+- [**V2 Core**](https://github.com/Pegasys-fi/v2-core)
+- [**V2 Periphery**](https://github.com/Pegasys-fi/v2-periphery)

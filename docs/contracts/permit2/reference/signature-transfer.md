@@ -4,7 +4,7 @@ title: SignatureTransfer
 sidebar_position: 1
 ---
 
-> [**Source Code**](https://github.com/Uniswap/permit2/blob/main/src/SignatureTransfer.sol)
+> [**Source Code**](https://github.com/Pegasys-fi/permit2/blob/main/src/SignatureTransfer.sol)
 
 ## Overview
 

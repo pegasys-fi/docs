@@ -13,7 +13,7 @@ module.exports = {
   },
   title: 'Uniswap',
   tagline: 'Documentation and Guides',
-  url: 'https://docs.uniswap.org/',
+  url: 'https://docs.pegasys.fi/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'ignore',
@@ -74,7 +74,7 @@ module.exports = {
           className: 'persistent',
         },
         {
-          href: 'https://github.com/uniswap/uniswap-docs',
+          href: 'https://github.com/pegasys-fi/docs',
           label: 'GitHub',
           position: 'right',
           className: 'persistent',
@@ -99,7 +99,7 @@ module.exports = {
             },
             {
               label: 'Bug Bounty',
-              href: 'https://github.com/Uniswap/uniswap-v2-periphery/blob/main/bug-bounty.md',
+              href: 'https://github.com/Pegasys-fi/v2-periphery/blob/main/bug-bounty.md',
             },
             {
               label: '#dev-chat',
@@ -115,20 +115,20 @@ module.exports = {
           title: 'Github',
           items: [
             {
-              label: 'uniswap-v2-core',
-              href: 'https://github.com/Uniswap/uniswap-v2-core',
+              label: 'v2-core',
+              href: 'https://github.com/Pegasys-fi/v2-core',
             },
             {
-              label: 'uniswap-v2-sdk',
-              href: 'https://github.com/Uniswap/uniswap-v2-sdk',
+              label: 'v2-sdk',
+              href: 'https://github.com/Pegasys-fi/v2-sdk',
             },
             {
-              label: 'uniswap-v2-periphery',
-              href: 'https://github.com/Uniswap/uniswap-v2-periphery',
+              label: 'v2-periphery',
+              href: 'https://github.com/Pegasys-fi/v2-periphery',
             },
             {
               label: 'Deployment addresses',
-              href: 'https://github.com/Uniswap/uniswap-v2-periphery/blob/main/deploys.md',
+              href: 'https://github.com/Pegasys-fi/v2-periphery/blob/main/deploys.md',
             },
           ],
         },
@@ -204,7 +204,7 @@ module.exports = {
           routeBasePath: 'contracts/',
           remarkPlugins: [math],
           rehypePlugins: [katex],
-          editUrl: 'https://github.com/uniswap/uniswap-docs/tree/main/',
+          editUrl: 'https://github.com/pegasys-fi/docs/tree/main/',
           includeCurrentVersion: true,
         },
         blog: {

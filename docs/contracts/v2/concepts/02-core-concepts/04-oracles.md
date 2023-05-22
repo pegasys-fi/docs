@@ -42,7 +42,7 @@ A few notes:
 
 There are some nuances that are good to be aware of when using Uniswap V1 as an oracle, especially where manipulation resistance is concerned. The <a href='/whitepaper.pdf' target='_blank' rel='noopener noreferrer'>whitepaper</a> elaborates on some of them. Additional oracle-focused developer guides and documentation will be released soon.
 
-In the meantime, check out our [example implementation](https://github.com/Uniswap/uniswap-v1-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol) of a 24 hr TWAP Oracle built on Uniswap V1!
+In the meantime, check out our [example implementation](https://github.com/Pegasys-fi/v1-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol) of a 24 hr TWAP Oracle built on Uniswap V1!
 
 ## Manipulation resistance
 

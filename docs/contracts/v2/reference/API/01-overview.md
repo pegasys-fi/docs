@@ -7,9 +7,9 @@ This section explains the Uniswap Subgraph and how to interact with it. The Unis
 
 ## Resources
 
-[Subgraph Explorer](https://thegraph.com/explorer/subgraph/uniswap/uniswap-v1) - sandbox for querying data and endpoints for developers.
+[Subgraph Explorer](https://thegraph.com/explorer/subgraph/pegasys-fi/v1) - sandbox for querying data and endpoints for developers.
 
-[Uniswap V1 Subgraph](https://github.com/Uniswap/uniswap-v1-subgraph) - source code for deployed subgraph.
+[Uniswap V1 Subgraph](https://github.com/Pegasys-fi/v1-subgraph) - source code for deployed subgraph.
 
 ## Usage
 
@@ -21,4 +21,4 @@ To learn more about querying a subgraph refer to [The Graph's documentation](htt
 
 ## Versions
 
-The [Uniswap V1 Subgraph](https://thegraph.com/explorer/subgraph/uniswap/uniswap-v1) only tracks data on Uniswap V1.
+The [Uniswap V1 Subgraph](https://thegraph.com/explorer/subgraph/pegasys-fi/v1) only tracks data on Uniswap V1.
