@@ -1,4 +1,4 @@
-[@uniswap/v2-sdk](../README.md) / [Exports](../modules.md) / QuoteOptions
+[@pegasys-fi/v2-sdk](../README.md) / [Exports](../modules.md) / QuoteOptions
 
 # Interface: QuoteOptions
 

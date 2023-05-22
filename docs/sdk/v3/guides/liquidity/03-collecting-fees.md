@@ -22,8 +22,8 @@ At the end of the guide, given the inputs above, we should be able to collect th
 
 For this guide, the following Uniswap packages are used:
 
-- [`@uniswap/v2-sdk`](https://www.npmjs.com/package/@uniswap/v2-sdk)
-- [`@uniswap/sdk-core`](https://www.npmjs.com/package/@uniswap/sdk-core)
+- [`@pegasys-fi/v2-sdk`](https://www.npmjs.com/package/@pegasys-fi/v2-sdk)
+- [`@pegasys-fi/sdk-core`](https://www.npmjs.com/package/@pegasys-fi/sdk-core)
 
 The core code of this guide can be found in [`collectFees()`](https://github.com/Uniswap/examples/blob/main/v2-sdk/collecting-fees/src/libs/liquidity.ts#L35).
 

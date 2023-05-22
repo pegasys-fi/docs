@@ -1,4 +1,4 @@
-[@uniswap/sdk-core](../README.md) / [Exports](../modules.md) / CurrencyAmount
+[@pegasys-fi/sdk-core](../README.md) / [Exports](../modules.md) / CurrencyAmount
 
 # Class: CurrencyAmount<T\>
 

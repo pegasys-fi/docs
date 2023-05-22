@@ -1,4 +1,4 @@
-[@uniswap/v2-sdk](../README.md) / [Exports](../modules.md) / Route
+[@pegasys-fi/v2-sdk](../README.md) / [Exports](../modules.md) / Route
 
 # Class: Route<TInput, TOutput\>
 

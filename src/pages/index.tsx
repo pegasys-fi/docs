@@ -65,7 +65,7 @@ export const developerLinks = [
   },
   {
     title: 'widgets',
-    href: 'https://www.npmjs.com/package/@uniswap/widgets',
+    href: 'https://www.npmjs.com/package/@pegasys-fi/widgets',
     icon: Npm,
   },
 ]

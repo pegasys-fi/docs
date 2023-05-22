@@ -1,4 +1,4 @@
-[@uniswap/sdk-core](../README.md) / [Exports](../modules.md) / Price
+[@pegasys-fi/sdk-core](../README.md) / [Exports](../modules.md) / Price
 
 # Class: Price<TBase, TQuote\>
 

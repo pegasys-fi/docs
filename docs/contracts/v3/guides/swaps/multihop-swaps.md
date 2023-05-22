@@ -22,8 +22,8 @@ pragma abicoder v2;
 Import the two needed contracts from the npm package installation.
 
 ```solidity
-import '@uniswap/v2-periphery/contracts/interfaces/ISwapRouter.sol';
-import '@uniswap/v2-periphery/contracts/libraries/TransferHelper.sol';
+import '@pegasys-fi/v2-periphery/contracts/interfaces/ISwapRouter.sol';
+import '@pegasys-fi/v2-periphery/contracts/libraries/TransferHelper.sol';
 ```
 
 Create a contract called `SwapExamples`, and declare an immutable public variable `swapRouter` of type `ISwapRouter`.
@@ -158,8 +158,8 @@ An exact output swap will swap a variable amount of the input token for a fixed 
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
-import '@uniswap/v2-periphery/contracts/libraries/TransferHelper.sol';
-import '@uniswap/v2-periphery/contracts/interfaces/ISwapRouter.sol';
+import '@pegasys-fi/v2-periphery/contracts/libraries/TransferHelper.sol';
+import '@pegasys-fi/v2-periphery/contracts/interfaces/ISwapRouter.sol';
 
 contract SwapExamples {
     // For the scope of these swap examples,

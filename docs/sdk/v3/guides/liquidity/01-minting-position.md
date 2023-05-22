@@ -26,9 +26,9 @@ At the end of the guide, given the inputs above, we should be able to mint a liq
 
 For this guide, the following Uniswap packages are used:
 
-- [`@uniswap/v2-sdk`](https://www.npmjs.com/package/@uniswap/v2-sdk)
-- [`@uniswap/sdk-core`](https://www.npmjs.com/package/@uniswap/sdk-core)
-- [`@uniswap/smart-order-router`](https://www.npmjs.com/package/@uniswap/smart-order-router)
+- [`@pegasys-fi/v2-sdk`](https://www.npmjs.com/package/@pegasys-fi/v2-sdk)
+- [`@pegasys-fi/sdk-core`](https://www.npmjs.com/package/@pegasys-fi/sdk-core)
+- [`@pegasys-fi/smart-order-router`](https://www.npmjs.com/package/@pegasys-fi/smart-order-router)
 
 The core code of this guide can be found in [`mintPosition()`](https://github.com/Uniswap/examples/blob/main/v2-sdk/minting-position/src/libs/positions.ts#L37)
 

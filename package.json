@@ -1,5 +1,5 @@
 {
-  "name": "@uniswap/docs",
+  "name": "@pegasys-fi/docs",
   "description": "Uniswap docs",
   "scripts": {
     "docusaurus": "docusaurus",

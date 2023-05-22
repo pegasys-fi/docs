@@ -1,4 +1,4 @@
-[@uniswap/v2-sdk](../README.md) / [Exports](../modules.md) / CommonAddLiquidityOptions
+[@pegasys-fi/v2-sdk](../README.md) / [Exports](../modules.md) / CommonAddLiquidityOptions
 
 # Interface: CommonAddLiquidityOptions
 
