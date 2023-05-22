@@ -23,7 +23,7 @@ Uniswap V2 introduces a new function, `flash`, within the Pool contract. `Flash`
 
 ## The Flash Callback
 
-`flash` will withdraw the tokens, but how are they paid back? To understand this, we must look inside the flash function code. midway through the [**flash**](https://github.com/Uniswap/uniswap-v2-core/blob/main/contracts/UniswapV2Pool.sol#L791) function, we see this:
+`flash` will withdraw the tokens, but how are they paid back? To understand this, we must look inside the flash function code. midway through the [**flash**](https://github.com/Pegasys-fi/v2-core/blob/main/contracts/UniswapV2Pool.sol#L791) function, we see this:
 
 ```solidity
 IUniswapV2FlashCallback(msg.sender).uniswapV2FlashCallback(fee0, fee1, data);

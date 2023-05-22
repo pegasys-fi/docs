@@ -22,7 +22,7 @@ The `FlashParams` struct will contain the token addresses and amounts we wish to
     }
 ```
 
-The `FlashCallbackData` struct will contain the data we want to send to the callback. This includes `poolKey`, which expresses the sorted tokens with the matched fee tier, returned by the [**PoolAddress**](https://github.com/Uniswap/uniswap-v2-periphery/blob/main/contracts/libraries/PoolAddress.sol) library.
+The `FlashCallbackData` struct will contain the data we want to send to the callback. This includes `poolKey`, which expresses the sorted tokens with the matched fee tier, returned by the [**PoolAddress**](https://github.com/Pegasys-fi/v2-periphery/blob/main/contracts/libraries/PoolAddress.sol) library.
 
 ```solidity
     struct FlashCallbackData {

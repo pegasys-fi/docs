@@ -22,7 +22,7 @@ Cannot be constructed.
 
 #### Defined in
 
-[utils/position.ts:10](https://github.com/Uniswap/v2-sdk/blob/08a7c05/src/utils/position.ts#L10)
+[utils/position.ts:10](https://github.com/Pegasys-fi/v2-sdk/blob/08a7c05/src/utils/position.ts#L10)
 
 ## Methods
 
@@ -46,4 +46,4 @@ Cannot be constructed.
 
 #### Defined in
 
-[utils/position.ts:13](https://github.com/Uniswap/v2-sdk/blob/08a7c05/src/utils/position.ts#L13)
+[utils/position.ts:13](https://github.com/Pegasys-fi/v2-sdk/blob/08a7c05/src/utils/position.ts#L13)

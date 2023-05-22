@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Uniswap V2 Staker Design
 
-The liquidity mining staker design is comprised of one canonical position staking contract, Staker. The technical reference for this contract is [here](../../periphery/staker/UniswapV2Staker.md) and the source code is [here](https://github.com/Uniswap/uniswap-v2-staker).
+The liquidity mining staker design is comprised of one canonical position staking contract, Staker. The technical reference for this contract is [here](../../periphery/staker/UniswapV2Staker.md) and the source code is [here](https://github.com/Pegasys-fi/v2-staker).
 
 ## Data Structures
 

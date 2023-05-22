@@ -19,7 +19,7 @@ The percent of the output that will be taken as a fee.
 
 #### Defined in
 
-[payments.ts:11](https://github.com/Uniswap/v2-sdk/blob/08a7c05/src/payments.ts#L11)
+[payments.ts:11](https://github.com/Pegasys-fi/v2-sdk/blob/08a7c05/src/payments.ts#L11)
 
 ___
 
@@ -31,4 +31,4 @@ The recipient of the fee.
 
 #### Defined in
 
-[payments.ts:16](https://github.com/Uniswap/v2-sdk/blob/08a7c05/src/payments.ts#L16)
+[payments.ts:16](https://github.com/Pegasys-fi/v2-sdk/blob/08a7c05/src/payments.ts#L16)

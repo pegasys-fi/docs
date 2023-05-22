@@ -46,7 +46,7 @@ The first step is to approve the `SwapRouter` smart contract to spend our tokens
 https://github.com/Uniswap/examples/blob/ec48bb845402419fa6e613cb26512a76d864afa5/v2-sdk/swap-and-add-liquidity/src/libs/liquidity.ts#L58-L66
 ```
 
-The we can setup our router, the [`AlphaRouter`](https://github.com/Uniswap/smart-order-router/blob/97c1bb7cb64b22ebf3509acda8de60c0445cf250/src/routers/alpha-router/alpha-router.ts#L333), which is part of the [smart-order-router package](https://www.npmjs.com/package/@pegasys-fi/smart-order-router). The router requires a `chainId` and a `provider` to be initialized. Note that routing is not supported for local forks, so we will use a mainnet provider even when swapping on a local fork:
+The we can setup our router, the [`AlphaRouter`](https://github.com/Pegasys-fi/smart-order-router/blob/97c1bb7cb64b22ebf3509acda8de60c0445cf250/src/routers/alpha-router/alpha-router.ts#L333), which is part of the [smart-order-router package](https://www.npmjs.com/package/@pegasys-fi/smart-order-router). The router requires a `chainId` and a `provider` to be initialized. Note that routing is not supported for local forks, so we will use a mainnet provider even when swapping on a local fork:
 
 ```typescript reference title="Creating a router instance" referenceLinkText="View on Github" customStyling
 https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v2-sdk/swap-and-add-liquidity/src/libs/liquidity.ts#L57
@@ -96,7 +96,7 @@ Having constructed all the parameters we need to call `routeToRatio`, we can now
 https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v2-sdk/swap-and-add-liquidity/src/libs/liquidity.ts#L97-L103
 ```
 
-The return type of the function call is [SwapToRatioResponse](https://github.com/Uniswap/smart-order-router/blob/97c1bb7cb64b22ebf3509acda8de60c0445cf250/src/routers/router.ts#L121). If a route was found successfully, this object will have two fields: the status (success) and the `SwapToRatioRoute` object. We check to make sure that both of those conditions hold true before we construct and submit the transaction:
+The return type of the function call is [SwapToRatioResponse](https://github.com/Pegasys-fi/smart-order-router/blob/97c1bb7cb64b22ebf3509acda8de60c0445cf250/src/routers/router.ts#L121). If a route was found successfully, this object will have two fields: the status (success) and the `SwapToRatioRoute` object. We check to make sure that both of those conditions hold true before we construct and submit the transaction:
 
 ```typescript reference title="Checking that a route was found" referenceLinkText="View on Github" customStyling
 https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v2-sdk/swap-and-add-liquidity/src/libs/liquidity.ts#L105-L110

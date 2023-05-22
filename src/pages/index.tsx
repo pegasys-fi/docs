@@ -44,23 +44,23 @@ export const actions = [
 
 export const developerLinks = [
   {
-    title: 'uniswap-v2-core',
-    href: 'https://github.com/Uniswap/uniswap-v2-core',
+    title: 'v2-core',
+    href: 'https://github.com/Pegasys-fi/v2-core',
     icon: GitHub,
   },
   {
-    title: 'uniswap-v2-sdk',
-    href: 'https://github.com/Uniswap/uniswap-v2-sdk',
+    title: 'v2-sdk',
+    href: 'https://github.com/Pegasys-fi/v2-sdk',
     icon: GitHub,
   },
   {
-    title: 'uniswap-v2-periphery',
-    href: 'https://github.com/Uniswap/uniswap-v2-periphery',
+    title: 'v2-periphery',
+    href: 'https://github.com/Pegasys-fi/v2-periphery',
     icon: GitHub,
   },
   {
     title: 'Deployment addresses',
-    href: 'https://github.com/Uniswap/uniswap-v2-periphery/blob/main/deploys.md',
+    href: 'https://github.com/Pegasys-fi/v2-periphery/blob/main/deploys.md',
     icon: GitHub,
   },
   {

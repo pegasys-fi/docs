@@ -70,7 +70,7 @@ For further exploration of flash swaps, see the <a href='/whitepaper.pdf' target
 
 # Example
 
-A fully functional example of flash swaps is available: [`ExampleFlashSwap.sol`](https://github.com/Uniswap/uniswap-v1-periphery/blob/master/contracts/examples/ExampleFlashSwap.sol).
+A fully functional example of flash swaps is available: [`ExampleFlashSwap.sol`](https://github.com/Pegasys-fi/v1-periphery/blob/master/contracts/examples/ExampleFlashSwap.sol).
 
 # Interface
 

@@ -7,7 +7,7 @@ This documentation covers ERC-20 functionality for denominating pool tokens. For
 
 # Code
 
-[`UniswapV1ERC20.sol`](https://github.com/Uniswap/uniswap-v1-core/blob/master/contracts/UniswapV1ERC20.sol)
+[`UniswapV1ERC20.sol`](https://github.com/Pegasys-fi/v1-core/blob/master/contracts/UniswapV1ERC20.sol)
 
 # Events
 

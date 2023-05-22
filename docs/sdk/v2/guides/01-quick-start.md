@@ -7,7 +7,7 @@ The Uniswap SDK exists to help developers build on top of Uniswap. It's designed
 
 # Installation
 
-The easiest way to consume the SDK is via [npm](https://github.com/Uniswap/uniswap-v1-sdk). To install it in your project, simply run `yarn add @pegasys-fi/v2-sdk` (or `npm install @pegasys-fi/v2-sdk`).
+The easiest way to consume the SDK is via [npm](https://github.com/Pegasys-fi/v1-sdk). To install it in your project, simply run `yarn add @pegasys-fi/v2-sdk` (or `npm install @pegasys-fi/v2-sdk`).
 
 # Usage
 

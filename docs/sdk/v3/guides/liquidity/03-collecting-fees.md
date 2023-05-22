@@ -37,7 +37,7 @@ Also note that we do not need to give approval to the `NonfungiblePositionManage
 
 All of the fee collecting logic can be found in the [`collectFees`](https://github.com/Uniswap/examples/blob/be67e7df220b0a270c9d18bbaab529e017213adf/v2-sdk/collecting-fees/src/example/Example.tsx#L24) function. Notice how the **Collect Fees** button is disabled until a position is minted. This happens because there will be no fees to collect unless there is a position whose liquidity has been traded against.
 
-To start, we construct an options object of type  [`CollectOptions`](https://github.com/Uniswap/v2-sdk/blob/08a7c050cba00377843497030f502c05982b1c43/src/nonfungiblePositionManager.ts#L105) that holds the data about the fees we want to collect:
+To start, we construct an options object of type  [`CollectOptions`](https://github.com/Pegasys-fi/v2-sdk/blob/08a7c050cba00377843497030f502c05982b1c43/src/nonfungiblePositionManager.ts#L105) that holds the data about the fees we want to collect:
 
 ```typescript reference title="Constructing the CollectOptions" referenceLinkText="View on Github" customStyling
 https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v2-sdk/collecting-fees/src/libs/liquidity.ts#L44-L61

@@ -18,10 +18,10 @@ You can also take a look at the V1 Protocol <a href='/whitepaper.pdf' target='_b
 
 The V1 Uniswap protocol is separated across two repositories
 
-- [`uniswap-v1-core`](https://github.com/Uniswap/uniswap-v1-core)
-- [`uniswap-v1-periphery`](https://github.com/Uniswap/uniswap-v1-periphery)
+- [`v1-core`](https://github.com/Pegasys-fi/v1-core)
+- [`v1-periphery`](https://github.com/Pegasys-fi/v1-periphery)
 
 The V1 SDK, which can assist developers when interacting with the Uniswap V1 Protocol can be found here.
 
-- [`uniswap-sdk`](https://github.com/Uniswap/uniswap-v1-sdk)
-- [`uniswap-sdk-core`](https://github.com/Uniswap/uniswap-sdk-core)
+- [`uniswap-sdk`](https://github.com/Pegasys-fi/v1-sdk)
+- [`uniswap-sdk-core`](https://github.com/Pegasys-fi/sdk-core)

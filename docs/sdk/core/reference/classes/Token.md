@@ -58,7 +58,7 @@ BaseCurrency.constructor
 
 #### Defined in
 
-[entities/token.ts:27](https://github.com/Uniswap/sdk-core/blob/9997e88/src/entities/token.ts#L27)
+[entities/token.ts:27](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/entities/token.ts#L27)
 
 ## Properties
 
@@ -70,7 +70,7 @@ The contract address on the chain on which this token lives
 
 #### Defined in
 
-[entities/token.ts:16](https://github.com/Uniswap/sdk-core/blob/9997e88/src/entities/token.ts#L16)
+[entities/token.ts:16](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/entities/token.ts#L16)
 
 ___
 
@@ -86,7 +86,7 @@ BaseCurrency.chainId
 
 #### Defined in
 
-[entities/baseCurrency.ts:21](https://github.com/Uniswap/sdk-core/blob/9997e88/src/entities/baseCurrency.ts#L21)
+[entities/baseCurrency.ts:21](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/entities/baseCurrency.ts#L21)
 
 ___
 
@@ -102,7 +102,7 @@ BaseCurrency.decimals
 
 #### Defined in
 
-[entities/baseCurrency.ts:25](https://github.com/Uniswap/sdk-core/blob/9997e88/src/entities/baseCurrency.ts#L25)
+[entities/baseCurrency.ts:25](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/entities/baseCurrency.ts#L25)
 
 ___
 
@@ -116,7 +116,7 @@ BaseCurrency.isNative
 
 #### Defined in
 
-[entities/token.ts:10](https://github.com/Uniswap/sdk-core/blob/9997e88/src/entities/token.ts#L10)
+[entities/token.ts:10](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/entities/token.ts#L10)
 
 ___
 
@@ -130,7 +130,7 @@ BaseCurrency.isToken
 
 #### Defined in
 
-[entities/token.ts:11](https://github.com/Uniswap/sdk-core/blob/9997e88/src/entities/token.ts#L11)
+[entities/token.ts:11](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/entities/token.ts#L11)
 
 ___
 
@@ -146,7 +146,7 @@ BaseCurrency.name
 
 #### Defined in
 
-[entities/baseCurrency.ts:33](https://github.com/Uniswap/sdk-core/blob/9997e88/src/entities/baseCurrency.ts#L33)
+[entities/baseCurrency.ts:33](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/entities/baseCurrency.ts#L33)
 
 ___
 
@@ -162,7 +162,7 @@ BaseCurrency.symbol
 
 #### Defined in
 
-[entities/baseCurrency.ts:29](https://github.com/Uniswap/sdk-core/blob/9997e88/src/entities/baseCurrency.ts#L29)
+[entities/baseCurrency.ts:29](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/entities/baseCurrency.ts#L29)
 
 ## Accessors
 
@@ -182,7 +182,7 @@ BaseCurrency.wrapped
 
 #### Defined in
 
-[entities/token.ts:66](https://github.com/Uniswap/sdk-core/blob/9997e88/src/entities/token.ts#L66)
+[entities/token.ts:66](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/entities/token.ts#L66)
 
 ## Methods
 
@@ -208,7 +208,7 @@ BaseCurrency.equals
 
 #### Defined in
 
-[entities/token.ts:47](https://github.com/Uniswap/sdk-core/blob/9997e88/src/entities/token.ts#L47)
+[entities/token.ts:47](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/entities/token.ts#L47)
 
 ___
 
@@ -238,4 +238,4 @@ if the tokens are on different chains
 
 #### Defined in
 
-[entities/token.ts:57](https://github.com/Uniswap/sdk-core/blob/9997e88/src/entities/token.ts#L57)
+[entities/token.ts:57](https://github.com/Pegasys-fi/sdk-core/blob/9997e88/src/entities/token.ts#L57)

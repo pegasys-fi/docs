@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Introduction
 
-As a DeFi project, token creator, or other interested party, you may want to _incentivize in-range liquidity provision_ on a Uniswap V2 pool. This guide describes one particular incentivization scheme at a high level, as implemented in [uniswap-v2-staker](https://github.com/Uniswap/uniswap-v2-staker).
+As a DeFi project, token creator, or other interested party, you may want to _incentivize in-range liquidity provision_ on a Uniswap V2 pool. This guide describes one particular incentivization scheme at a high level, as implemented in [v2-staker](https://github.com/Pegasys-fi/v2-staker).
 
 ## The Setting
 
@@ -30,7 +30,7 @@ Recall that `Incentive` creators pick a `reward` amount and a program duration. 
 
 So, how do users participate in these programs? Note that this section requires a basic understanding of [how Uniswap V2 position NFTs work](../../reference/periphery/NonfungiblePositionManager)
 
-The first action a user must take in order to begin participating in an `Incentive` is to _deposit_ their position NFT into the [canonical staking contract address](https://github.com/Uniswap/uniswap-v2-staker#deployments), effectively temporarily giving custody over their NFT to this contract. This is necessary because, as we'll see later on, the staking contract needs to be able to guarantee that liquidity cannot be removed from NFTs participating in the program.
+The first action a user must take in order to begin participating in an `Incentive` is to _deposit_ their position NFT into the [canonical staking contract address](https://github.com/Pegasys-fi/v2-staker#deployments), effectively temporarily giving custody over their NFT to this contract. This is necessary because, as we'll see later on, the staking contract needs to be able to guarantee that liquidity cannot be removed from NFTs participating in the program.
 
 Once deposited, a user may then _stake_ their NFT into any number of active `Incentive`s for the Uniswap V2 pool their NFT is tied to (note that this can happen atomically with an initial _deposit_). Staked NFTs then immediately start to earn rewards, according to the algorithm outlined above. Users may periodically claim accrued `rewardToken`s while the program is ongoing, or wait to claim until the program has concluded to minimize overhead.
 

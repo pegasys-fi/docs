@@ -5,7 +5,7 @@ title: Queries
 
 The subgraph can be queried to retrieve important information about Uniswap, pairs, tokens, transactions, users, and more. This page will provide examples for common queries.
 
-To try these queries and run your own visit the [subgraph sandbox](https://thegraph.com/explorer/subgraph/uniswap/uniswap-v1).
+To try these queries and run your own visit the [subgraph sandbox](https://thegraph.com/explorer/subgraph/pegasys-fi/v1).
 
 ### Global Data
 
