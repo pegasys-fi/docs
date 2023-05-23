@@ -19,6 +19,7 @@ import {
 import React from 'react'
 import { ArrowUpRight as LinkIcon, BookOpen, HelpCircle, Info, MessageCircle } from 'react-feather'
 
+import { colors } from '../theme/color'
 import SearchBarWithAnalytics from '../theme/SearchBar'
 
 export const actions = [
@@ -177,8 +178,7 @@ const Card = styled.div`
   /* flex: 1 1 0px; */
 
   &:hover {
-    border: 1px solid var(--ifm-color-emphasis-400);
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: ${colors.deepShadow};
   }
 
   @media (max-width: 960px) {
@@ -206,11 +206,8 @@ const CenterCard = styled(Card)`
 `
 
 const ShadowCard = styled(Card)`
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
-  background-color: #ffffff10;
-  backdrop-filter: blur(10px);
+  background-color: var(--ifm-color-bg);
   min-height: 200px;
-  /* background-color: var(--ifm-color-emphasis-0); */
 `
 
 const WideCard = styled(ShadowCard)`
@@ -310,15 +307,15 @@ export default function Home() {
               alignItems: 'center',
             }}
           >
-            <h1 style={{ fontWeight: 600 }}> Welcome to Pegasys Docs</h1>
+            <h1 style={{ fontWeight: 600, color: 'white' }}> Welcome to Pegasys Docs</h1>
             <HideMedium>
               <SearchBarWithAnalytics />
             </HideMedium>
           </div>
           <StyledTitleImage
             sources={{
-              light: useBaseUrl('/img/grow.png'),
-              dark: useBaseUrl('/img/grow2.png'),
+              light: useBaseUrl('/img/bannerDeskLight4.png'),
+              dark: useBaseUrl('/img/bannerDeskDark4.png'),
             }}
           />
           <Row>
