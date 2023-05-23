@@ -51,29 +51,30 @@ html {
 
 html[data-theme='dark'] {
   --ifm-color-primary: white;
-  --ifm-color-primary-dark: #5a91ea;
+  --ifm-color-primary-dark: #00D9EF;
+  --ifm-color-bg: rgba(8, 17, 32, 0.28);
 
   /* --ifm-color-secondary: black; */
 
-  /* --ifm-background-color: #191b1f; */
+  --ifm-background-color: #010101;
   --ifm-navbar-background-color: #191b1f;
   --ifm-global-shadow-md: 0 5px 4px rgba(255, 255, 255, 0.448);
 
   background-position: 0px -30vh;
   background-repeat: no-repeat;
-  background-image: radial-gradient(50% 50% at 50% 50%, rgba(33, 114, 229, 0.1) 0%, rgba(33, 36, 41, 0) 100%);
+  background-image: radial-gradient(60% 50% at 50% 20%, #56BED8 0%, rgba(33, 36, 41, 0) 100%);
 
   /* any other colors you wish to overwrite */
 }
 
 html[data-theme='light'] {
   --ifm-color-primary: black;
-  /* --ifm-color-secondary: white; */
-  /* --ifm-background-color: #F1F1F2; */
+  --ifm-color-secondary: white;
+  --ifm-color-bg:   rgba(255, 255, 255, 0.28);
 
   background-position: 0px -30vh;
   background-repeat: no-repeat;
-  background-image: radial-gradient(50% 50% at 50% 50%, rgba(255, 0, 122, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: radial-gradient(60% 50% at 50% 20%, #665EE1 0%, rgba(255, 255, 255, 1) 100%);
 
   /* any other colors you wish to overwrite */
 }
