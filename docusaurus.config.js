@@ -17,7 +17,7 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'ignore',
-  favicon: 'img/favicon.png',
+  favicon: 'img/pegasys.png',
   organizationName: 'Pegasys-fi', // Usually your GitHub org/user name.
   projectName: 'Pegasys-fi-docs', // Usually your repo name.
   themeConfig: {
@@ -34,7 +34,7 @@ module.exports = {
       title: 'Pegasys-fi Docs',
       logo: {
         alt: 'Pegasys-fi Unicorn',
-        src: 'img/uni_dark_icon.svg',
+        src: 'img/logoPegasys.svg',
       },
       items: [
         {
@@ -97,10 +97,10 @@ module.exports = {
               label: 'Feedback',
               href: 'https://forms.gle/13XtjmkwdXQ2jMn26',
             },
-            {
-              label: 'Bug Bounty',
-              href: 'https://github.com/Pegasys-fi/v1-periphery/blob/main/bug-bounty.md',
-            },
+            // {
+            //   label: 'Bug Bounty',
+            //   href: 'https://github.com/Pegasys-fi/v1-periphery/blob/main/bug-bounty.md',
+            // },
             {
               label: '#dev-chat',
               href: 'https://discord.gg/ybKVQUWb4s',
@@ -122,14 +122,14 @@ module.exports = {
               label: 'v1-sdk',
               href: 'https://github.com/Pegasys-fi/v1-sdk',
             },
-            {
-              label: 'v1-periphery',
-              href: 'https://github.com/Pegasys-fi/v1-periphery',
-            },
-            {
-              label: 'Deployment addresses',
-              href: 'https://github.com/Pegasys-fi/v1-periphery/blob/main/deploys.md',
-            },
+            // {
+            //   label: 'v1-periphery',
+            //   href: 'https://github.com/Pegasys-fi/v1-periphery',
+            // },
+            // {
+            //   label: 'Deployment addresses',
+            //   href: 'https://github.com/Pegasys-fi/v1-periphery/blob/main/deploys.md',
+            // },
           ],
         },
         {
@@ -147,14 +147,14 @@ module.exports = {
               label: 'Analytics',
               href: 'https://info.pegasys.fi/home',
             },
-            {
-              label: 'Token Lists',
-              href: 'https://tokenlists.org/',
-            },
-            {
-              label: 'Brand Assets',
-              href: 'https://uniswap.org/Uniswap_brand_assets.zip',
-            },
+            // {
+            //   label: 'Token Lists',
+            //   href: 'https://tokenlists.org/',
+            // },
+            // {
+            //   label: 'Brand Assets',
+            //   href: 'https://uniswap.org/Uniswap_brand_assets.zip',
+            // },
           ],
         },
         {
@@ -166,11 +166,11 @@ module.exports = {
             },
             {
               label: 'Discord',
-              href: 'https://discord.gg/ybKVQUWb4s',
+              href: 'https://discord.com/invite/UzjWbWWERz',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/Pegasys-fi',
+              href: 'https://twitter.com/PegasysDEX',
             },
             {
               label: 'Blog',

@@ -418,10 +418,10 @@ export default function Home() {
           }}
         >
           <StyledImage
-            style={{ maxHeight: '400px' }}
+            style={{ maxHeight: '400px', borderRadius: '16px' }}
             sources={{
-              light: useBaseUrl('/img/use.png'),
-              dark: useBaseUrl('/img/use2.png'),
+              light: useBaseUrl('/img/bannerDeskLight6.png'),
+              dark: useBaseUrl('/img/bannerDeskDark6.png'),
             }}
           />
           <div>
@@ -463,7 +463,7 @@ export default function Home() {
             section={SectionName.BOTTOM_MENU_LINKS}
             name={SharedEventName.PAGE_CLICKED}
           >
-            <Link style={{ textDecoration: 'none' }} href={'https://discord.gg/ybKVQUWb4s'}>
+            <Link style={{ textDecoration: 'none' }} href={'https://discord.com/invite/UzjWbWWERz'}>
               <CenterCard>
                 <Discord style={{ width: '48px', height: '48px' }} />
                 <div>
@@ -508,7 +508,8 @@ export default function Home() {
             </Link>
           </TraceEvent>
         </Row>
-        <Link
+
+        {/* <Link
           style={{
             textDecoration: 'none',
             maxWidth: '960px',
@@ -534,7 +535,7 @@ export default function Home() {
               </p>
             </div>
           </WideCard>
-        </Link>
+        </Link> */}
       </Container>
     </Layout>
   )
