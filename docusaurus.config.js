@@ -79,12 +79,12 @@ module.exports = {
           position: 'right',
           className: 'persistent',
         },
-        {
-          href: 'https://unigrants.org/',
-          label: 'Grants',
-          position: 'right',
-          className: 'persistent',
-        },
+        // {
+        //   href: 'https://unigrants.org/',
+        //   label: 'Grants',
+        //   position: 'right',
+        //   className: 'persistent',
+        // },
       ],
     },
     footer: {
@@ -93,17 +93,17 @@ module.exports = {
         {
           title: 'Developers',
           items: [
-            {
-              label: 'Feedback',
-              href: 'https://forms.gle/13XtjmkwdXQ2jMn26',
-            },
+            // {
+            //   label: 'Feedback',
+            //   href: 'https://forms.gle/13XtjmkwdXQ2jMn26',
+            // },
             // {
             //   label: 'Bug Bounty',
             //   href: 'https://github.com/Pegasys-fi/v1-periphery/blob/main/bug-bounty.md',
             // },
             {
               label: '#dev-chat',
-              href: 'https://discord.gg/ybKVQUWb4s',
+              href: 'https://discord.com/invite/UzjWbWWERz',
             },
             {
               label: 'Whitepaper',
@@ -160,10 +160,10 @@ module.exports = {
         {
           title: 'Community',
           items: [
-            {
-              label: 'Governance',
-              href: 'https://gov.pegasys.fi/',
-            },
+            // {
+            //   label: 'Governance',
+            //   href: 'https://gov.pegasys.fi/',
+            // },
             {
               label: 'Discord',
               href: 'https://discord.com/invite/UzjWbWWERz',
@@ -172,10 +172,10 @@ module.exports = {
               label: 'Twitter',
               href: 'https://twitter.com/PegasysDEX',
             },
-            {
-              label: 'Blog',
-              href: 'https://pegasys.fi/blog/',
-            },
+            // {
+            //   label: 'Blog',
+            //   href: 'https://pegasys.fi/blog/',
+            // },
           ],
         },
       ],
