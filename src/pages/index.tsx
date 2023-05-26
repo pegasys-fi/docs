@@ -308,9 +308,9 @@ export default function Home() {
             }}
           >
             <h1 style={{ fontWeight: 600, color: 'white' }}> Welcome to Pegasys Docs</h1>
-            {/* <HideMedium>
+            <HideMedium>
               <SearchBarWithAnalytics />
-            </HideMedium> */}
+            </HideMedium>
           </div>
           <StyledTitleImage
             sources={{
