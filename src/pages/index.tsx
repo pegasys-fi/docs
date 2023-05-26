@@ -6,7 +6,7 @@ import styled from '@emotion/styled'
 import Discord from '@site/static/img/discord.svg'
 import GitHub from '@site/static/img/github.svg'
 import Npm from '@site/static/img/npm.svg'
-import UGP from '@site/static/img/UGP.png'
+// import UGP from '@site/static/img/UGP.png'
 import Layout from '@theme/Layout'
 import ThemedImage from '@theme/ThemedImage'
 import { TraceEvent } from '@uniswap/analytics'
@@ -210,15 +210,15 @@ const ShadowCard = styled(Card)`
   min-height: 200px;
 `
 
-const WideCard = styled(ShadowCard)`
-  max-height: auto;
+// const WideCard = styled(ShadowCard)`
+//   max-height: auto;
 
-  @media (max-width: 960px) {
-    margin: 0 2rem;
-    max-height: fit-content;
-    width: fit-content;
-  }
-`
+//   @media (max-width: 960px) {
+//     margin: 0 2rem;
+//     max-height: fit-content;
+//     width: fit-content;
+//   }
+// `
 
 const IconWrapper = styled.div`
   width: 32px;

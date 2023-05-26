@@ -26,9 +26,9 @@ module.exports = {
       additionalLanguages: ['solidity'],
     },
     algolia: {
-      apiKey: '32465e2ab6f7554ff014e64c0d92171c',
-      indexName: 'v1-docs',
-      appId: 'S0IDD0YGLZ',
+      apiKey: process.env.API_KEY,
+      indexName: 'v2-docs',
+      appId: process.env.APPLICATION_ID,
     },
     navbar: {
       title: 'Pegasys-fi Docs',
@@ -217,7 +217,7 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
-          customCss2: require.resolve('./src/css/colors.css'),
+          // customCss2: require.resolve('./src/css/colors.css'),
         },
       },
     ],
@@ -230,6 +230,10 @@ module.exports = {
       crossorigin: 'anonymous',
     },
   ],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
   plugins: [
     ['@saucelabs/theme-github-codeblock', {}],
     [
