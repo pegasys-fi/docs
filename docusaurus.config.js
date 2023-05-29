@@ -26,9 +26,9 @@ module.exports = {
       additionalLanguages: ['solidity'],
     },
     algolia: {
-      apiKey: process.env.API_KEY,
+      apiKey: '94695b27d67e29001e39d689d2e9cce9',
       indexName: 'v2-docs',
-      appId: process.env.APPLICATION_ID,
+      appId: 'ULGD82ZSGJ',
     },
     navbar: {
       title: 'Pegasys-fi Docs',
