@@ -272,24 +272,24 @@ module.exports = {
         redirects: [
           // 1/9/23 V1 SDK Guide Redirects
           {
-            to: '/sdk/v1/guides/background',
-            from: '/sdk/v1/guides/quick-start',
+            to: '/sdk/v2/guides/background',
+            from: '/sdk/v2/guides/quick-start',
           },
           {
-            to: '/sdk/v1/guides/quoting',
-            from: ['/sdk/v1/guides/creating-a-pool', '/sdk/v1/guides/fetching-prices'],
+            to: '/sdk/v2/guides/quoting',
+            from: ['/sdk/v2/guides/creating-a-pool', '/sdk/v1/guides/fetching-prices'],
           },
           {
-            to: '/sdk/v1/guides/trading',
-            from: '/sdk/v1/guides/creating-a-trade',
+            to: '/sdk/v2/guides/trading',
+            from: '/sdk/v2/guides/creating-a-trade',
           },
           {
-            to: '/sdk/v1/guides/routing',
-            from: '/sdk/v1/guides/auto-router',
+            to: '/sdk/v2/guides/routing',
+            from: '/sdk/v2/guides/auto-router',
           },
           {
-            to: '/sdk/v1/guides/liquidity/modifying-position',
-            from: ['/sdk/v1/guides/liquidity/adding', '/sdk/v1/guides/liquidity/removing'],
+            to: '/sdk/v2/guides/liquidity/modifying-position',
+            from: ['/sdk/v2/guides/liquidity/adding', '/sdk/v2/guides/liquidity/removing'],
           },
         ],
         createRedirects(existingPath) {
