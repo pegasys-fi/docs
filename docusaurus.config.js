@@ -116,20 +116,20 @@ module.exports = {
           title: 'Github',
           items: [
             {
-              label: 'v1-core',
-              href: 'https://github.com/Pegasys-fi/v1-core',
+              label: 'v2-core',
+              href: 'https://github.com/Pegasys-fi/v2-core',
             },
             {
-              label: 'v1-sdk',
-              href: 'https://github.com/Pegasys-fi/v1-sdk',
+              label: 'v2-sdk',
+              href: 'https://github.com/Pegasys-fi/v2-sdk',
+            },
+            {
+              label: 'v2-periphery',
+              href: 'https://github.com/Pegasys-fi/v2-periphery',
             },
             // {
-            //   label: 'v1-periphery',
-            //   href: 'https://github.com/Pegasys-fi/v1-periphery',
-            // },
-            // {
             //   label: 'Deployment addresses',
-            //   href: 'https://github.com/Pegasys-fi/v1-periphery/blob/main/deploys.md',
+            //   href: 'https://github.com/Pegasys-fi/v2-periphery/blob/main/deploys.md',
             // },
           ],
         },
