@@ -494,7 +494,7 @@ export default function Home() {
             element={ElementName.GITHUB}
             name={SharedEventName.PAGE_CLICKED}
           >
-            <Link style={{ textDecoration: 'none' }} href={'https://github.com/Pegasys'}>
+            <Link style={{ textDecoration: 'none' }} href={'https://github.com/Pegasys-fi'}>
               <CenterCard>
                 <StyledIcon>
                   <GitHub style={{ width: '48px', height: '48px' }} />
