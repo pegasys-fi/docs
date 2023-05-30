@@ -35,7 +35,6 @@ module.exports = {
       logo: {
         alt: 'Pegasys-fi Unicorn',
         src: 'img/logoPegasys.svg',
-        srcDark: 'img/logoPegasys.svg',
       },
       items: [
         {
@@ -69,8 +68,8 @@ module.exports = {
         //   className: 'persistent',
         // },
         {
-          label: 'Whitepaper',
-          to: 'https://uniswap.org/whitepaper-v3.pdf',
+          label: 'Litepaper',
+          to: 'https://pegasys.finance/blog/introducing-pegasys/',
           position: 'right',
           className: 'persistent',
         },
@@ -107,7 +106,11 @@ module.exports = {
               href: 'https://discord.com/invite/UzjWbWWERz',
             },
             {
-              label: 'Whitepaper',
+              label: 'Litepaper',
+              href: 'https://pegasys.finance/blog/introducing-pegasys/',
+            },
+            {
+              label: 'Forked from Uniswap v3',
               href: 'https://uniswap.org/whitepaper-v3.pdf',
             },
           ],
