@@ -49,16 +49,16 @@ export const developerLinks = [
     href: 'https://github.com/Pegasys-fi/v2-core',
     icon: GitHub,
   },
-  // {
-  //   title: 'v2-sdk',
-  //   href: 'https://github.com/Pegasys-fi/v2-sdk',
-  //   icon: GitHub,
-  // },
-  // {
-  //   title: 'v2-periphery',
-  //   href: 'https://github.com/Pegasys-fi/v2-periphery',
-  //   icon: GitHub,
-  // },
+  {
+    title: 'v2-sdk',
+    href: 'https://github.com/Pegasys-fi/v2-sdk',
+    icon: GitHub,
+  },
+  {
+    title: 'v2-periphery',
+    href: 'https://github.com/Pegasys-fi/v2-periphery',
+    icon: GitHub,
+  },
   // {
   //   title: 'Deployment addresses',
   //   href: 'https://github.com/Pegasys-fi/v2-periphery/blob/main/deploys.md',
