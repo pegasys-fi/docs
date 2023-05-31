@@ -23,8 +23,8 @@ console.log(`The chainId of mainnet is ${ChainId.MAINNET}.`)
 ## CommonJS (require)
 
 ```typescript
-const UNISWAP = require('@pegasys-fi/v2-sdk')
-console.log(`The chainId of mainnet is ${UNISWAP.ChainId.MAINNET}.`)
+const PEGASYS = require('@pegasys-fi/v2-sdk')
+console.log(`The chainId of mainnet is ${PEGASYS.ChainId.MAINNET}.`)
 ```
 
 # Reference
