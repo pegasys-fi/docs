@@ -17,8 +17,6 @@ There are many community-developed tools to determine returns. You can also read
 
 At the moment there are no protocol fees. However, it is possible for a 0.05% fee to be turned on in the future.
 
-More information about a potential future protocol fee can be found [here](https://uniswap.org/blog/uniswap-v3/#path-to-sustainability).
-
 ## Protocol Charge Calculation
 
 In the future, it is possible that a protocol-wide charge of 0.05% per trade will take effect. This represents ⅙th (16.6̅%) of the 0.30% fee. The fee is in effect if [feeTo](../../reference/smart-contracts/factory/#feeto) is not `address(0)` (`0x0000000000000000000000000000000000000000`), indicating that feeTo is the recipient of the charge.
