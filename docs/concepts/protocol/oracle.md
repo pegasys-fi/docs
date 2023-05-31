@@ -56,7 +56,7 @@ See [OracleLibrary](https://github.com/Pegasys-fi/v2-periphery/blob/main/contrac
 
 The liquidity accumulator stores the value of seconds / in-range liquidity at the time of the observation. The liquidity accumulator value increases monotonically and grows by the value of seconds / in-range liquidity - per second.
 
-To derive the harmonic mean liquidity over an interval, the caller needs to retrieve two observations, one after the other, take the delta of the two values, then divide the time elapsed by this value. Calculating TWAL is addressed in finer detail in the [**whitepaper**](https://uniswap.org/whitepaper-v2.pdf).
+To derive the harmonic mean liquidity over an interval, the caller needs to retrieve two observations, one after the other, take the delta of the two values, then divide the time elapsed by this value. Calculating TWAL is addressed in finer detail in the [**Uniswap whitepaper**](https://uniswap.org/whitepaper-v2.pdf).
 
 :::note
 The in-range liquidity accumulator should be used with care. Because the current tick and the current in-range liquidity can be entirely uncorrelated, there are scenarios in which taking the arithmetic mean tick and the harmonic mean liquidity over the same interval in a pool can inaccurately characterize this pool relative to another. For example, if the current tick on pool A is 0 for 5 seconds, and 100 for 5 seconds, the tick accumulator will be 50. If over this same interval, the in-range liquidity was 5000 and 50, the harmonic mean liquidity will be ~99. Compare this to pool B (composed of the same assets) where the tick was 50 and the in-range liquidity was ~99 for 10 seconds. The accumulator values will be identical, but the underlying behavior is of course quite different.
