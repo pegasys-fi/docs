@@ -48,7 +48,7 @@ Note that because the oracle is only updated at most once every block, calling `
 
 The tick accumulator stores the cumulative sum of the active tick at the time of the observation. The tick accumulator value increases monotonically and grows by the value of the current tick - per second.
 
-To derive the arithmetic mean tick over an interval, the caller needs to retrieve two observations, one after the other, take the delta of the two values, and divide by the time elapsed between them. Calculating a TWAP from the tick accumulator is also covered in the [**whitepaper**](https://uniswap.org/whitepaper-v2.pdf). Note that using an arithmetic mean tick to derive a price corresponds to a _geometric_ mean price.
+To derive the arithmetic mean tick over an interval, the caller needs to retrieve two observations, one after the other, take the delta of the two values, and divide by the time elapsed between them. Calculating a TWAP from the tick accumulator is also covered in the [** Uniswap Whitepaper**](https://uniswap.org/whitepaper-v2.pdf). Note that using an arithmetic mean tick to derive a price corresponds to a _geometric_ mean price.
 
 See [OracleLibrary](https://github.com/Pegasys-fi/v2-periphery/blob/main/contracts/libraries/OracleLibrary.sol) for an example of how to use the tick accumulator.
 
