@@ -1,4 +1,4 @@
-Provides functions to integrate with different tier oracles of the same V2 pair
+Provides functions to integrate with different tier oracles of the same V3 pair
 
 ## Functions
 
@@ -11,7 +11,7 @@ Provides functions to integrate with different tier oracles of the same V2 pair
   ) internal view returns (struct WeightedOracleLibrary.PeriodObservation observation)
 ```
 
-Fetches a time-weighted observation for a given Pegasys V2 pool
+Fetches a time-weighted observation for a given Pegasys V3 pool
 
 #### Parameters:
 

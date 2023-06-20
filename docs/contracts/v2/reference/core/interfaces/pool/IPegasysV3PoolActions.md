@@ -34,7 +34,7 @@ Price is represented as a sqrt(amountToken1/amountToken0) Q64.96 value
 
 Adds liquidity for the given recipient/tickLower/tickUpper position
 
-The caller of this method receives a callback in the form of IPegasysV2MintCallback#pegasysV2MintCallback
+The caller of this method receives a callback in the form of IPegasysV3MintCallback#pegasysV3MintCallback
 in which they must pay any token0 or token1 owed for the liquidity. The amount of token0/token1 due depends
 on tickLower, tickUpper, the amount of liquidity, and the current price.
 
@@ -135,7 +135,7 @@ Fees must be collected separately via a call to #collect
 
 Swap token0 for token1, or token1 for token0
 
-The caller of this method receives a callback in the form of IPegasysV2SwapCallback#pegasysV2SwapCallback
+The caller of this method receives a callback in the form of IPegasysV3SwapCallback#pegasysV3SwapCallback
 
 #### Parameters:
 
@@ -167,7 +167,7 @@ The caller of this method receives a callback in the form of IPegasysV2SwapCallb
 
 Receive token0 and/or token1 and pay it back, plus a fee, in the callback
 
-The caller of this method receives a callback in the form of IPegasysV2FlashCallback#pegasysV2FlashCallback
+The caller of this method receives a callback in the form of IPegasysV3FlashCallback#pegasysV3FlashCallback
 Can be used to donate underlying tokens pro-rata to currently in-range liquidity providers by calling
 with 0 amount{0,1} and sending the donation amount(s) from the callback
 

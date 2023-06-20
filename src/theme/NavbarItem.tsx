@@ -6,7 +6,7 @@ import React from 'react'
 
 enum ProtocolVersion {
   V1 = 'V1',
-  V2 = 'V2',
+  V3 = 'V3',
 }
 
 const UNKNOWN_PROTOCOL_VERSION = 'UNKNOWN_PROTOCOL_VERSION'
@@ -15,8 +15,8 @@ const getSection = (version: string) => {
   switch (version) {
     case ProtocolVersion.V1:
       return DocsProtocolVersion.V1
-    case ProtocolVersion.V2:
-      return DocsProtocolVersion.V2
+    case ProtocolVersion.V3:
+      return DocsProtocolVersion.V3
     default:
       return UNKNOWN_PROTOCOL_VERSION
   }
@@ -29,7 +29,7 @@ const getSelectedDocVersion = (docVersion: string) => {
       return ProtocolVersion.V1
     // Default to the current doc version
     default:
-      return ProtocolVersion.V2
+      return ProtocolVersion.V3
   }
 }
 

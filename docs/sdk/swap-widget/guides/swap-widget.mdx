@@ -53,7 +53,7 @@ function App() {
 }
 ```
 
-That’s it! You should now see a fully functional swap widget on your site. The widget is self-contained and gracefully handles all interactions with the Pegasys Protocol. It leverages the [Auto Router](/sdk/v2/guides/routing) to compute the best price across all Pegasys v1 and v2 pools.
+That’s it! You should now see a fully functional swap widget on your site. The widget is self-contained and gracefully handles all interactions with the Pegasys Protocol. It leverages the [Auto Router](/sdk/v3/guides/routing) to compute the best price across all Pegasys v1 and v3 pools.
 
 See a full implementation of the swap widget in the `/cra` and `/nextjs` branches of the [widgets-demo](https://github.com/Uniswap/widgets-demo) repo.
 
@@ -101,8 +101,8 @@ import { provider } from './your/provider'
 
 // We recommend you pass your own JSON-RPC endpoints.
 const jsonRpcUrlMap = { 
-  1: ['https://mainnet.infura.io/v2/<YOUR_INFURA_PROJECT_ID>'], 
-  3: ['https://ropsten.infura.io/v2/<YOUR_INFURA_PROJECT_ID>']
+  1: ['https://mainnet.infura.io/v3/<YOUR_INFURA_PROJECT_ID>'], 
+  3: ['https://ropsten.infura.io/v3/<YOUR_INFURA_PROJECT_ID>']
 }
 
 function App() {
@@ -304,7 +304,7 @@ If you want to offer a different set of tokens in the widget, you can provide a 
 import { SwapWidget } from '@pegasys-fi/widgets'
 import '@pegasys-fi/widgets/fonts.css'
 
-const CMC_TOKEN_LIST = 'https://api.coinmarketcap.com/data-api/v2/pegasys-fi/all.json'
+const CMC_TOKEN_LIST = 'https://api.coinmarketcap.com/data-api/v3/pegasys-fi/all.json'
 
 function App() {
   <div className="Uniswap">

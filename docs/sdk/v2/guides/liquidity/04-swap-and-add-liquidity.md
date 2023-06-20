@@ -11,7 +11,7 @@ This guide will cover how to execute a swap-and-add operation in a single atomic
 If you need a briefer on the SDK and to learn more about how these guides connect to the examples repository, please visit our [background](../01-background.md) page!
 :::
 
-When adding liquidity to a Pegasys v2 pool, you must provide two assets in a particular ratio. In many cases, your contract or the user's wallet hold a different ratio of those two assets. In order to deposit 100% of your assets, you must first swap your assets to the optimal ratio and then add liquidity.
+When adding liquidity to a Pegasys v3 pool, you must provide two assets in a particular ratio. In many cases, your contract or the user's wallet hold a different ratio of those two assets. In order to deposit 100% of your assets, you must first swap your assets to the optimal ratio and then add liquidity.
 
 However, the swap may shift the balance of the pool and thus change the optimal ratio. To avoid that, we can execute this swap-and-add liquidity operation in an atomic fashion, using a router. The inputs to our guide are the **two tokens** that we are pooling for, the **amount** of each token we are pooling for, the **amount** of each token to swap-and-add, and the Pool **fee**.
 
@@ -26,7 +26,7 @@ At the end of the guide, given the inputs above, we should be able swap-and-add 
 
 For this guide, the following Pegasys packages are used:
 
-- [`@pegasys-fi/v2-sdk`](https://www.npmjs.com/package/@pollum-io/v2-sdk)
+- [`@pegasys-fi/v3-sdk`](https://www.npmjs.com/package/@pollum-io/v3-sdk)
 - [`@pegasys-fi/sdk-core`](https://www.npmjs.com/package/@pollum-io/sdk-core)
 - [`@pegasys-fi/smart-order-router`](https://www.npmjs.com/package/@pollum-io/smart-order-router)
 
@@ -85,7 +85,7 @@ Finally, we will create an instance of `SwapAndAddOptions` to configure which po
 - **`addLiquidityOptions`** must contain a `tokenId` to add to an existing position
 
 ```typescript reference title="Constructing SwapAndAddOptions" referenceLinkText="View on Github" customStyling
-https://github.com/Uniswap/examples/blob/c4667fadb13584268bbee2e0e0f556558a474751/v2-sdk/swap-and-add-liquidity/src/libs/liquidity.ts#L104-L114
+https://github.com/Uniswap/examples/blob/c4667fadb13584268bbee2e0e0f556558a474751/v3-sdk/swap-and-add-liquidity/src/libs/liquidity.ts#L104-L114
 ```
 
 ## Calculating our currency ratio

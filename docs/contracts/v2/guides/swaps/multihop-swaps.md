@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Introduction
 
-The examples below are implementations of the two styles of multi-hop swapping available on v2. The examples below are not production ready code, and are implemented in a simplistic manner for the purpose of learning.
+The examples below are implementations of the two styles of multi-hop swapping available on v3. The examples below are not production ready code, and are implemented in a simplistic manner for the purpose of learning.
 
 ## Setting up the Contract
 
@@ -22,8 +22,8 @@ pragma abicoder v2;
 Import the two needed contracts from the npm package installation.
 
 ```solidity
-import '@pegasys-fi/v2-periphery/contracts/interfaces/ISwapRouter.sol';
-import '@pegasys-fi/v2-periphery/contracts/libraries/TransferHelper.sol';
+import '@pegasys-fi/v3-periphery/contracts/interfaces/ISwapRouter.sol';
+import '@pegasys-fi/v3-periphery/contracts/libraries/TransferHelper.sol';
 ```
 
 Create a contract called `SwapExamples`, and declare an immutable public variable `swapRouter` of type `ISwapRouter`.
@@ -158,8 +158,8 @@ An exact output swap will swap a variable amount of the input token for a fixed 
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
-import '@pegasys-fi/v2-periphery/contracts/libraries/TransferHelper.sol';
-import '@pegasys-fi/v2-periphery/contracts/interfaces/ISwapRouter.sol';
+import '@pegasys-fi/v3-periphery/contracts/libraries/TransferHelper.sol';
+import '@pegasys-fi/v3-periphery/contracts/interfaces/ISwapRouter.sol';
 
 contract SwapExamples {
     // For the scope of these swap examples,

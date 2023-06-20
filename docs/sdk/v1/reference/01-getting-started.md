@@ -27,7 +27,7 @@ The SDK works for all chains on which the [factory](../../../contracts/v1/refere
 
 ## Code
 
-The [source code is available on GitHub](https://github.com/Pegasys-fi/v2-sdk).
+The [source code is available on GitHub](https://github.com/Pegasys-fi/v3-sdk).
 
 ## Dependencies
 
