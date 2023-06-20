@@ -50,7 +50,7 @@ Digital assets that are stored in a Pegasys pool contract, and are able to be tr
 
 ## Mid Price
 
-The price between the available buy and sell prices. In Pegasys V2, this is the ratio of the two ERC20 token reserves available within the current active tick.
+The price between the available buy and sell prices. In Pegasys V3, this is the ratio of the two ERC20 token reserves available within the current active tick.
 
 ## Observation
 
@@ -58,7 +58,7 @@ An instance of historical price and liquidity data of a given pair.
 
 ## Pair
 
-A smart contract deployed from a Pegasys V1 factory contract that enables trading between two ERC20 tokens. Pair contracts are now called Pools in V2.
+A smart contract deployed from a Pegasys V1 factory contract that enables trading between two ERC20 tokens. Pair contracts are now called Pools in V3.
 
 ## Periphery
 
@@ -66,7 +66,7 @@ External smart contracts that are useful, but not required for Pegasys to exist.
 
 ## Pool
 
-A contract deployed by the V2 factory that pairs two ERC-20 assets. Different pools may have different fees despite containing the same token pair. Pools were previously called Pairs before the introduction of multiple fee options.
+A contract deployed by the V3 factory that pairs two ERC-20 assets. Different pools may have different fees despite containing the same token pair. Pools were previously called Pairs before the introduction of multiple fee options.
 
 ## Position
 

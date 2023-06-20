@@ -1,4 +1,4 @@
-[@pegasys-fi/v2-sdk](../README.md) / [Exports](../modules.md) / MintSpecificOptions
+[@pegasys-fi/v3-sdk](../README.md) / [Exports](../modules.md) / MintSpecificOptions
 
 # Interface: MintSpecificOptions
 
@@ -19,7 +19,7 @@ Creates pool if not initialized before mint.
 
 #### Defined in
 
-[nonfungiblePositionManager.ts:34](https://github.com/Pegasys-fi/v2-sdk/blob/08a7c05/src/nonfungiblePositionManager.ts#L34)
+[nonfungiblePositionManager.ts:34](https://github.com/Pegasys-fi/v3-sdk/blob/08a7c05/src/nonfungiblePositionManager.ts#L34)
 
 ___
 
@@ -31,4 +31,4 @@ The account that should receive the minted NFT.
 
 #### Defined in
 
-[nonfungiblePositionManager.ts:29](https://github.com/Pegasys-fi/v2-sdk/blob/08a7c05/src/nonfungiblePositionManager.ts#L29)
+[nonfungiblePositionManager.ts:29](https://github.com/Pegasys-fi/v3-sdk/blob/08a7c05/src/nonfungiblePositionManager.ts#L29)

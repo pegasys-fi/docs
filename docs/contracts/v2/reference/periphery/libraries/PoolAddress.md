@@ -41,11 +41,11 @@ Deterministically computes the pool address given the factory and PoolKey
 
 | Name      | Type                       | Description                             |
 | :-------- | :------------------------- | :-------------------------------------- |
-| `factory` | address                    | The Pegasys V2 factory contract address |
+| `factory` | address                    | The Pegasys V3 factory contract address |
 | `key`     | struct PoolAddress.PoolKey | The PoolKey                             |
 
 #### Return Values:
 
 | Name   | Type    | Description                         |
 | :----- | :------ | :---------------------------------- |
-| `pool` | address | The contract address of the V2 pool |
+| `pool` | address | The contract address of the V3 pool |

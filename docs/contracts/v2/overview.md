@@ -4,12 +4,12 @@ title: Overview
 sidebar_position: 1
 ---
 
-# The Pegasys V2 Smart Contracts
+# The Pegasys V3 Smart Contracts
 
-Welcome to the Pegasys V2 smart contracts documentation.
+Welcome to the Pegasys V3 smart contracts documentation.
 
-The pages here contain guides and technical documentation for the Pegasys V2 Smart Contracts.
-You can use these docs to learn about the V2 Protocol Smart Contracts and develop on-chain integrations.
+The pages here contain guides and technical documentation for the Pegasys V3 Smart Contracts.
+You can use these docs to learn about the V3 Protocol Smart Contracts and develop on-chain integrations.
 
 # Guides
 
@@ -23,5 +23,5 @@ For a deeper dive, read through the [technical reference](./reference/overview) 
 
 # Resources
 
-- [**V2 Core**](https://github.com/Pegasys-fi/v2-core)
-- [**V2 Periphery**](https://github.com/Pegasys-fi/v2-periphery)
+- [**V3 Core**](https://github.com/Pegasys-fi/v3-core)
+- [**V3 Periphery**](https://github.com/Pegasys-fi/v3-periphery)

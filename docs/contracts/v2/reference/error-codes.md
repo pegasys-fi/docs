@@ -31,7 +31,7 @@ TransferHelper.sol
 
 - `TF`: Transfer Failed : errors with TF if transfer fails
 
-PegasysV2Pool.sol
+PegasysV3Pool.sol
 
 - `LOK`: The reentrancy guard. A transaction cannot re-enter the pool mid-swap
 

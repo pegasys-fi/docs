@@ -1,5 +1,5 @@
 {
-  "index_name": "v2-docs",
+  "index_name": "v3-docs",
   "start_urls": ["https://docs.pegasys.fi"],
   "sitemap_urls": ["https://docs.pegasys.fi/sitemap.xml"],
   "sitemap_alternate_links": true,

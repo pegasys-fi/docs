@@ -4,7 +4,7 @@ title: Token Integration Issues
 sidebar_position: 6
 ---
 
-Fee-on-transfer and rebasing tokens will not function correctly on v2.
+Fee-on-transfer and rebasing tokens will not function correctly on v3.
 
 ## Fee-on-transfer Tokens
 

@@ -40,8 +40,8 @@ A complete list of commands can be found in the table below:
 
 | Command | Value                                                                                    |
 | :------ | :--------------------------------------------------------------------------------------- |
-| `0x00`  | [`V2_SWAP_EXACT_IN`](./02-technical-reference.md#v2_swap_exact_in)                       |
-| `0x01`  | [`V2_SWAP_EXACT_OUT`](./02-technical-reference.md#v2_swap_exact_out)                     |
+| `0x00`  | [`V3_SWAP_EXACT_IN`](./02-technical-reference.md#v3_swap_exact_in)                       |
+| `0x01`  | [`V3_SWAP_EXACT_OUT`](./02-technical-reference.md#v3_swap_exact_out)                     |
 | `0x02`  | [`PERMIT2_TRANSFER_FROM`](./02-technical-reference.md#permit2_transfer_from)             |
 | `0x03`  | [`PERMIT2_PERMIT_BATCH`](./02-technical-reference.md#permit2_permit_batch)               |
 | `0x04`  | [`SWEEP`](./02-technical-reference.md#sweep)                                             |
@@ -83,20 +83,20 @@ The router uses the command type to know how to decode the encoded input paramet
 
 The input parameters required for each command are outlined below:
 
-### `V2_SWAP_EXACT_IN`
+### `V3_SWAP_EXACT_IN`
 
 - `address` The recipient of the output of the trade
 - `uint256` The amount of input tokens for the trade
 - `uint256` The minimum amount of output tokens the user wants
-- `bytes` The PegasysV2 encoded path to trade along
+- `bytes` The PegasysV3 encoded path to trade along
 - `bool` A flag for whether the input tokens should come from the `msg.sender` (through Permit2) or whether the funds are already in the `UniversalRouter`
 
-### `V2_SWAP_EXACT_OUT`
+### `V3_SWAP_EXACT_OUT`
 
 - `address` The recipient of the output of the trade
 - `uint256` The amount of output tokens to receive
 - `uint256` The maximum number of input tokens that should be spent
-- `bytes` The PegasysV2 encoded path to trade along
+- `bytes` The PegasysV3 encoded path to trade along
 - `bool` A flag for whether the input tokens should come from the `msg.sender` (through Permit2) or whether the funds are already in the `UniversalRouter`
 
 ### `PERMIT2_TRANSFER_FROM`

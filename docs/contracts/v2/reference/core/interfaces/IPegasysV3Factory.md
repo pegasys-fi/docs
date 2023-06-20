@@ -1,4 +1,4 @@
-The Pegasys V2 Factory facilitates creation of Pegasys V2 pools and control over the protocol fees
+The Pegasys V3 Factory facilitates creation of Pegasys V3 pools and control over the protocol fees
 
 ## Functions
 

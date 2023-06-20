@@ -4,15 +4,15 @@ title: The Full Contract
 sidebar_position: 6
 ---
 
-Below we have the complete functioning code example: a contract that can custody Pegasys V2 position NFT's and manipulate the positions and liquidity therein by collecting fees, increasing or decreasing liquidity, and minting new positions. View on github [here](https://github.com/Pegasys-fi/docs/blob/main/examples/smart-contracts/LiquidityExamples.sol).
+Below we have the complete functioning code example: a contract that can custody Pegasys V3 position NFT's and manipulate the positions and liquidity therein by collecting fees, increasing or decreasing liquidity, and minting new positions. View on github [here](https://github.com/Pegasys-fi/docs/blob/main/examples/smart-contracts/LiquidityExamples.sol).
 
 ```solidity
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
-import '@pegasys-fi/v2-core/contracts/interfaces/IPegasysV2Pool.sol';
-import '@pegasys-fi/v2-core/contracts/libraries/TickMath.sol';
+import '@pegasys-fi/v3-core/contracts/interfaces/IPegasysV3Pool.sol';
+import '@pegasys-fi/v3-core/contracts/libraries/TickMath.sol';
 import '@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol';
 import '../libraries/TransferHelper.sol';
 import '../interfaces/INonfungiblePositionManager.sol';
