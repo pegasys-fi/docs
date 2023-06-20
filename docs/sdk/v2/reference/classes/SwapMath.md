@@ -1,4 +1,4 @@
-[@pegasys-fi/v2-sdk](../README.md) / [Exports](../modules.md) / SwapMath
+[@pegasys-fi/v3-sdk](../README.md) / [Exports](../modules.md) / SwapMath
 
 # Class: SwapMath
 
@@ -22,7 +22,7 @@ Cannot be constructed.
 
 #### Defined in
 
-[utils/swapMath.ts:13](https://github.com/Pegasys-fi/v2-sdk/blob/08a7c05/src/utils/swapMath.ts#L13)
+[utils/swapMath.ts:13](https://github.com/Pegasys-fi/v3-sdk/blob/08a7c05/src/utils/swapMath.ts#L13)
 
 ## Methods
 
@@ -46,4 +46,4 @@ Cannot be constructed.
 
 #### Defined in
 
-[utils/swapMath.ts:15](https://github.com/Pegasys-fi/v2-sdk/blob/08a7c05/src/utils/swapMath.ts#L15)
+[utils/swapMath.ts:15](https://github.com/Pegasys-fi/v3-sdk/blob/08a7c05/src/utils/swapMath.ts#L15)

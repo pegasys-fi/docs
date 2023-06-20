@@ -11,19 +11,19 @@ sidebar_position: 4
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
-import '@pegasys-fi/v2-core/contracts/interfaces/callback/IPegasysV2FlashCallback.sol';
-import '@pegasys-fi/v2-core/contracts/libraries/LowGasSafeMath.sol';
+import '@pegasys-fi/v3-core/contracts/interfaces/callback/IPegasysV3FlashCallback.sol';
+import '@pegasys-fi/v3-core/contracts/libraries/LowGasSafeMath.sol';
 
-import '@pegasys-fi/v2-periphery/contracts/base/PeripheryPayments.sol';
-import '@pegasys-fi/v2-periphery/contracts/base/PeripheryImmutableState.sol';
-import '@pegasys-fi/v2-periphery/contracts/libraries/PoolAddress.sol';
-import '@pegasys-fi/v2-periphery/contracts/libraries/CallbackValidation.sol';
-import '@pegasys-fi/v2-periphery/contracts/libraries/TransferHelper.sol';
-import '@pegasys-fi/v2-periphery/contracts/interfaces/ISwapRouter.sol';
+import '@pegasys-fi/v3-periphery/contracts/base/PeripheryPayments.sol';
+import '@pegasys-fi/v3-periphery/contracts/base/PeripheryImmutableState.sol';
+import '@pegasys-fi/v3-periphery/contracts/libraries/PoolAddress.sol';
+import '@pegasys-fi/v3-periphery/contracts/libraries/CallbackValidation.sol';
+import '@pegasys-fi/v3-periphery/contracts/libraries/TransferHelper.sol';
+import '@pegasys-fi/v3-periphery/contracts/interfaces/ISwapRouter.sol';
 
 /// @title Flash contract implementation
-/// @notice An example contract using the Pegasys V2 flash function
-contract PairFlash is IPegasysV2FlashCallback, PeripheryImmutableState, PeripheryPayments {
+/// @notice An example contract using the Pegasys V3 flash function
+contract PairFlash is IPegasysV3FlashCallback, PeripheryImmutableState, PeripheryPayments {
     using LowGasSafeMath for uint256;
     using LowGasSafeMath for int256;
 
@@ -42,7 +42,7 @@ contract PairFlash is IPegasysV2FlashCallback, PeripheryImmutableState, Peripher
     /// @param data The data needed in the callback passed as FlashCallbackData from `initFlash`
     /// @notice implements the callback called from flash
     /// @dev fails if the flash is not profitable, meaning the amountOut from the flash is less than the amount borrowed
-    function pegasysV2FlashCallback(
+    function pegasysV3FlashCallback(
         uint256 fee0,
         uint256 fee1,
         bytes calldata data
@@ -138,11 +138,11 @@ contract PairFlash is IPegasysV2FlashCallback, PeripheryImmutableState, Peripher
     }
 
     /// @param params The parameters necessary for flash and the callback, passed in as FlashParams
-    /// @notice Calls the pools flash function with data needed in `pegasysV2FlashCallback`
+    /// @notice Calls the pools flash function with data needed in `pegasysV3FlashCallback`
     function initFlash(FlashParams memory params) external {
         PoolAddress.PoolKey memory poolKey =
             PoolAddress.PoolKey({token0: params.token0, token1: params.token1, fee: params.fee1});
-        IPegasysV2Pool pool = IPegasysV2Pool(PoolAddress.computeAddress(factory, poolKey));
+        IPegasysV3Pool pool = IPegasysV3Pool(PoolAddress.computeAddress(factory, poolKey));
         // recipient of borrowed amounts
         // amount of token0 requested to borrow
         // amount of token1 requested to borrow

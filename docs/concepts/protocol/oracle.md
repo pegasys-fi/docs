@@ -8,11 +8,11 @@ sidebar_position: 3
 Unfamiliar with the concept of an oracle? Check out the Ethereum Foundation's [oracle overview](https://ethereum.org/en/developers/docs/oracles/) first.
 :::
 
-All Pegasys v2 pools can serve as oracles, offering access to historical price and liquidity data. This capability unlocks a wide range of on-chain use cases.
+All Pegasys v3 pools can serve as oracles, offering access to historical price and liquidity data. This capability unlocks a wide range of on-chain use cases.
 
-Historical data is stored as an array of observations. At first, each pool tracks only a single observation, overwriting it as blocks elapse. This limits how far into the past users may access data. However, any party willing to pay the transaction fees may [increase the number of tracked observations](../../contracts/v2/reference/core/PegasysV2Pool#increaseobservationcardinalitynext) (up to a maximum of `65535`), expanding the period of data availability to ~9 days or more.
+Historical data is stored as an array of observations. At first, each pool tracks only a single observation, overwriting it as blocks elapse. This limits how far into the past users may access data. However, any party willing to pay the transaction fees may [increase the number of tracked observations](../../contracts/v3/reference/core/PegasysV3Pool#increaseobservationcardinalitynext) (up to a maximum of `65535`), expanding the period of data availability to ~9 days or more.
 
-Storing price and liquidity history directly in the pool contract substantially reduces the potential for logical errors on the part of the calling contract, and reduces integration costs by eliminating the need to store historical values. Additionally, the v2 oracle's considerable maximum length makes oracle price manipulation significantly more difficult, as the calling contract may cheaply construct a time-weighted average over any arbitrary range inside of (or fully encompassing) the length of the oracle array.
+Storing price and liquidity history directly in the pool contract substantially reduces the potential for logical errors on the part of the calling contract, and reduces integration costs by eliminating the need to store historical values. Additionally, the v3 oracle's considerable maximum length makes oracle price manipulation significantly more difficult, as the calling contract may cheaply construct a time-weighted average over any arbitrary range inside of (or fully encompassing) the length of the oracle array.
 
 ## Observations
 
@@ -31,7 +31,7 @@ struct Observation {
 }
 ```
 
-`Observation`s may be retrieved via the [`observations`](../../contracts/v2/reference/core/interfaces/pool/IPegasysV2PoolState#observations) method on v2 pools. However, this is _not_ the recommended way to consume oracle data. Instead, prefer [`observe`](../../contracts/v2/reference/core/PegasysV2Pool#observe):
+`Observation`s may be retrieved via the [`observations`](../../contracts/v3/reference/core/interfaces/pool/IPegasysV3PoolState#observations) method on v3 pools. However, this is _not_ the recommended way to consume oracle data. Instead, prefer [`observe`](../../contracts/v3/reference/core/PegasysV3Pool#observe):
 
 ```solidity
 function observe(uint32[] calldata secondsAgos)
@@ -50,7 +50,7 @@ The tick accumulator stores the cumulative sum of the active tick at the time of
 
 To derive the arithmetic mean tick over an interval, the caller needs to retrieve two observations, one after the other, take the delta of the two values, and divide by the time elapsed between them. Calculating a TWAP from the tick accumulator is also covered in the [** Uniswap Whitepaper**](https://uniswap.org/whitepaper-v2.pdf). Note that using an arithmetic mean tick to derive a price corresponds to a _geometric_ mean price.
 
-See [OracleLibrary](https://github.com/Pegasys-fi/v2-periphery/blob/main/contracts/libraries/OracleLibrary.sol) for an example of how to use the tick accumulator.
+See [OracleLibrary](https://github.com/Pegasys-fi/v3-periphery/blob/main/contracts/libraries/OracleLibrary.sol) for an example of how to use the tick accumulator.
 
 ## Liquidity Accumulator
 

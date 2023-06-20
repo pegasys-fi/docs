@@ -6,10 +6,10 @@ Allows staking nonfungible liquidity tokens in exchange for reward tokens
 
 ```solidity
   function factory(
-  ) external view returns (contract IPegasysV2Factory)
+  ) external view returns (contract IPegasysV3Factory)
 ```
 
-The Pegasys V2 Factory
+The Pegasys V3 Factory
 
 ### nonfungiblePositionManager
 
@@ -133,7 +133,7 @@ Returns amounts of reward tokens owed to a given address according to the last t
 
 ```solidity
   function createIncentive(
-    struct IPegasysV2Staker.IncentiveKey key,
+    struct IPegasysV3Staker.IncentiveKey key,
     uint256 reward
   ) external
 ```
@@ -144,14 +144,14 @@ Creates a new liquidity mining incentive program
 
 | Name     | Type                                 | Description                                   |
 | :------- | :----------------------------------- | :-------------------------------------------- |
-| `key`    | struct IPegasysV2Staker.IncentiveKey | Details of the incentive to create            |
+| `key`    | struct IPegasysV3Staker.IncentiveKey | Details of the incentive to create            |
 | `reward` | uint256                              | The amount of reward tokens to be distributed |
 
 ### endIncentive
 
 ```solidity
   function endIncentive(
-    struct IPegasysV2Staker.IncentiveKey key
+    struct IPegasysV3Staker.IncentiveKey key
   ) external returns (uint256 refund)
 ```
 
@@ -161,7 +161,7 @@ Ends an incentive after the incentive end time has passed and all stakes have be
 
 | Name  | Type                                 | Description                     |
 | :---- | :----------------------------------- | :------------------------------ |
-| `key` | struct IPegasysV2Staker.IncentiveKey | Details of the incentive to end |
+| `key` | struct IPegasysV3Staker.IncentiveKey | Details of the incentive to end |
 
 #### Return Values:
 
@@ -197,13 +197,13 @@ Transfers ownership of a deposit from the sender to the given recipient
   ) external
 ```
 
-Withdraws a Pegasys V2 LP token `tokenId` from this contract to the recipient `to`
+Withdraws a Pegasys V3 LP token `tokenId` from this contract to the recipient `to`
 
 #### Parameters:
 
 | Name      | Type    | Description                                                                                       |
 | :-------- | :------ | :------------------------------------------------------------------------------------------------ |
-| `tokenId` | uint256 | The unique identifier of an Pegasys V2 LP token                                                   |
+| `tokenId` | uint256 | The unique identifier of an Pegasys V3 LP token                                                   |
 | `to`      | address | The address where the LP token will be sent                                                       |
 | `data`    | bytes   | An optional data array that will be passed along to the `to` address via the NFT safeTransferFrom |
 
@@ -211,36 +211,36 @@ Withdraws a Pegasys V2 LP token `tokenId` from this contract to the recipient `t
 
 ```solidity
   function stakeToken(
-    struct IPegasysV2Staker.IncentiveKey key,
+    struct IPegasysV3Staker.IncentiveKey key,
     uint256 tokenId
   ) external
 ```
 
-Stakes a Pegasys V2 LP token
+Stakes a Pegasys V3 LP token
 
 #### Parameters:
 
 | Name      | Type                                 | Description                                         |
 | :-------- | :----------------------------------- | :-------------------------------------------------- |
-| `key`     | struct IPegasysV2Staker.IncentiveKey | The key of the incentive for which to stake the NFT |
+| `key`     | struct IPegasysV3Staker.IncentiveKey | The key of the incentive for which to stake the NFT |
 | `tokenId` | uint256                              | The ID of the token to stake                        |
 
 ### unstakeToken
 
 ```solidity
   function unstakeToken(
-    struct IPegasysV2Staker.IncentiveKey key,
+    struct IPegasysV3Staker.IncentiveKey key,
     uint256 tokenId
   ) external
 ```
 
-Unstakes a Pegasys V2 LP token
+Unstakes a Pegasys V3 LP token
 
 #### Parameters:
 
 | Name      | Type                                 | Description                                           |
 | :-------- | :----------------------------------- | :---------------------------------------------------- |
-| `key`     | struct IPegasysV2Staker.IncentiveKey | The key of the incentive for which to unstake the NFT |
+| `key`     | struct IPegasysV3Staker.IncentiveKey | The key of the incentive for which to unstake the NFT |
 | `tokenId` | uint256                              | The ID of the token to unstake                        |
 
 ### claimReward
@@ -273,7 +273,7 @@ Transfers `amountRequested` of accrued `rewardToken` rewards from the contract t
 
 ```solidity
   function getRewardInfo(
-    struct IPegasysV2Staker.IncentiveKey key,
+    struct IPegasysV3Staker.IncentiveKey key,
     uint256 tokenId
   ) external returns (uint256 reward, uint160 secondsInsideX128)
 ```
@@ -284,7 +284,7 @@ Calculates the reward amount that will be received for the given stake
 
 | Name      | Type                                 | Description              |
 | :-------- | :----------------------------------- | :----------------------- |
-| `key`     | struct IPegasysV2Staker.IncentiveKey | The key of the incentive |
+| `key`     | struct IPegasysV3Staker.IncentiveKey | The key of the incentive |
 | `tokenId` | uint256                              | The ID of the token      |
 
 #### Return Values:
@@ -301,7 +301,7 @@ Calculates the reward amount that will be received for the given stake
 ```solidity
   event IncentiveCreated(
     contract IERC20Minimal rewardToken,
-    contract IPegasysV2Pool pool,
+    contract IPegasysV3Pool pool,
     uint256 startTime,
     uint256 endTime,
     address refundee,
@@ -316,7 +316,7 @@ Event emitted when a liquidity mining incentive has been created
 | Name          | Type                    | Description                                                               |
 | :------------ | :---------------------- | :------------------------------------------------------------------------ |
 | `rewardToken` | contract IERC20Minimal  | The token being distributed as a reward                                   |
-| `pool`        | contract IPegasysV2Pool | The Pegasys V2 pool                                                       |
+| `pool`        | contract IPegasysV3Pool | The Pegasys V3 pool                                                       |
 | `startTime`   | uint256                 | The time when the incentive program begins                                |
 | `endTime`     | uint256                 | The time when rewards stop accruing                                       |
 | `refundee`    | address                 | The address which receives any remaining reward tokens after the end time |
@@ -370,13 +370,13 @@ Emitted when ownership of a deposit changes
   )
 ```
 
-Event emitted when a Pegasys V2 LP token has been staked
+Event emitted when a Pegasys V3 LP token has been staked
 
 #### Parameters:
 
 | Name          | Type    | Description                                     |
 | :------------ | :------ | :---------------------------------------------- |
-| `tokenId`     | uint256 | The unique identifier of an Pegasys V2 LP token |
+| `tokenId`     | uint256 | The unique identifier of an Pegasys V3 LP token |
 | `liquidity`   | bytes32 | The amount of liquidity staked                  |
 | `incentiveId` | uint128 | The incentive in which the token is staking     |
 
@@ -389,13 +389,13 @@ Event emitted when a Pegasys V2 LP token has been staked
   )
 ```
 
-Event emitted when a Pegasys V2 LP token has been unstaked
+Event emitted when a Pegasys V3 LP token has been unstaked
 
 #### Parameters:
 
 | Name          | Type    | Description                                     |
 | :------------ | :------ | :---------------------------------------------- |
-| `tokenId`     | uint256 | The unique identifier of an Pegasys V2 LP token |
+| `tokenId`     | uint256 | The unique identifier of an Pegasys V3 LP token |
 | `incentiveId` | bytes32 | The incentive in which the token is staking     |
 
 ### RewardClaimed

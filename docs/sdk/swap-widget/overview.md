@@ -20,5 +20,5 @@ Pull requests are welcome!
 - [**Swap Widget Github Repo**](https://github.com/Pegasys-fi/widgets)
 - [**Swap Widget NPM Package**](https://www.npmjs.com/package/@pollum-io/widgets)
 
-[![npm version](https://img.shields.io/npm/v/@pegasys-fi/widgets/latest.svg)](https://www.npmjs.com/package/@pollum-io/v2-sdk/v/latest)
-[![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@pegasys-fi/widgets/latest.svg)](https://bundlephobia.com/result?p=@pollum-io/v2-sdk@latest)
+[![npm version](https://img.shields.io/npm/v/@pegasys-fi/widgets/latest.svg)](https://www.npmjs.com/package/@pollum-io/v3-sdk/v/latest)
+[![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@pegasys-fi/widgets/latest.svg)](https://bundlephobia.com/result?p=@pollum-io/v3-sdk@latest)

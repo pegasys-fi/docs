@@ -5,7 +5,7 @@ title: Minting a Position
 
 ## Introduction
 
-This guide will cover how to create (or mint) a liquidity position on the Pegasys V2 protocol.
+This guide will cover how to create (or mint) a liquidity position on the Pegasys V3 protocol.
 It is based on the [minting a position code example](https://github.com/uniswap/examples/tree/main/v3-sdk/minting-position), found in the Pegasys code examples [repository](https://github.com/Uniswap/examples).
 To run this example, check out the examples's [README](https://github.com/uniswap/examples/blob/main/v3-sdk/minting-posotion/README.md) and follow the setup instructions.
 
@@ -13,7 +13,7 @@ To run this example, check out the examples's [README](https://github.com/uniswa
 If you need a briefer on the SDK and to learn more about how these guides connect to the examples repository, please visit our [background](../01-background.md) page!
 :::
 
-In the Pegasys V2 protocol, liquidity positions are represented using non-fungible tokens. In this guide we will use the `NonfungiblePositionManager` class to help us mint a liquidity position for the  **USDC - DAI** pair. The inputs to our guide are the **two tokens** that we are pooling for, the **amount** of each token we are pooling for and the Pool **fee**.
+In the Pegasys V3 protocol, liquidity positions are represented using non-fungible tokens. In this guide we will use the `NonfungiblePositionManager` class to help us mint a liquidity position for the  **USDC - DAI** pair. The inputs to our guide are the **two tokens** that we are pooling for, the **amount** of each token we are pooling for and the Pool **fee**.
 
 The guide will **cover**:
 
@@ -26,7 +26,7 @@ At the end of the guide, given the inputs above, we should be able to mint a liq
 
 For this guide, the following Pegasys packages are used:
 
-- [`@pegasys-fi/v2-sdk`](https://www.npmjs.com/package/@pollum-io/v2-sdk)
+- [`@pegasys-fi/v3-sdk`](https://www.npmjs.com/package/@pollum-io/v3-sdk)
 - [`@pegasys-fi/sdk-core`](https://www.npmjs.com/package/@pollum-io/sdk-core)
 - [`@pegasys-fi/smart-order-router`](https://www.npmjs.com/package/@pollum-io/smart-order-router)
 
@@ -85,7 +85,7 @@ Given those parameters, `fromAmounts` will attempt to calculate the maximum amou
 
 ## Configuring and executing our minting transaction
 
-The Position instance is then passed as input to the `NonfungiblePositionManager`'s `addCallParameters` function. The function also requires an [`AddLiquidityOptions`](https://github.com/Pegasys-fi/v2-sdk/blob/08a7c050cba00377843497030f502c05982b1c43/src/nonfungiblePositionManager.ts#L77) object as its second parameter. This is either of type [`MintOptions`](https://github.com/Pegasys-fi/v2-sdk/blob/08a7c050cba00377843497030f502c05982b1c43/src/nonfungiblePositionManager.ts#L74) for minting a new position or [`IncreaseOptions`](https://github.com/Pegasys-fi/v2-sdk/blob/08a7c050cba00377843497030f502c05982b1c43/src/nonfungiblePositionManager.ts#L75) for adding liquidity to an existing position. For this example, we're using a `MintOptions` to create our position.
+The Position instance is then passed as input to the `NonfungiblePositionManager`'s `addCallParameters` function. The function also requires an [`AddLiquidityOptions`](https://github.com/Pegasys-fi/v3-sdk/blob/08a7c050cba00377843497030f502c05982b1c43/src/nonfungiblePositionManager.ts#L77) object as its second parameter. This is either of type [`MintOptions`](https://github.com/Pegasys-fi/v3-sdk/blob/08a7c050cba00377843497030f502c05982b1c43/src/nonfungiblePositionManager.ts#L74) for minting a new position or [`IncreaseOptions`](https://github.com/Pegasys-fi/v3-sdk/blob/08a7c050cba00377843497030f502c05982b1c43/src/nonfungiblePositionManager.ts#L75) for adding liquidity to an existing position. For this example, we're using a `MintOptions` to create our position.
 
 ```typescript reference title="Getting the transaction calldata and parameters" referenceLinkText="View on Github" customStyling
 https://github.com/Uniswap/examples/blob/b5e64e3d6c17cb91bc081f1ed17581bbf22024bc/v3-sdk/minting-position/src/libs/positions.ts#L78-L88

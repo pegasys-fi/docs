@@ -1,16 +1,16 @@
 import { CurrencyAmount, Percent, Token } from '@pegasys-fi/sdk-core'
-import { abi as IPegasysV2PoolABI } from '@pegasys-fi/v2-core/artifacts/contracts/interfaces/IPegasysV2Pool.sol/IPegasysV2Pool.json'
-import { nearestUsableTick, NonfungiblePositionManager, Pool, Position } from '@pegasys-fi/v2-sdk'
+import { abi as IPegasysV3PoolABI } from '@pegasys-fi/v3-core/artifacts/contracts/interfaces/IPegasysV3Pool.sol/IPegasysV3Pool.json'
+import { nearestUsableTick, NonfungiblePositionManager, Pool, Position } from '@pegasys-fi/v3-sdk'
 import { ethers } from 'ethers'
 
 // default uses “http://localhost:8545”
-// can also input your own connection with "https://mainnet.infura.io/v2/<YOUR-ENDPOINT-HERE>" as an input
+// can also input your own connection with "https://mainnet.infura.io/v3/<YOUR-ENDPOINT-HERE>" as an input
 const provider = new ethers.providers.JsonRpcProvider()
 
 // pool address for DAI/USDC 0.05%
 const poolAddress = '0x6c6bc977e13df9b0de53b251522280bb72383700'
 
-const poolContract = new ethers.Contract(poolAddress, IPegasysV2PoolABI, provider)
+const poolContract = new ethers.Contract(poolAddress, IPegasysV3PoolABI, provider)
 
 interface Immutables {
   factory: string

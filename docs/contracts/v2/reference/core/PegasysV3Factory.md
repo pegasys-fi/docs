@@ -1,4 +1,4 @@
-Deploys Pegasys V2 pools and manages ownership and control over pool protocol fees
+Deploys Pegasys V3 pools and manages ownership and control over pool protocol fees
 
 ## Functions
 

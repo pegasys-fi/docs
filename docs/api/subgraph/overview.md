@@ -15,11 +15,11 @@ Each version of Pegasys has its own dedicated subgraph, and governance contracts
 
 Each subgraph has a dedicated endpoint for querying data, as well as a page on [The Graph explorer](https://thegraph.com/explorer/) the exposes the schema and available fields to query.
 
-##### V2
+##### V3
 
-- Explorer Page: https://thegraph.com/explorer/subgraph/pegasys-fi/v2
-- Graphql Endpoint: https://api.thegraph.com/subgraphs/name/pegasys-fi/v2
-- Code: https://github.com/Pegasys-fi/v2-subgraph
+- Explorer Page: https://thegraph.com/explorer/subgraph/pegasys-fi/v3
+- Graphql Endpoint: https://api.thegraph.com/subgraphs/name/pegasys-fi/v3
+- Code: https://github.com/Pegasys-fi/v3-subgraph
 
 ##### Governance
 

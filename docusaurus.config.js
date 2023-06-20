@@ -27,7 +27,7 @@ module.exports = {
     },
     algolia: {
       apiKey: '94695b27d67e29001e39d689d2e9cce9',
-      indexName: 'v2-docs',
+      indexName: 'v3-docs',
       appId: 'ULGD82ZSGJ',
     },
     navbar: {
@@ -119,20 +119,20 @@ module.exports = {
           title: 'Github',
           items: [
             {
-              label: 'v2-core',
-              href: 'https://github.com/Pegasys-fi/v2-core',
+              label: 'v3-core',
+              href: 'https://github.com/Pegasys-fi/v3-core',
             },
             {
-              label: 'v2-sdk',
-              href: 'https://github.com/Pegasys-fi/v2-sdk',
+              label: 'v3-sdk',
+              href: 'https://github.com/Pegasys-fi/v3-sdk',
             },
             {
-              label: 'v2-periphery',
-              href: 'https://github.com/Pegasys-fi/v2-periphery',
+              label: 'v3-periphery',
+              href: 'https://github.com/Pegasys-fi/v3-periphery',
             },
             // {
             //   label: 'Deployment addresses',
-            //   href: 'https://github.com/Pegasys-fi/v2-periphery/blob/main/deploys.md',
+            //   href: 'https://github.com/Pegasys-fi/v3-periphery/blob/main/deploys.md',
             // },
           ],
         },
@@ -275,24 +275,24 @@ module.exports = {
         redirects: [
           // 1/9/23 V1 SDK Guide Redirects
           {
-            to: '/sdk/v2/guides/background',
-            from: '/sdk/v2/guides/quick-start',
+            to: '/sdk/v3/guides/background',
+            from: '/sdk/v3/guides/quick-start',
           },
           {
-            to: '/sdk/v2/guides/quoting',
-            from: ['/sdk/v2/guides/creating-a-pool', '/sdk/v1/guides/fetching-prices'],
+            to: '/sdk/v3/guides/quoting',
+            from: ['/sdk/v3/guides/creating-a-pool', '/sdk/v1/guides/fetching-prices'],
           },
           {
-            to: '/sdk/v2/guides/trading',
-            from: '/sdk/v2/guides/creating-a-trade',
+            to: '/sdk/v3/guides/trading',
+            from: '/sdk/v3/guides/creating-a-trade',
           },
           {
-            to: '/sdk/v2/guides/routing',
-            from: '/sdk/v2/guides/auto-router',
+            to: '/sdk/v3/guides/routing',
+            from: '/sdk/v3/guides/auto-router',
           },
           {
-            to: '/sdk/v2/guides/liquidity/modifying-position',
-            from: ['/sdk/v2/guides/liquidity/adding', '/sdk/v2/guides/liquidity/removing'],
+            to: '/sdk/v3/guides/liquidity/modifying-position',
+            from: ['/sdk/v3/guides/liquidity/adding', '/sdk/v3/guides/liquidity/removing'],
           },
         ],
         createRedirects(existingPath) {

@@ -5,7 +5,7 @@ title: License Modifications
 
 ## Licensing
 
-Please note that Pegasys V2 is under [BUSL license](https://github.com/Pegasys-fi/v2-core#licensing) until the Change Date, currently 2023-04-01. Exceptions to the license may be specified by Pegasys Governance via Additional Use Grants, which can, for example, allow V2 to be deployed on new chains. Please follow the [Pegasys Governance process](https://gov.pegasys.fi/t/community-governance-process/7732) to request a DAO vote for exceptions to the license, or to move up the Change Date.
+Please note that Pegasys V3 is under [BUSL license](https://github.com/Pegasys-fi/v3-core#licensing) until the Change Date, currently 2023-04-01. Exceptions to the license may be specified by Pegasys Governance via Additional Use Grants, which can, for example, allow V3 to be deployed on new chains. Please follow the [Pegasys Governance process](https://gov.pegasys.fi/t/community-governance-process/7732) to request a DAO vote for exceptions to the license, or to move up the Change Date.
 
 License changes must be enacted via the [ENS domain](https://ens.domains/) uniswap.eth, which is controlled by Pegasys Governance. This means (among other things) that Governance has the power to associate arbitrary text with any subdomain of the form X.uniswap.eth. Modifications of the Change Date should be specified at v2-core-license-date.uniswap.eth, and Additional Use Grants should be specified at v2-core-license-grants.uniswap.eth. The process for associating text with a subdomain is detailed below:
 

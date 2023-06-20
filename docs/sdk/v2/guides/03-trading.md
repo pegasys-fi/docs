@@ -5,7 +5,7 @@ title: Executing a Trade
 
 ## Introduction
 
-This guide will build off our [quoting guide](./02-quoting.md) and show how to use a quote to construct and execute a trade on the Pegasys V2 protocol. It is based on the [Trading code example](https://github.com/uniswap/examples/tree/main/v3-sdk/trading), found in the Uniswap code examples [repository](https://github.com/Uniswap/examples). To run this example, check out the guide's [README](https://github.com/uniswap/examples/blob/main/v3-sdk/trading/README.md) and follow the setup instructions.
+This guide will build off our [quoting guide](./02-quoting.md) and show how to use a quote to construct and execute a trade on the Pegasys V3 protocol. It is based on the [Trading code example](https://github.com/uniswap/examples/tree/main/v3-sdk/trading), found in the Uniswap code examples [repository](https://github.com/Uniswap/examples). To run this example, check out the guide's [README](https://github.com/uniswap/examples/blob/main/v3-sdk/trading/README.md) and follow the setup instructions.
 
 :::info
 If you need a briefer on the SDK and to learn more about how these guides connect to the examples repository, please visit our [background](./01-background.md) page!
@@ -27,7 +27,7 @@ Included in the example application is functionality to wrap/unwrap ETH as neede
 
 For this guide, the following Uniswap packages are used:
 
-- [`@pegasys-fi/v2-sdk`](https://www.npmjs.com/package/@pollum-io/v2-sdk)
+- [`@pegasys-fi/v3-sdk`](https://www.npmjs.com/package/@pollum-io/v3-sdk)
 - [`@pegasys-fi/sdk-core`](https://www.npmjs.com/package/@pollum-io/sdk-core)
 
 The core code of this guide can be found in [`trading.ts`](https://github.com/uniswap/examples/blob/main/v3-sdk/trading/src/libs/trading.ts)
@@ -60,15 +60,15 @@ Once we have constructed the route object, we now need to obtain a quote for the
 https://github.com/Uniswap/examples/blob/bbee4b974768ff1668ac56e27d1fe840060bb61b/v3-sdk/trading/src/libs/trading.ts#L58
 ```
 
-As shown below, the quote is obtained using the `v2-sdk`'s `SwapQuoter`, in contrast to the [previous quoting guide](./02-quoting.md), where we directly accessed the smart contact:
+As shown below, the quote is obtained using the `v3-sdk`'s `SwapQuoter`, in contrast to the [previous quoting guide](./02-quoting.md), where we directly accessed the smart contact:
 
-```typescript reference title="Fetching a quote using the v2-sdk" referenceLinkText="View on Github" customStyling
+```typescript reference title="Fetching a quote using the v3-sdk" referenceLinkText="View on Github" customStyling
 https://github.com/Uniswap/examples/blob/bbee4b974768ff1668ac56e27d1fe840060bb61b/v3-sdk/trading/src/libs/trading.ts#L128-L141
 ```
 
 The `SwapQuoter`'s `quoteCallParameters` function, gives us the calldata needed to make the call to the `Quoter`, and we then decode the returned quote:
 
-```typescript reference title="Getting a quote using the v2-sdk" referenceLinkText="View on Github" customStyling
+```typescript reference title="Getting a quote using the v3-sdk" referenceLinkText="View on Github" customStyling
 https://github.com/Uniswap/examples/blob/bbee4b974768ff1668ac56e27d1fe840060bb61b/v3-sdk/trading/src/libs/trading.ts#L143-L148
 ```
 

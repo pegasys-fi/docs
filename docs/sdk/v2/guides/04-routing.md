@@ -23,7 +23,7 @@ At the end of the guide, we should be able to create a route and and execute a s
 
 For this guide, the following Pegasys packages are used:
 
-- [`@pegasys-fi/v2-sdk`](https://www.npmjs.com/package/@pollum-io/v2-sdk)
+- [`@pegasys-fi/v3-sdk`](https://www.npmjs.com/package/@pollum-io/v3-sdk)
 - [`@pegasys-fi/sdk-core`](https://www.npmjs.com/package/@pollum-io/sdk-core)
 - [`@pegasys-fi/smart-order-router`](https://www.npmjs.com/package/@pollum-io/smart-order-router)
 

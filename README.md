@@ -7,8 +7,8 @@ This web application contains all documentation for Pegasys products. It is buil
 
 ### Pegasys documentation is broken down into four sections:
 - Concepts - General Pegasys information or concepts useful for using Pegasys products, such as *Liquidity* and *Fees*
-- Contracts - Pegasys smart contracts such as the V2 Contracts or *Permit2*
-- SDKs - Pegasys integrations such as the *v2-sdk* and the *Swap Widget*
+- Contracts - Pegasys smart contracts such as the V3 Contracts or *Permit2*
+- SDKs - Pegasys integrations such as the *v3-sdk* and the *Swap Widget*
 - APIs - The Pegasys APIs such the *Subgraph API*
 
 ### Each item in a section should include the following:
@@ -27,7 +27,7 @@ A product overview should address points such as:
 - Where does the source code of the product live?
 - Where does the code artifact live (eg *npm*) and how does someone integrate with it?
 
-A good example is the [V2 Smart Contracts](./docs/contracts/v2/overview.md).
+A good example is the [V3 Smart Contracts](./docs/contracts/v3/overview.md).
 
 ### Guides
 > Guides should follow the **Principles of a Good Guide**:
@@ -48,10 +48,10 @@ A good example is the [V2 Smart Contracts](./docs/contracts/v2/overview.md).
 By implementing these consistent principles Pegasys will have docs that are easy to understand and produce reusable code for its community.
 
 
-A good example is the [V2 SDK Guides](./docs/sdk/v2/guides/01-quick-start.md).
+A good example is the [V3 SDK Guides](./docs/sdk/v3/guides/01-quick-start.md).
 
 ### Technical References
-This should contain the technical reference for the exported interfaces. A good example is the [V2 SDK](./docs/sdk/v2/reference/overview).
+This should contain the technical reference for the exported interfaces. A good example is the [V3 SDK](./docs/sdk/v3/reference/overview).
 These files can be created using the [guides below](#how-to-create-a-technical-reference).
 
 # Contributing to Pegasys Docs
@@ -124,7 +124,7 @@ If you don't have those, one for the Engineering Managers should be able to help
 - Edit config.json file if needed:
     - Start url from updated website
     - Sitemap url from updated website: eg for docs: https://docs.pegasys.fi/sitemap.xml
-    - Use "v2-docs" as the index name
+    - Use "v3-docs" as the index name
 - [Install](https://www.docker.com/products/docker-desktop/) and start running Docker Desktop
 - Install jq `brew install jq`
 - Run `docker run -it --env-file=.env -e "CONFIG=$(cat ./config.json | jq -r tostring)" algolia/docsearch-scraper`

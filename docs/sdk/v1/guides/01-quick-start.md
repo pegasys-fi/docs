@@ -7,7 +7,7 @@ The Pegasys SDK exists to help developers build on top of Pegasys. It's designed
 
 # Installation
 
-The easiest way to consume the SDK is via [npm](https://github.com/Pegasys-fi/v1-sdk). To install it in your project, simply run `yarn add @pegasys-fi/v2-sdk` (or `npm install @pegasys-fi/v2-sdk`).
+The easiest way to consume the SDK is via [npm](https://github.com/Pegasys-fi/v1-sdk). To install it in your project, simply run `yarn add @pegasys-fi/v3-sdk` (or `npm install @pegasys-fi/v3-sdk`).
 
 # Usage
 
@@ -16,14 +16,14 @@ To run code from the SDK in your application, use an `import` or `require` state
 ## ES6 (import)
 
 ```typescript
-import { ChainId } from '@pegasys-fi/v2-sdk'
+import { ChainId } from '@pegasys-fi/v3-sdk'
 console.log(`The chainId of mainnet is ${ChainId.MAINNET}.`)
 ```
 
 ## CommonJS (require)
 
 ```typescript
-const PEGASYS = require('@pegasys-fi/v2-sdk')
+const PEGASYS = require('@pegasys-fi/v3-sdk')
 console.log(`The chainId of mainnet is ${PEGASYS.ChainId.MAINNET}.`)
 ```
 

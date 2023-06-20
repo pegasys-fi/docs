@@ -8,10 +8,10 @@ sidebar_position: 3
 
 Here we will override the flash callback with our custom logic to execute the desired swaps and pay the profits to the original `msg.sender`.
 
-Declare the `pegasysV2FlashCallback` function and override it.
+Declare the `pegasysV3FlashCallback` function and override it.
 
 ```solidity
-    function pegasysV2FlashCallback(
+    function pegasysV3FlashCallback(
         uint256 fee0,
         uint256 fee1,
         bytes calldata data
@@ -24,7 +24,7 @@ Declare a variable `decoded` in memory and assign it to the [**decoded data**](h
         FlashCallbackData memory decoded = abi.decode(data, (FlashCallbackData));
 ```
 
-Each callback must be validated to verify that the call originated from a genuine V2 pool. Otherwise, the pool contract would be vulnerable to attack via an EOA manipulating the callback function.
+Each callback must be validated to verify that the call originated from a genuine V3 pool. Otherwise, the pool contract would be vulnerable to attack via an EOA manipulating the callback function.
 
 ```solidity
         CallbackValidation.verifyCallback(factory, decoded.poolKey);
@@ -132,7 +132,7 @@ Send the profits to the `payer`: the original `msg.sender` of the `initFlash` fu
 # The full function
 
 ```solidity
-    function pegasysV2FlashCallback(
+    function pegasysV3FlashCallback(
         uint256 fee0,
         uint256 fee1,
         bytes calldata data
