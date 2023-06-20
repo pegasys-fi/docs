@@ -9,13 +9,6 @@ import Npm from '@site/static/img/npm.svg'
 // import UGP from '@site/static/img/UGP.png'
 import Layout from '@theme/Layout'
 import ThemedImage from '@theme/ThemedImage'
-import { TraceEvent } from '@uniswap/analytics'
-import {
-  BrowserEvent,
-  DocsHomepageElementName as ElementName,
-  DocsSectionName as SectionName,
-  SharedEventName,
-} from '@uniswap/analytics-events'
 import React from 'react'
 import { ArrowUpRight as LinkIcon, BookOpen, HelpCircle, Info, MessageCircle } from 'react-feather'
 
@@ -319,13 +312,7 @@ export default function Home() {
           />
           <Row>
             {actions.map((action) => (
-              <TraceEvent
-                key={action.to}
-                element={action.to}
-                events={[BrowserEvent.onClick]}
-                name={SharedEventName.PAGE_CLICKED}
-                section={SectionName.WELCOME_LINKS}
-              >
+              <React.Fragment key={action.to}>
                 <Link style={{ textDecoration: 'none' }} to={action.to}>
                   <ShadowCard key={action.title}>
                     <TopSection>
@@ -340,7 +327,7 @@ export default function Home() {
                     <p style={{ marginBottom: '0.5rem', fontWeight: 300 }}>{action.text}</p>
                   </ShadowCard>
                 </Link>
-              </TraceEvent>
+              </React.Fragment>
             ))}
           </Row>
         </DocsHeader>
@@ -355,27 +342,19 @@ export default function Home() {
             <p>Explore these guided tutorials to get started integrating with Pegasys in your dApp.</p>
             <div>
               {dAppGuides.map((action) => (
-                <TraceEvent
-                  key={action.to}
-                  element={action.to}
-                  events={[BrowserEvent.onClick]}
-                  name={SharedEventName.PAGE_CLICKED}
-                  section={SectionName.DAPP_LINKS}
-                >
-                  <Link style={{ textDecoration: 'none' }} key={action.title} to={action.to}>
-                    <Card key={action.title} style={{ marginBottom: '1rem' }}>
-                      <LinkRow>
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
-                          <h3 style={{ marginBottom: '0rem' }}>{action.title}</h3>
-                        </div>
-                        <LinkIconWrapper>
-                          <LinkIcon />
-                        </LinkIconWrapper>
-                      </LinkRow>
-                      <p style={{ marginBottom: '0rem', fontWeight: 300 }}>{action.text}</p>
-                    </Card>
-                  </Link>
-                </TraceEvent>
+                <Link style={{ textDecoration: 'none' }} key={action.title} to={action.to}>
+                  <Card key={action.title} style={{ marginBottom: '1rem' }}>
+                    <LinkRow>
+                      <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <h3 style={{ marginBottom: '0rem' }}>{action.title}</h3>
+                      </div>
+                      <LinkIconWrapper>
+                        <LinkIcon />
+                      </LinkIconWrapper>
+                    </LinkRow>
+                    <p style={{ marginBottom: '0rem', fontWeight: 300 }}>{action.text}</p>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>
@@ -384,27 +363,19 @@ export default function Home() {
             <p>Explore these guided tutorials to get started integrating with Pegasys in your smart contracts.</p>
             <div>
               {smartContractGuides.map((action) => (
-                <TraceEvent
-                  key={action.to}
-                  element={action.to}
-                  events={[BrowserEvent.onClick]}
-                  name={SharedEventName.PAGE_CLICKED}
-                  section={SectionName.SMART_CONTRACT_LINKS}
-                >
-                  <Link style={{ textDecoration: 'none' }} key={action.title} to={action.to}>
-                    <Card key={action.title} style={{ marginBottom: '1rem' }}>
-                      <LinkRow>
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
-                          <h3 style={{ marginBottom: '0rem' }}>{action.title}</h3>
-                        </div>
-                        <LinkIconWrapper>
-                          <LinkIcon />
-                        </LinkIconWrapper>
-                      </LinkRow>
-                      <p style={{ marginBottom: '0rem', fontWeight: 300 }}>{action.text}</p>
-                    </Card>
-                  </Link>
-                </TraceEvent>
+                <Link style={{ textDecoration: 'none' }} key={action.title} to={action.to}>
+                  <Card key={action.title} style={{ marginBottom: '1rem' }}>
+                    <LinkRow>
+                      <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <h3 style={{ marginBottom: '0rem' }}>{action.title}</h3>
+                      </div>
+                      <LinkIconWrapper>
+                        <LinkIcon />
+                      </LinkIconWrapper>
+                    </LinkRow>
+                    <p style={{ marginBottom: '0rem', fontWeight: 300 }}>{action.text}</p>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>
@@ -426,86 +397,59 @@ export default function Home() {
           <div>
             <h2>Developer Links</h2>
             {developerLinks.map((action) => (
-              <TraceEvent
-                key={action.href}
-                element={action.href}
-                name={SharedEventName.PAGE_CLICKED}
-                events={[BrowserEvent.onClick]}
-                section={SectionName.DEVELOPER_LINKS}
-              >
-                <Link key={action.href} to={action.href}>
-                  <Card key={action.href} style={{ marginBottom: '0.5rem' }}>
-                    <LinkRow>
-                      <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <IconWrapper>
-                          <StyledIcon>
-                            <action.icon style={{ width: '24px' }} />
-                          </StyledIcon>
-                        </IconWrapper>
-                        {action.title}
-                      </div>
-                      <LinkIconWrapper>
-                        <LinkIcon />
-                      </LinkIconWrapper>
-                    </LinkRow>
-                  </Card>
-                </Link>
-              </TraceEvent>
+              <Link key={action.href} to={action.href}>
+                <Card key={action.href} style={{ marginBottom: '0.5rem' }}>
+                  <LinkRow>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                      <IconWrapper>
+                        <StyledIcon>
+                          <action.icon style={{ width: '24px' }} />
+                        </StyledIcon>
+                      </IconWrapper>
+                      {action.title}
+                    </div>
+                    <LinkIconWrapper>
+                      <LinkIcon />
+                    </LinkIconWrapper>
+                  </LinkRow>
+                </Card>
+              </Link>
             ))}
           </div>
         </TwoRow>
         <hr />
         <Row>
-          <TraceEvent
-            events={[BrowserEvent.onClick]}
-            element={ElementName.DISCORD}
-            section={SectionName.BOTTOM_MENU_LINKS}
-            name={SharedEventName.PAGE_CLICKED}
-          >
-            <Link style={{ textDecoration: 'none' }} href={'https://discord.com/invite/UzjWbWWERz'}>
-              <CenterCard>
-                <Discord style={{ width: '48px', height: '48px' }} />
-                <div>
-                  <h3>Discord</h3>
-                  <p>Join our Developer Community.</p>
-                </div>
-              </CenterCard>
-            </Link>
-          </TraceEvent>
-          <TraceEvent
-            events={[BrowserEvent.onClick]}
-            element={ElementName.GRANTS}
-            section={SectionName.BOTTOM_MENU_LINKS}
-            name={SharedEventName.PAGE_CLICKED}
-          >
-            <Link style={{ textDecoration: 'none' }} href={'https://gov.pegasys.fi/'}>
-              <CenterCard>
-                <MessageCircle style={{ width: '48px', height: '48px' }} />
-                <div>
-                  <h3>Forum</h3>
-                  <p>Discuss governance and more.</p>
-                </div>
-              </CenterCard>
-            </Link>
-          </TraceEvent>
-          <TraceEvent
-            events={[BrowserEvent.onClick]}
-            section={SectionName.BOTTOM_MENU_LINKS}
-            element={ElementName.GITHUB}
-            name={SharedEventName.PAGE_CLICKED}
-          >
-            <Link style={{ textDecoration: 'none' }} href={'https://github.com/Pegasys-fi'}>
-              <CenterCard>
-                <StyledIcon>
-                  <GitHub style={{ width: '48px', height: '48px' }} />
-                </StyledIcon>
-                <div>
-                  <h3>GitHub</h3>
-                  <p>View all Pegasys repositories.</p>
-                </div>
-              </CenterCard>
-            </Link>
-          </TraceEvent>
+          <Link style={{ textDecoration: 'none' }} href={'https://discord.com/invite/UzjWbWWERz'}>
+            <CenterCard>
+              <Discord style={{ width: '48px', height: '48px' }} />
+              <div>
+                <h3>Discord</h3>
+                <p>Join our Developer Community.</p>
+              </div>
+            </CenterCard>
+          </Link>
+
+          <Link style={{ textDecoration: 'none' }} href={'https://gov.pegasys.fi/'}>
+            <CenterCard>
+              <MessageCircle style={{ width: '48px', height: '48px' }} />
+              <div>
+                <h3>Forum</h3>
+                <p>Discuss governance and more.</p>
+              </div>
+            </CenterCard>
+          </Link>
+
+          <Link style={{ textDecoration: 'none' }} href={'https://github.com/Pegasys-fi'}>
+            <CenterCard>
+              <StyledIcon>
+                <GitHub style={{ width: '48px', height: '48px' }} />
+              </StyledIcon>
+              <div>
+                <h3>GitHub</h3>
+                <p>View all Pegasys repositories.</p>
+              </div>
+            </CenterCard>
+          </Link>
         </Row>
 
         {/* <Link
