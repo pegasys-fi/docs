@@ -69,7 +69,7 @@ module.exports = {
         // },
         {
           label: 'Litepaper',
-          to: 'https://pegasys.finance/blog/introducing-pegasys/',
+          to: 'https://pegasys.fi/blog/introducing-pegasys/',
           position: 'right',
           className: 'persistent',
         },
@@ -107,10 +107,10 @@ module.exports = {
             },
             {
               label: 'Litepaper',
-              href: 'https://pegasys.finance/blog/introducing-pegasys/',
+              href: 'https://pegasys.fi/blog/introducing-pegasys/',
             },
             {
-              label: 'Forked from Uniswap v3',
+              label: 'Whitepaper (Uniswap v3)',
               href: 'https://uniswap.org/whitepaper-v3.pdf',
             },
           ],
