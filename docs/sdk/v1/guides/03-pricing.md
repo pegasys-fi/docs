@@ -20,7 +20,7 @@ The simplest way to get the DAI-WETH mid price is to observe the pair directly:
 ```typescript
 import { ChainId, Token, WETH, Fetcher, Route } from '@pegasys-fi/v3-sdk'
 
-const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
+const DAI = new Token(ChainId.MAINNET, '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73', 18)
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option
@@ -45,8 +45,8 @@ For the sake of example, let's imagine a direct pair between DAI and WETH _doesn
 ```typescript
 import { ChainId, Token, WETH, Fetcher, Route } from '@pegasys-fi/v3-sdk'
 
-const USDC = new Token(ChainId.MAINNET, '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', 6)
-const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
+const USDC = new Token(ChainId.MAINNET, '0x2bF9b864cdc97b08B6D79ad4663e71B8aB65c45c', 6)
+const DAI = new Token(ChainId.MAINNET, '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73', 18)
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option
@@ -68,7 +68,7 @@ Imagine we're interested in trading 1 WETH for DAI:
 ```typescript
 import { ChainId, Token, WETH, Fetcher, Trade, Route, TokenAmount, TradeType } from '@pegasys-fi/v3-sdk'
 
-const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
+const DAI = new Token(ChainId.MAINNET, '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73', 18)
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option

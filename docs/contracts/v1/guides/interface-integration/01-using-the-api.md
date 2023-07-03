@@ -121,7 +121,7 @@ const {
   data: daiData,
 } = useQuery(DAI_QUERY, {
   variables: {
-    tokenAddress: '0x6b175474e89094c44da98b954eedeac495271d0f',
+    tokenAddress: '0x5B0aC6194499621630ddebb30c4aBE37037b30Ec',
   },
 })
 ```
@@ -224,7 +224,7 @@ function App() {
   const { loading: ethLoading, data: ethPriceData } = useQuery(ETH_PRICE_QUERY)
   const { loading: daiLoading, data: daiData } = useQuery(DAI_QUERY, {
     variables: {
-      tokenAddress: '0x6b175474e89094c44da98b954eedeac495271d0f',
+      tokenAddress: '0x5B0aC6194499621630ddebb30c4aBE37037b30Ec',
     },
   })
 

@@ -7,8 +7,8 @@ import { ethers } from 'ethers'
 // can also input your own connection with "https://mainnet.infura.io/v3/<YOUR-ENDPOINT-HERE>" as an input
 const provider = new ethers.providers.JsonRpcProvider()
 
-// pool address for DAI/USDC 0.05%
-const poolAddress = '0x6c6bc977e13df9b0de53b251522280bb72383700'
+// pool address for DAI/SYS 0.05%
+const poolAddress = '0x3395e8b9ca80ad40df329736f34bc40e813039ab'
 
 const poolContract = new ethers.Contract(poolAddress, IPegasysV3PoolABI, provider)
 
@@ -120,6 +120,3 @@ async function liquidityExamples(sender: string, exampleType: number) {
     })
   }
 }
-
-// call the example function by passing the sender, e.g.:
-// liquidityExamples("0xDA9dfA130Df4dE4673b89022EE50ff26f6EA73Cf", 0)

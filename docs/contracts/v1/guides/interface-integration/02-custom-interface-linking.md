@@ -50,7 +50,7 @@ Two parameters, exactField and exactAmount can be used to set specific token amo
 
 ### Example Usage
 
-`https://app.pegasys.fi/#/swap?exactField=input&exactAmount=10&inputCurrency=0x0F5D2fB29fb7d3CFeE444a200298f468908cC942`
+`https://app.pegasys.fi/#/swap?exactField=input&exactAmount=10&inputCurrency=0x368433CaC2A0B8D76E64681a9835502a1f2A8A30`
 
 ## Pool Page
 
@@ -65,7 +65,7 @@ The Pool page is made up of 2 subroutes: `add`, `remove`.
 
 ### Example Usage
 
-`https://app.pegasys.fi/#/add/v1/0x6B175474E89094C44Da98b954EedeAC495271d0F/0xdAC17F958D2ee523a2206206994597C13D831ec7`
+`https://app.pegasys.fi/#/add/v1/0x5B0aC6194499621630ddebb30c4aBE37037b30Ec/0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd`
 
 ## Remove Liquidity
 
@@ -76,4 +76,4 @@ The Pool page is made up of 2 subroutes: `add`, `remove`.
 
 ### Example Usage
 
-`https://app.pegasys.fi/#/remove/0x6B175474E89094C44Da98b954EedeAC495271d0F-0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2`
+`https://app.pegasys.fi/#/remove/0x5B0aC6194499621630ddebb30c4aBE37037b30Ec-0xaA1c53AFd099E415208F47FCFA2C880f659E6904`

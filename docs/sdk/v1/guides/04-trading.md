@@ -16,7 +16,7 @@ Let's say we want to trade 1 WETH for as much DAI as possible:
 ```typescript
 import { ChainId, Token, WETH, Fetcher, Trade, Route, TokenAmount, TradeType } from '@pegasys-fi/v3-sdk'
 
-const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
+const DAI = new Token(ChainId.MAINNET, '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73', 18)
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option

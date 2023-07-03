@@ -16,7 +16,7 @@ and much more. Below are some example queries. To run a query copy and paste it 
 
 ## Global Data
 
-Global data refers to data points about the Pegasys v3 protocol as a whole. Some examples of global data points are total value locked in the protocol, total pools deployed, or total transaction counts. Thus, to query global data you must pass in the Pegasys V3 Factory address `0x1F98431c8aD98523631AE4a59f267346ea31F984` and select the desired fields. Reference the full [factory schema](https://github.com/Pegasys-fi/v3-subgraph/blob/main/schema.graphql#L1) to see all possible fields.
+Global data refers to data points about the Pegasys v3 protocol as a whole. Some examples of global data points are total value locked in the protocol, total pools deployed, or total transaction counts. Thus, to query global data you must pass in the Pegasys V3 Factory address `0xeAa20BEA58979386A7d37BAeb4C1522892c74640` and select the desired fields. Reference the full [factory schema](https://github.com/Pegasys-fi/v3-subgraph/blob/main/schema.graphql#L1) to see all possible fields.
 
 ### Current Global Data
 
@@ -24,7 +24,7 @@ An example querying total pool count, transaction count, and total volume in USD
 
 ```
 {
-  factory(id: "0x1F98431c8aD98523631AE4a59f267346ea31F984" ) {
+  factory(id: "0xeAa20BEA58979386A7d37BAeb4C1522892c74640" ) {
     poolCount
     txCount
     totalVolumeUSD
@@ -39,7 +39,7 @@ You can also query historical data by specifying a block number.
 
 ```
 {
-  factory(id: "0x1F98431c8aD98523631AE4a59f267346ea31F984", block: {number: 13380584}){
+  factory(id: "0xeAa20BEA58979386A7d37BAeb4C1522892c74640", block: {number: 13380584}){
     poolCount
     txCount
     totalVolumeUSD
@@ -54,11 +54,11 @@ To get data about a certain pool, pass in the pool address. Reference the full [
 
 ### General Pool Query
 
-The query below returns the feeTier, spot price, and liquidity for the ETH-USDC pool.
+The query below returns the feeTier, spot price, and liquidity for the ETH-USDT pool.
 
 ```
 {
-  pool(id: "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8") {
+  pool(id: "0xd3ef8d514deb494c252fd9735134807b3a4527b6") {
     tick
     token0 {
       symbol
@@ -143,12 +143,12 @@ Retrieve the top 1000 most liquid pools. You can use this similar set up to orde
 
 ### Pool Daily Aggregated
 
-This query returns daily aggregated data for the first 10 days since the given timestamp for the UNI-ETH pool.
+This query returns daily aggregated data for the first 10 days since the given timestamp for the SYS-ETH pool.
 
 ```
 {
   poolDayDatas(first: 10, orderBy: date, where: {
-    pool: "0x1d42064fc4beb5f8aaf85f4617ae8b3b5b8bd801",
+    pool: "0xb0631942b2d862ccf9c4b753c1ef068e6bec1cfb",
     date_gt: 1633642435
   } ) {
     date
@@ -169,34 +169,6 @@ This query returns daily aggregated data for the first 10 days since the given t
 To query data about a particular swap, input the transaction hash + "#" + the index in the swaps the transaction array.R
 This is the reference for the full [swap schema](https://github.com/Pegasys-fi/v3-subgraph/blob/main/schema.graphql#L353).
 
-This query fetches data about the sender, receiver, amounts, transaction data, and timestamp for a particular swap.
-
-```
-{
-   swap(id: "0x000007e1111cbd97f74cfc6eea2879a5b02020f26960ac06f4af0f9395372b64#66785") {
-    sender
-    recipient
-    amount0
-    amount1
-    transaction {
-      id
-      blockNumber
-      gasUsed
-      gasPrice
-    }
-    timestamp
-    token0 {
-      id
-      symbol
-    }
-    token1 {
-      id
-      symbol
-    }
-   }
- }
-```
-
 ### Recent Swaps Within a Pool
 
 You can set the `where` field to filter swap data by pool address. This example fetches data about multiple swaps for the USDC-USDT pool, ordered by timestamp.
@@ -204,7 +176,7 @@ You can set the `where` field to filter swap data by pool address. This example 
 ```
 {
 swaps(orderBy: timestamp, orderDirection: desc, where:
- { pool: "0x7858e59e0c01ea06df3af3d20ac7b0003275d4bf" }
+ { pool: "0x197e0865e759235699a758c5428944964627cde1" }
 ) {
   pool {
     token0 {
@@ -230,11 +202,11 @@ Input the the token contract address to fetch token data. Any token that exists 
 
 ### General Token Data
 
-This queries the decimals, symbol, name, pool count, and volume in USD for the UNI token. Reference the full [token schema](https://github.com/Pegasys-fi/v3-subgraph/blob/main/schema.graphql#L38) for all possible fields you can query.
+This queries the decimals, symbol, name, pool count, and volume in USD for the SYS token. Reference the full [token schema](https://github.com/Pegasys-fi/v3-subgraph/blob/main/schema.graphql#L38) for all possible fields you can query.
 
 ```
 {
-  token(id:"0x1f9840a85d5af5bf1d1762f925bdaddc4201f984") {
+  token(id:"0x368433CaC2A0B8D76E64681a9835502a1f2A8A30") {
     symbol
     name
     decimals
@@ -246,11 +218,11 @@ This queries the decimals, symbol, name, pool count, and volume in USD for the U
 
 ### Token Daily Aggregated
 
-You can fetch aggregate data about a specific token over a 24-hour period. This query gets 10-days of the 24-hour volume data for the UNI token ordered from oldest to newest.
+You can fetch aggregate data about a specific token over a 24-hour period. This query gets 10-days of the 24-hour volume data for the PSYS token ordered from oldest to newest.
 
 ```
 {
-  tokenDayDatas(first: 10, where: {token: "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"}, orderBy: date, orderDirection: asc) {
+  tokenDayDatas(first: 10, where: {token: "0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd"}, orderBy: date, orderDirection: asc) {
     date
     token {
       id

@@ -30,7 +30,7 @@ Thanks to some [fancy footwork in the factory](https://github.com/Pegasys-fi/v1-
 ### Solidity
 
 ```solidity
-address factory = 0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f;
+address factory = 0x7Bbbb6abaD521dE677aBe089C85b29e3b2021496;
 address token0 = 0xCAFE000000000000000000000000000000000000; // change me!
 address token1 = 0xF00D000000000000000000000000000000000000; // change me!
 

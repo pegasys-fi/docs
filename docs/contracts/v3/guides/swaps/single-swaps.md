@@ -54,9 +54,9 @@ contract SwapExamples {
 Hardcode the token contract addresses and pool fee tiers for the example. In production, you would likely use an input parameter for this and pass the input into a memory variable, allowing the contract to change the pools and tokens it interacts with on a per transaction basis, but for conceptual simplicity, we are hardcoding them here.
 
 ```solidity
-    address public constant DAI = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
-    address public constant WETH9 = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
-    address public constant USDC = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48;
+    address public constant DAI = 0x5B0aC6194499621630ddebb30c4aBE37037b30Ec;
+    address public constant WETH9 = 0xaA1c53AFd099E415208F47FCFA2C880f659E6904;
+    address public constant USDC = 0x368433CaC2A0B8D76E64681a9835502a1f2A8A30;
 
     // For this example, we will set the pool fee to 0.3%.
     uint24 public constant poolFee = 3000;
@@ -196,9 +196,9 @@ contract SwapExamples {
 
     // This example swaps DAI/WETH9 for single path swaps and DAI/USDC/WETH9 for multi path swaps.
 
-    address public constant DAI = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
-    address public constant WETH9 = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
-    address public constant USDC = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48;
+    address public constant DAI = 0x5B0aC6194499621630ddebb30c4aBE37037b30Ec;
+    address public constant WETH9 = 0xaA1c53AFd099E415208F47FCFA2C880f659E6904;
+    address public constant USDC = 0x368433CaC2A0B8D76E64681a9835502a1f2A8A30;
 
     // For this example, we will set the pool fee to 0.3%.
     uint24 public constant poolFee = 3000;

@@ -11,7 +11,7 @@ title: Router01
 
 # Address
 
-`PegasysV1Router01` is deployed at `0xf164fC0Ec4E93095b804a4795bBe1e041497b92a` on the Ethereum [mainnet](https://etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), and the [Ropsten](https://ropsten.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), [Rinkeby](https://rinkeby.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), [Görli](https://goerli.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), and [Kovan](https://kovan.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a) testnets. It was built from commit [2ad7da2](https://github.com/Pegasys-fi/v1-periphery/tree/2ad7da28a6f70ec4299364bc1608af8f30e7646b).
+`PegasysV1Router01` is deployed at `0x017dAd2578372CAEE5c6CddfE35eEDB3728544C4` on the Syscoin [mainnet](https://explorer.syscoin.org/address/0x017dAd2578372CAEE5c6CddfE35eEDB3728544C4).
 
 # Read-Only Functions
 
@@ -22,14 +22,6 @@ function factory() external pure returns (address);
 ```
 
 Returns [factory address](../smart-contracts/factory#address).
-
-## WETH
-
-```solidity
-function WETH() external pure returns (address);
-```
-
-Returns the [canonical WETH address](https://blog.0xproject.com/canonical-weth-a9aa7d0279dd) on the Ethereum [mainnet](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), or the [Ropsten](https://ropsten.etherscan.io/address/0xc778417e063141139fce010982780140aa0cd5ab), [Rinkeby](https://rinkeby.etherscan.io/address/0xc778417e063141139fce010982780140aa0cd5ab), [Görli](https://goerli.etherscan.io/address/0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6), or [Kovan](https://kovan.etherscan.io/address/0xd0a1e359811322d97991e03f863a0c30c2cf029c) testnets.
 
 # State-Changing Functions
 

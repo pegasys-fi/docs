@@ -18,7 +18,7 @@ As an example, let's try to represent DAI in a format the SDK can work with. To 
 
 The first two pieces of data — **chainId** and **token address** — must be provided by us. Thinking about it, this makes sense, as there's really no other way to unambiguously identify a token.
 
-So, in the case of DAI, we know that the **chainId** is `1` (we're on mainnet), and the **token address** is `0x6B175474E89094C44Da98b954EedeAC495271d0F`. Note that it's very important to externally verify token addresses. Don't use addresses from sources you don't trust!
+So, in the case of DAI, we know that the **chainId** is `57` (we're on mainnet), and the **token address** is `0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73`. Note that it's very important to externally verify token addresses. Don't use addresses from sources you don't trust!
 
 ## Required Data
 
@@ -32,7 +32,7 @@ One option here is to simply pass in the correct value, which we may know is `18
 import { ChainId, Token } from '@pegasys-fi/v3-sdk'
 
 const chainId = ChainId.MAINNET
-const tokenAddress = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // must be checksummed
+const tokenAddress = '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73' // must be checksummed
 const decimals = 18
 
 const DAI = new Token(chainId, tokenAddress, decimals)
@@ -56,7 +56,7 @@ If we don't want to provide or look up the value ourselves, we can ask the SDK t
 import { ChainId, Token, Fetcher } from '@pegasys-fi/v3-sdk'
 
 const chainId = ChainId.MAINNET
-const tokenAddress = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // must be checksummed
+const tokenAddress = '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73' // must be checksummed
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option
@@ -74,7 +74,7 @@ Finally, we can talk about **symbol** and **name**. Because these fields aren't 
 ```typescript
 import { ChainId, Token } from '@pegasys-fi/v3-sdk'
 
-const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18, 'DAI', 'Dai Stablecoin')
+const DAI = new Token(ChainId.MAINNET, '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73', 18, 'DAI', 'Dai Stablecoin')
 ```
 
 or:
@@ -86,7 +86,7 @@ import { ChainId, Token, Fetcher } from '@pegasys-fi/v3-sdk'
 // for example if top-level await is not an option
 const DAI = await Fetcher.fetchTokenData(
   ChainId.MAINNET,
-  '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+  '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73',
   undefined,
   'DAI',
   'Dai Stablecoin'
@@ -114,7 +114,7 @@ One option here is to simply pass in values which we've fetched ourselves to cre
 ```typescript
 import { ChainId, Token, WETH, Pair, TokenAmount } from '@pegasys-fi/v3-sdk'
 
-const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
+const DAI = new Token(ChainId.MAINNET, '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73', 18)
 
 async function getPair(): Promise<Pair> {
   const pairAddress = Pair.getAddress(DAI, WETH[DAI.chainId])
@@ -141,7 +141,7 @@ If we don't want to look up the value ourselves, we can ask the SDK to look them
 ```typescript
 import { ChainId, Token, WETH, Fetcher } from '@pegasys-fi/v3-sdk'
 
-const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
+const DAI = new Token(ChainId.MAINNET, '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73', 18)
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option

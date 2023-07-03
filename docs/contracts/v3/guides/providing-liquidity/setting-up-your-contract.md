@@ -35,8 +35,8 @@ We've chosen to hardcode the token contract addresses and pool fee tiers for our
 ```solidity
 contract LiquidityExamples is IERC721Receiver {
 
-    address public constant DAI = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
-    address public constant USDC = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48;
+    address public constant DAI = 0x5B0aC6194499621630ddebb30c4aBE37037b30Ec;
+    address public constant USDC = 0x368433CaC2A0B8D76E64681a9835502a1f2A8A30;
 
     uint24 public constant poolFee = 3000;
 ```
@@ -128,8 +128,8 @@ import '../interfaces/INonfungiblePositionManager.sol';
 import '../base/LiquidityManagement.sol';
 
 contract LiquidityExamples is IERC721Receiver {
-    address public constant DAI = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
-    address public constant USDC = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48;
+    address public constant DAI = 0x5B0aC6194499621630ddebb30c4aBE37037b30Ec;
+    address public constant USDC = 0x368433CaC2A0B8D76E64681a9835502a1f2A8A30;
 
     uint24 public constant poolFee = 3000;
 

@@ -17,7 +17,7 @@ All time volume in USD, total liquidity in USD, all time transaction count.
 
 ```
 {
- pegasysFactory(id: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f"){
+ pegasysFactory(id: "0x7Bbbb6abaD521dE677aBe089C85b29e3b2021496"){
    totalVolumeUSD
    totalLiquidityUSD
    txCount
@@ -31,7 +31,7 @@ To get a snapshot of past state, use The Graph's block query feature and query a
 
 ```
 {
- pegasysFactory(id: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f", block: {number: 10291203}){
+ pegasysFactory(id: "0x7Bbbb6abaD521dE677aBe089C85b29e3b2021496", block: {number: 10291203}){
    totalVolumeUSD
    totalLiquidityUSD
    txCount
@@ -47,7 +47,7 @@ Fetch a snapshot of the current state of the pair with common values. This examp
 
 ```
 {
- pair(id: "0xa478c2975ab1ea89e8196811f51a7b7ade33eb11"){
+ pair(id: "0x7C598c96D02398d89FbCb9d41Eab3DF0C16F227D"){
      token0 {
        id
        symbol
@@ -105,7 +105,7 @@ Get the last 100 swaps on a pair by fetching Swap events and passing in the pair
 ```
 {
 swaps(orderBy: timestamp, orderDirection: desc, where:
- { pair: "0xa478c2975ab1ea89e8196811f51a7b7ade33eb11" }
+ { pair: "0x7C598c96D02398d89FbCb9d41Eab3DF0C16F227D" }
 ) {
      pair {
        token0 {
@@ -133,7 +133,7 @@ Day data is useful for building charts and historical views around entities. To 
 {
  pairDayDatas(first: 100, orderBy: date, orderDirection: asc,
    where: {
-     pairAddress: "0xa478c2975ab1ea89e8196811f51a7b7ade33eb11",
+     pairAddress: "0x7C598c96D02398d89FbCb9d41Eab3DF0C16F227D",
      date_gt: 1592505859
    }
  ) {
@@ -157,7 +157,7 @@ The allPairs field gets the first 200 pairs DAI is included in sorted by liquidi
 
 ```
 {
- token(id: "0x6b175474e89094c44da98b954eedeac495271d0f"){
+ token(id: "0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73"){
    name
    symbol
    decimals
@@ -187,15 +187,6 @@ Similar to fetching all pairs (see above), you can query all tokens in Pegasys. 
 #### Token Transactions
 
 To get transactions that include a token you'll need to first fetch an array of pairs that the token is included in (this can be done with the allPairs field on the Token entity.) Once you have an array of pairs the token is included in, filter on that in the transaction lookup.
-
-This query fetches the latest 30 mints, swaps, and burns involving DAI. The allPairs array could look something like this where we include the DAI/WETH pair address and the DAI/USDC pair address.
-
-```
-allPairs = [
- "0xa478c2975ab1ea89e8196811f51a7b7ade33eb11",
- "0xae461ca67b15dc8dc81ce7615e0320da1a9ab8d5"
-]
-```
 
 ```
 query($allPairs: [String!]) {
@@ -244,7 +235,7 @@ Like pair and global daily lookups, tokens have daily entities that can be queri
 {
  tokenDayDatas(orderBy: date, orderDirection: asc,
   where: {
-    token: "0x6b175474e89094c44da98b954eedeac495271d0f"
+    token: "0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73"
   }
  ) {
     id

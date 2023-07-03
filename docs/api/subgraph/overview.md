@@ -18,17 +18,13 @@ Each subgraph has a dedicated endpoint for querying data, as well as a page on [
 ##### V3
 
 - Explorer Page: https://thegraph.com/explorer/subgraph/pegasys-fi/v3
-- Graphql Endpoint: https://api.thegraph.com/subgraphs/name/pegasys-fi/v3
 - Code: https://github.com/Pegasys-fi/v3-subgraph
 
 ##### Governance
 
-- Explorer Page: https://thegraph.com/explorer/subgraph/ianlapham/governance-tracking
-- Graphql Endpoint: https://api.thegraph.com/subgraphs/name/ianlapham/governance-tracking
-- Code: https://github.com/ianlapham/uniswap-governance-subgraph
+- Forum: https://gov.pegasys.fi/
 
 ##### V1
 
-- Explorer Page: https://thegraph.com/explorer/subgraph/ianlapham/uniswapv1
-- Graphql Endpoint: https://api.thegraph.com/subgraphs/name/ianlapham/uniswapv1
+- Explorer Page: https://thegraph.com/explorer/subgraph/pegasys-fi/v1
 - Code: https://github.com/Pegasys-fi/v1-subgraph

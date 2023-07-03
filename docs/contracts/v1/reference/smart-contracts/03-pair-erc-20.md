@@ -43,7 +43,7 @@ Returns `Pegasys V1` for all pairs.
 function symbol() external pure returns (string memory);
 ```
 
-Returns `UNI-V1` for all pairs.
+Returns `PSYS-V1` for all pairs.
 
 ## decimals
 

@@ -3,11 +3,10 @@ id: governance-reference
 title: Governance Reference
 ---
 
-> The updated reference for the newly deployed Governor Bravo is available via [Etherscan](https://etherscan.io/address/0x408ED6354d4973f66138C91495F2f2FCbd8724C3), some of the reference material below may be out of date.
+The Pegasys protocol is governed and upgraded by PSYS token holders, using three distinct components; the PSYS token, governance module, and Timelock. Together, these contracts allow the community to propose, vote, and implement changes to the pegasys protocol.
 
-The Pegasys protocol is governed and upgraded by UNI token holders, using three distinct components; the UNI token, governance module, and Timelock. Together, these contracts allow the community to propose, vote, and implement changes to the pegasys protocol.
+**WIP**
 
-Any addresses with more than 2.5M UNI delegated to it may propose governance actions, which contain finished, executable code. When a proposal is created, the community can cast their votes during a 3 day voting period. If a majority, and at least 4M votes are cast for the proposal, it is queued in the Timelock, and may be executed in a minimum of 2 days.
 
 ## Timelock
 
@@ -73,7 +72,7 @@ ProposalExecuted(uint id)
 
 Emitted when a proposal has been executed in the Timelock.
 
-# Read-Only Functions: UNI
+# Read-Only Functions: PSYS
 
 ## Get Current Votes
 
@@ -102,7 +101,7 @@ Returns the prior number of votes for an account at a specific block number. The
 |             |           |                                                                        |
 | unnamed     | `uint96`  | The number of prior votes                                              |
 
-# State-Changing Functions: UNI
+# State-Changing Functions: PSYS
 
 ## Delegate
 
@@ -110,7 +109,7 @@ Returns the prior number of votes for an account at a specific block number. The
 function delegate(address delegatee)
 ```
 
-Delegate votes from the sender to the delegatee. Users can delegate to 1 address at a time, and the number of votes added to the delegatee’s vote count is equivalent to the balance of UNI in the user’s account. Votes are delegated from the current block and onward, until the sender delegates again, or transfers their UNI.
+Delegate votes from the sender to the delegatee. Users can delegate to 1 address at a time, and the number of votes added to the delegatee’s vote count is equivalent to the balance of PSYS in the user’s account. Votes are delegated from the current block and onward, until the sender delegates again, or transfers their PSYS.
 
 | Name      | Type      |                                                                    |
 | :-------- | :-------- | :----------------------------------------------------------------- |
@@ -122,7 +121,7 @@ Delegate votes from the sender to the delegatee. Users can delegate to 1 address
 function delegateBySig(address delegatee, uint nonce, uint expiry, uint8 v, bytes32 r, bytes32 s)
 ```
 
-Delegate votes from the sender to the delegatee. Users can delegate to 1 address at a time, and the number of votes added to the delegatee’s vote count is equivalent to the balance of UNI in the user’s account. Votes are delegated from the current block and onward, until the sender delegates again, or transfers their UNI.
+Delegate votes from the sender to the delegatee. Users can delegate to 1 address at a time, and the number of votes added to the delegatee’s vote count is equivalent to the balance of PSYS in the user’s account. Votes are delegated from the current block and onward, until the sender delegates again, or transfers their PSYS.
 
 | Name      | Type      |                                                                                                                     |
 | :-------- | :-------- | :------------------------------------------------------------------------------------------------------------------ |
@@ -241,7 +240,7 @@ Creates a Proposal to change the protocol.
 
 Proposals will be voted on by delegated voters. If there is sufficient support before the voting period ends, the proposal shall be automatically enacted. Enacted proposals are queued and executed in the Timelock contract.
 
-The sender must hold more UNI than the current proposal threshold (proposalThreshold()) as of the immediately previous block. The proposal can have up to 10 actions (based on proposalMaxOperations()).
+The sender must hold more PSYS than the current proposal threshold (proposalThreshold()) as of the immediately previous block. The proposal can have up to 10 actions (based on proposalMaxOperations()).
 
 The proposer cannot create another proposal if they currently have a pending or active proposal. It is not possible to queue two identical actions in the same block (due to a restriction in the Timelock), therefore actions in a single proposal must be unique, and unique proposals that share an identical action must be queued in different blocks.
 
